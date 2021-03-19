@@ -11,8 +11,7 @@ site:
     usePrettyRefs: true
     title: /param/notes
     description: My notes
-    siteUrl: https://notes.param.codes
-    assetsPrefix: notes
+    siteUrl: https://notes.param.codes/
     duplicateNoteBehavior:
         action: useVault
         payload:
