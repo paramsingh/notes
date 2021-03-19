@@ -62,7 +62,7 @@
     }
   
     function initNavBar() {
-      return fetch("https://param.codes/notes/notes/nav.html").then(function (response) {
+      return fetch("https://notes.param.codes/nav.html").then(function (response) {
         return response.text().then((content) => {
           replaceNav(content);
           return;
@@ -80,7 +80,7 @@
     function initSearch() {
       var request = new XMLHttpRequest();
       // TODO: CHECK IF THIS WORKS WITHOUT ABSOLUTE_URL
-      request.open("GET", "https://param.codes/notes/notes/assets/js/search-data.json", true);
+      request.open("GET", "https://notes.param.codes/assets/js/search-data.json", true);
   
       request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
@@ -514,7 +514,7 @@
       var cssFile = document.querySelector('[rel="stylesheet"]');
       cssFile.setAttribute(
         "href",
-        'https://param.codes/notes/notes/assets/css/just-the-docs-' + theme + ".css"
+        'https://notes.param.codes/assets/css/just-the-docs-' + theme + ".css"
       );
     };
   
