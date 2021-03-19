@@ -7,5 +7,5 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: true
-    title: Dendron
-    description: Personal knowledge space
+    title: /param/notes
+    description: My notes
