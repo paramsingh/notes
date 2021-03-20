@@ -2,11 +2,11 @@
 id: ba8c1187-f136-4f4e-95a4-3dab646b2c71
 title: Dendron
 desc: ''
-updated: 1616196312889
+updated: 1616280093096
 created: 1616196211541
 ---
 
-Dendron is a note-taking tool.
+[Dendron](https://dendron.so) is a note-taking tool.
 
 Build site for local dev.
 

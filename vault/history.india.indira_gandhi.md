@@ -2,7 +2,7 @@
 id: 395b0076-50b6-41c1-b30d-4df9b0caa402
 title: Indira Gandhi
 desc: ''
-updated: 1616190468209
+updated: 1616280366434
 created: 1616190041195
 ---
 
@@ -31,7 +31,7 @@ Indira was PM during the [[war | history.india.indo_pak_war_1971]] in 1971, a ma
 
 ## Emergency, 1975
 
-Indira is most well-known for declaring an [emergency]({% link notes/emergency.md %}),
+Indira is most well-known for declaring an [[emergency|history.india.emergency]],
 due to "internal disturbances". This was followed by more authoritarian practises like
 putting dissenters in jail, press censorship, and extreme implementation of policies like
 forced sterilization.
