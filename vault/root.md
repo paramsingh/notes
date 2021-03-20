@@ -2,7 +2,7 @@
 id: root
 title: Notes
 desc: ''
-updated: 1616280249062
+updated: 1616280551946
 created: 1595961348801
 stub: false
 ---
@@ -20,6 +20,7 @@ notes could eventually become blog posts.
 
 Some notes you might find interesting:
 
+* [[laphams_quarterly.democracy.campaign_finance]]
 * [[engineering.being_a_mentor]]
 * [[history.china.dynasties]]
 * [[history.india.indira_gandhi]]
