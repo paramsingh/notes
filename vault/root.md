@@ -2,7 +2,7 @@
 id: root
 title: Notes
 desc: ''
-updated: 1616280551946
+updated: 1616332444572
 created: 1595961348801
 stub: false
 ---
@@ -13,9 +13,7 @@ My real blog is https://param.codes, but I also cross-post
 stuff to my substack: https://paramcodes.substack.com.
 
 I've found that taking notes helps me remember things, and it's nice
-to look back on information that you processed years ago.
-
-I jot down random things, there's no real structure, but some of these
+to look back on information that you processed years ago. I jot down random things, there's no real structure, but some of these
 notes could eventually become blog posts.
 
 Some notes you might find interesting:
