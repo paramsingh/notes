@@ -6,11 +6,11 @@ Build site for local dev.
 
 ```
 npm install
-npx dendron-cli buildSiteV2 --wsRoot . --stage dev --serve
+./develop.sh
 ```
 
 Build site for production
 
 ```
-npx dendron-cli buildSiteV2 --wsRoot .  --stage prod
+./build.sh
 ```
