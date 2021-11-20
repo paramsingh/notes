@@ -3,6 +3,29 @@ vaults:
     -
         fsPath: vault
 useFMTitle: true
+useNoteTitleForLink: true
+noAutoCreateOnDefinition: true
+noLegacyNoteRef: true
+noXVaultWikiLink: true
+lookupConfirmVaultOnCreate: false
+mermaid: true
+useKatex: true
+autoFoldFrontmatter: true
+dev:
+    previewV2Enabled: false
+lookup:
+    note:
+        selectionType: selectionExtract
+journal:
+    dailyDomain: daily
+    name: journal
+    dateFormat: y.MM.dd
+    addBehavior: childOfDomain
+    firstDayOfWeek: 1
+scratch:
+    name: scratch
+    dateFormat: y.MM.dd.HHmmss
+    addBehavior: asOwnDomain
 site:
     copyAssets: true
     siteHierarchies:
@@ -11,8 +34,10 @@ site:
     usePrettyRefs: true
     title: /param/notes
     description: My notes
-    siteUrl: https://notes.param.codes/
+    siteUrl: 'https://notes.param.codes/'
     duplicateNoteBehavior:
         action: useVault
         payload:
             - vault
+initializeRemoteVaults: true
+dendronVersion: 0.56.0
