@@ -25,3 +25,6 @@ defaults:
     values:
       layout: "default"
       image: "/assets/images/logo.png"
+
+plugins:
+  - jekyll-seo-tag
