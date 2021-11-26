@@ -2,7 +2,7 @@
 id: iUIm6UQGbacPjlRf8BeKC
 title: a16z crypto startup school
 desc: ''
-updated: 1637444063182
+updated: 1637447276362
 created: 1637429008124
 stub: true
 ---
