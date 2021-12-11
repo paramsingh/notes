@@ -4,6 +4,9 @@ title: Weekly
 desc: ''
 updated: 1639176948572
 created: 1639176948572
-stub: true
 ---
 
+# 2021
+
+* [[weekly.2021.12.10]]
+* [[weekly.2021.12.17]]
