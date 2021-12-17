@@ -18,7 +18,7 @@ The [GitHub pull request](https://github.com/apache/logging-log4j2/pull/608) fix
 
 I don't think it's surprising. It's definitely not ideal, but it's not surprising. The fact that open source is massively underfunded is basically a meme at this point. I always like linking this [xkcd comic](https://xkcd.com/2347/) because it's just so true.
 
-I worked on open-source software for years with MetaBrainz, which is probably much better funded than most other open-source organizations, but even still, going from MetaBrainz to Stripe was such culture shock to me, because the engineering resources you have in a company is just on another level. Things can get prioritized, it's not just one developer wearing ten hats, doing development, code review, releases, support. It's very easy to miss things even if you're working full time, and most of open-source is developed by people in their free time, outside of their regular job.
+I worked on open-source software for years with MetaBrainz, which is probably much better funded than most other open-source projects, but even still, going from MetaBrainz to Stripe was such culture shock to me, because the engineering resources that were available was just on another level. Things can get prioritized, it's not just one developer wearing ten hats, doing development, code review, releases, support. It's very easy to miss things even if you're working full time, and most of open-source is developed by people in their free time, outside of their regular job.
 
 Luckily, the main developer of log4j now has [hundreds of supporters](https://github.com/sponsors/rgoers), but that's just log4j, there are probably so many core infrastructural open source projects that have near zero engineering resources behind them. If you use and like something open-source, you should try to support the creators and donate.
 
@@ -36,3 +36,7 @@ ListenBrainz released an [Year in Music](https://listenbrainz.org/user/iliekcomp
 ----------------------
 
 I'm reading [a book by Stephen Webb](https://www.amazon.in/gp/product/B00XVTG1NC/ref=ppx_yo_dt_b_d_asin_title_o01?ie=UTF8&psc=1) on the Fermi Paradox and was introduced to the absolutely mind-boggling idea of a [Dyson Sphere](https://en.wikipedia.org/wiki/Dyson_sphere). It's so amazing to think how people even imagine this kind of stuff and it also shows just how much scope for technological progress there exists in the world.
+
+-----------------
+
+Stripe announced an [increase in carbon removal commitments](https://stripe.com/newsroom/news/fall-21-carbon-removal-purchases) this week. The work that the Climate team does is probably my favorite thing at Stripe, it makes me proud to work here. It's very cool that Stripe will be the first customer for 3 of the 4 carbon removal projects.
