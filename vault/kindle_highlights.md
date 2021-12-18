@@ -1,9 +1,9 @@
 ---
 id: fa0ae1f5-c7cd-4b13-9a03-efda3ad263bf
-title: Kindle Highlights
+title: Books
 desc: ''
-updated: 1616195804199
+updated: 1639833512629
 created: 1616195370942
 ---
 
-Here's the highlights from the books I've read.
+This is a list of books I've read with Kindle highlights for most of them.
