@@ -15,7 +15,10 @@ Why I listen to hip-hop.
 > "LOL to the bank checkin' my account, Bank teller flirtin' after checkin' my account" - Lil Wayne, Truffle Butter
 
 >She say, "Can you get my friends in the club?"
+>
 >I say, "Can you get my Benz in the club?"
+>
 >If not, treat your friends like my Benz
+>
 >Park they ass outside 'til the evenin' end
 >  - Kanye West, Send It Up
