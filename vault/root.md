@@ -2,7 +2,7 @@
 id: root
 title: Notes
 desc: ''
-updated: 1616332444572
+updated: 1640609010949
 created: 1595961348801
 stub: false
 ---
@@ -10,7 +10,7 @@ stub: false
 Hi! I'm Param! This is a place for my personal notes.
 
 My real blog is https://param.codes, but I also cross-post
-stuff to my substack: https://paramcodes.substack.com.
+stuff to my substack: https://newsletter.param.codes.
 
 I've found that taking notes helps me remember things, and it's nice
 to look back on information that you processed years ago. I jot down random things, there's no real structure, but some of these
@@ -23,7 +23,7 @@ Some notes you might find interesting:
 * [[history.china.dynasties]]
 * [[history.india.indira_gandhi]]
 
-I also keep my [[kindle highlights|kindle_highlights]] in here for easy reference.
+I also keep notes on books I read [[here|kindle_highlights]].
 
 This is built using [[Dendron|engineering.dendron]] and hosted using
 GitHub Pages.
