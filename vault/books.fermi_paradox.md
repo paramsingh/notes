@@ -1,8 +1,9 @@
 ---
 id: NqYC6kBewa4SuClAF0zXl
-title: 'If the universe is teeming with aliens ... where is everybody?: seventy-five
-  solutions to the fermi paradox and the problem of extraterrestrial life (science
-  and fiction)'
+title: >-
+  If the universe is teeming with aliens ... where is everybody?: seventy-five
+  solutions to the fermi paradox and the problem of extraterrestrial life
+  (science and fiction)
 desc: ''
 updated: 1639833396099
 created: 1639833372146

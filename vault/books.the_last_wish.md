@@ -1,7 +1,7 @@
 ---
 id: UM1PhfakEPXQA1LrwmKpB
 title: The Last Wish - Andrzej Sapkowski
-desc: "The Witcher #0.5"
+desc: 'The Witcher #0.5'
 updated: 1640609840211
 created: 1640609705604
 ---

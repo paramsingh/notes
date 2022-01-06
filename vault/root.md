@@ -23,7 +23,7 @@ Some notes you might find interesting:
 * [[history.china.dynasties]]
 * [[history.india.indira_gandhi]]
 
-I also keep notes on books I read [[here|kindle_highlights]].
+I also keep notes on books I read [[here|books]].
 
 This is built using [[Dendron|engineering.dendron]] and hosted using
 GitHub Pages.
