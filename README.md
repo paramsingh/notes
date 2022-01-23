@@ -2,15 +2,8 @@
 
 https://notes.param.codes
 
-Build site for local dev.
 
+Local dev:
 ```
-npm install
-./develop.sh
-```
-
-Build site for production
-
-```
-./build.sh
+npx dendron publish dev
 ```
