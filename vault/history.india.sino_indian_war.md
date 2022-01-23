@@ -2,7 +2,7 @@
 id: fc297f60-41d8-4b8a-adaf-170483cb080b
 title: Sino-Indian War
 desc: ''
-updated: 1616190735702
+updated: 1642956977131
 created: 1616190709464
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: 18yrasvXbsIkhoZv2ZkQi
+id: 17NKiYLkq3t1wpPNvaZ7c
 title: The Manager's Path
 desc: ''
 updated: 1642952622081

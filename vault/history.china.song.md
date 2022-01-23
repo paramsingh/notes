@@ -2,7 +2,7 @@
 id: 2a60065d-623d-469b-a6b9-479ce634269e
 title: The Song Dynasty
 desc: ''
-updated: 1616188331029
+updated: 1642957164952
 created: 1616188283515
 ---
 The Song dynasty followed the Five Kingdoms Period after [[the Tang Dynasty | history.china.tang]]

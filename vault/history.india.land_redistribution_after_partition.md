@@ -1,8 +1,8 @@
 ---
-id: 80d81c51-0edf-4856-a881-1070b9ef139c
+id: NymnTTPRLL8GPcJcFy3uA
 title: Land redistribution after Partition
 desc: ''
-updated: 1616189671197
+updated: 1642956906318
 created: 1616188913148
 ---
 After the partition, there was around 1.9 million hectares of land in East

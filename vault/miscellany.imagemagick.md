@@ -1,9 +1,8 @@
 ---
-id: 3cf0aaa6-f3b5-4a04-ae62-aa6ba117846a
+id: Dg8qEYi5aQfVmgLfVHxrX
 title: Imagemagick
 desc: ''
-updated: 1622659776141
+updated: 1642955478784
 created: 1622659776141
-stub: true
 ---
 

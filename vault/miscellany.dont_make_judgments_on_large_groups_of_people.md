@@ -1,5 +1,5 @@
 ---
-id: hlstMRtR57NwW1osVMKha
+id: LHYovAWDceRPV2SI8qJfO
 title: Don't make judgements on large groups of people
 desc: ''
 updated: 1642852230594

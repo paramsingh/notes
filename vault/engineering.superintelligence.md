@@ -1,9 +1,8 @@
 ---
-id: 7def8ebc-a790-45bc-ae10-ca6306fffdd2
+id: hYbhddXOpWFd08Upq6dl9
 title: Superintelligence
 desc: ''
-updated: 1641260005498
+updated: 1642955419845
 created: 1641260005498
-stub: true
 ---
 

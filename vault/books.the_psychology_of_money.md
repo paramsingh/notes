@@ -1,5 +1,5 @@
 ---
-id: 7g31eTCRlh8OuOwnlR4jd
+id: G2kcUxAw28h2tOl0lTH8Q
 title: The Psychology of Money
 desc: ''
 updated: 1637966723239

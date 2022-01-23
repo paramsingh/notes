@@ -1,6 +1,8 @@
 ---
-id: dgFcPIfQa0eUsr5d2rrgI
-title: RSA was known by cryptographers in UK communications security years before discovery.
+id: vq68NAqLFFMId1BQI4DiJ
+title: >-
+  RSA was known by cryptographers in UK communications security years before
+  discovery.
 desc: ''
 updated: 1641347171365
 created: 1641346899966

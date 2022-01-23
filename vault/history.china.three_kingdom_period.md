@@ -2,7 +2,7 @@
 id: 3e5cf3b5-2c04-43e4-8020-f52e472d509d
 title: The Three kingdom period
 desc: ''
-updated: 1616188143891
+updated: 1642957172103
 created: 1616187991050
 ---
 Following the [[Han dynasty | history.china.han]] there was a ~50 year break between the traditional

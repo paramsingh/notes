@@ -2,7 +2,7 @@
 id: c63a5f2e-3a1f-43a5-9013-6081fa3d55c0
 title: How Open Source really helps create a even playing field
 desc: ''
-updated: 1616191352175
+updated: 1642957313300
 created: 1616191337816
 ---
 

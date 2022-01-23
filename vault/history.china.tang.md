@@ -2,7 +2,7 @@
 id: 55c10a90-f654-4192-baa3-2fc92571ff71
 title: The Tang Dynasty
 desc: ''
-updated: 1616188252229
+updated: 1642957168430
 created: 1616188214741
 ---
 The Tang dynasty came into power after a short living Sui dynasty re-united China into a single kingdom

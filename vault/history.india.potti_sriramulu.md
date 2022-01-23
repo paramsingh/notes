@@ -2,7 +2,7 @@
 id: 424e51c4-5831-4542-a58f-95d5e2048dfe
 title: Potti Sriramulu
 desc: ''
-updated: 1616191745578
+updated: 1642956935615
 created: 1616191723062
 ---
 

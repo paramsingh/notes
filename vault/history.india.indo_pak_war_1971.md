@@ -1,8 +1,8 @@
 ---
-id: 05ee3eb9-5f0d-4c85-aab9-2b6baf8e4faa
-title: India Pakistan war, 1971
+id: Fpm81lfFrZwYvjkpiBj5m
+title: 'India Pakistan war, 1971'
 desc: ''
-updated: 1616190502171
+updated: 1642956897545
 created: 1616190322248
 ---
 

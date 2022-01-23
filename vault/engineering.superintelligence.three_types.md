@@ -1,5 +1,5 @@
 ---
-id: H5MBBRgqUcjY9mhKccYey
+id: yLISGsHbQUn7aSr7snrUV
 title: Three types of Superintelligence
 desc: ''
 updated: 1641229394293

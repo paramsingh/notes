@@ -1,5 +1,5 @@
 ---
-id: ugIpMsTgtnDtnSyD5Hcoa
+id: VUBKDqTAA27DYwrpuasx1
 title: Dan Boneh - Blockchain Primitives - Cryptography and Consensus
 desc: ''
 updated: 1637436052322

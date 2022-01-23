@@ -1,5 +1,5 @@
 ---
-id: FWklpQXIM0mdvPiG5lUkn
+id: kjOTlWjuukptaV7q4Ma95
 title: Working at big tech does not make you a bad person
 desc: ''
 updated: 1642851605865

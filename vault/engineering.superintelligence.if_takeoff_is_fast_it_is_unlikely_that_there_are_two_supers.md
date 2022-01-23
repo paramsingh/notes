@@ -1,6 +1,8 @@
 ---
-id: Jx7V8DZdrscBqoDUBA8jR
-title: If takeoff is fast, then it's unlikely that two independent superintelligences develop
+id: vIl746x4bWZX0X9P0TsMg
+title: >-
+  If takeoff is fast, then it's unlikely that two independent superintelligences
+  develop
 desc: ''
 updated: 1641346790193
 created: 1641346096120

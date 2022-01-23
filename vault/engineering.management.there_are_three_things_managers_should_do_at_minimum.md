@@ -1,5 +1,5 @@
 ---
-id: Q4993IsZO6TlCiOi8ECYr
+id: aJbvmZ1eyemaA7E6bQfVh
 title: There are three things managers should do at a minimum.
 desc: ''
 updated: 1641747537342

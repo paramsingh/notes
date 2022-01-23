@@ -2,7 +2,7 @@
 id: 27869ad9-d1bc-4585-b57c-8a8450f37c1b
 title: ListenBrainz release process changes
 desc: ''
-updated: 1616191237879
+updated: 1642957246800
 created: 1616191204967
 ---
 

@@ -1,4 +1,12 @@
 ---
+id: wowSCC15T90fqofmacnZF
+title: Single_transferable_vote
+desc: ''
+updated: 1642956148676
+created: 1642956148676
+---
+
+---
 id: 7feac04c-128f-4902-af72-7f7e1ed03ad6
 title: Single Transferable Vote
 desc: ''

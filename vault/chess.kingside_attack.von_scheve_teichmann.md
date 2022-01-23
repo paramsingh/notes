@@ -1,6 +1,6 @@
 ---
-id: T2_hbwY0nw3_YSh7qmcvu
-title: von Scheve - Teichmann, Berlin 1907
+id: Q79NeuLx5wcIJGYPK4eZd
+title: 'von Scheve - Teichmann, Berlin 1907'
 desc: ''
 updated: 1624812546644
 created: 1624812182609

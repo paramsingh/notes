@@ -1,5 +1,5 @@
 ---
-id: VUB1Q10sdIyTwvNpi22xL
+id: az6mVo3qZsJiHkAw6YZAm
 title: Kingside Attack
 desc: ''
 updated: 1624812908410

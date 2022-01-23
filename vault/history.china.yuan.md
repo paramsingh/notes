@@ -2,7 +2,7 @@
 id: 630207ab-eaee-4168-b99b-d7db8739a5db
 title: The Yuan Dynasty
 desc: ''
-updated: 1616188390616
+updated: 1642957180978
 created: 1616188336010
 ---
 The Yuan dynasty followed [[the Song dynasty | history.china.song]]. It was established by Kublai

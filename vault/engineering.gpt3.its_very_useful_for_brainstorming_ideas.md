@@ -1,5 +1,5 @@
 ---
-id: KkHjWok3iIZ62TOQUF4Be
+id: xjzu0nTUBER9S3JWi8VKM
 title: It's possible to use GPT-3 to brainstorm ideas
 desc: ''
 updated: 1642939597313

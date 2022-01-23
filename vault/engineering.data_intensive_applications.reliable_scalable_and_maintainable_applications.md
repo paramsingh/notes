@@ -2,7 +2,7 @@
 id: 665411d4-e320-4768-b3b6-a5c0c5d1eeb1
 title: Chapter 1 - Reliable, Scalable and maintainable applications
 desc: ''
-updated: 1616356800505
+updated: 1642957231415
 created: 1616351795299
 ---
 

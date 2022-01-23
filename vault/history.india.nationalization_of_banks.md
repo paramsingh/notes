@@ -1,8 +1,8 @@
 ---
-id: 188c0dc2-5b08-475e-bf68-8235b9f3bb34
-title: Nationalization of Banks, 1969
+id: tkx1eYaDXd4GkTduTFO6I
+title: 'Nationalization of Banks, 1969'
 desc: ''
-updated: 1616190256706
+updated: 1642956911192
 created: 1616190227779
 ---
 

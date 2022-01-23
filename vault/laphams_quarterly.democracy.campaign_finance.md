@@ -1,8 +1,8 @@
 ---
-id: d28735d0-3c3e-497c-a223-c35eb498acbd
+id: TLjXj5pzmWZy3S4oYLXWF
 title: Campaign Finance
 desc: ''
-updated: 1616277410468
+updated: 1642956492933
 created: 1616277061720
 ---
 
@@ -21,3 +21,5 @@ incentives to change the current system too much.
 Otherwise, if you're living "from" politics, meaning you, as a professional politician,
 depend on it for your income, you either take bribes for services (illegal) or play
 power games inside the party to get the ability to allocate party capital.
+
+END

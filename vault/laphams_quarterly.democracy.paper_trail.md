@@ -1,8 +1,8 @@
 ---
-id: cb853a0a-a6d2-4a20-83bb-2cc2de403d7d
+id: DO9y4e1V5yjxGdvJ4jJwz
 title: Paper Trail
 desc: ''
-updated: 1616884865284
+updated: 1642956407977
 created: 1616884571162
 ---
 
@@ -20,3 +20,5 @@ Wonder what the author would have thought of social media. :)
 > Hardly any democratic association can do without newspapers.
 
 > Newspapers make associations and associations make newspapers.
+
+hello

@@ -1,6 +1,8 @@
 ---
-id: CYsynQlQDDr2zgva2ezzo
-title: You have to go down a non-average path if you want better than average results.
+id: EgLrGYhCx15EQQ8dHgWkY
+title: >-
+  You have to go down a non-average path if you want better than average
+  results.
 desc: ''
 updated: 1641259986995
 created: 1641259798512

@@ -2,7 +2,7 @@
 id: 750fbc08-13aa-4752-bb37-877740948de0
 title: Alert Fatigue
 desc: ''
-updated: 1616191993884
+updated: 1642957322270
 created: 1616191957845
 ---
 Notes from [this tech talk](https://vimeo.com/274820572) by Aditya Mukherjee.

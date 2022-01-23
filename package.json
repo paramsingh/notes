@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@dendronhq/dendron-11ty": "^1.33.0",
-    "@dendronhq/dendron-cli": "^0.33.0"
+    "@dendronhq/dendron-cli": "^0.78.4",
+    "ajv": "^8.9.0"
   },
   "directories": {
     "doc": "docs"
@@ -16,5 +17,13 @@
   },
   "keywords": [],
   "author": "",
-  "description": ""
+  "description": "https://notes.param.codes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paramsingh/notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paramsingh/notes/issues"
+  },
+  "homepage": "https://github.com/paramsingh/notes#readme"
 }

@@ -1,5 +1,5 @@
 ---
-id: RBYs0P1gMSpRgLFICc6e3
+id: I3RjMBEuORVlqusF1dryy
 title: GitHub Copilot makes leetcode interviews even more pointless
 desc: ''
 updated: 1641228526393

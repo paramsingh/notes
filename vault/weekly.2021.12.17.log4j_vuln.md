@@ -1,5 +1,5 @@
 ---
-id: lt4HwALPCOYdWUACfNZTL
+id: pDs88AGgvDd31Vugvy2Zp
 title: Log4j Vulnerability
 desc: ''
 updated: 1639255677358

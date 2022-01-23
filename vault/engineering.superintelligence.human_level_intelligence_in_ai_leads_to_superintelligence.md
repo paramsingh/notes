@@ -1,5 +1,5 @@
 ---
-id: BzHnTV9jqhGwWVIYy2Lgq
+id: oXu13TRCjLkRXIrsDHEab
 title: Human level intelligence in AI leads to superintelligence
 desc: ''
 updated: 1641228951264

@@ -1,9 +1,8 @@
 ---
-id: 5cdc07ca-898a-4cef-b5fb-15369cc9fc68
+id: 7nAQ226q3pwfVvQ9KSV80
 title: Miscellany
 desc: ''
-updated: 1616189217101
+updated: 1642955275060
 created: 1616189217101
-stub: true
 ---
 

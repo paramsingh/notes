@@ -1,9 +1,8 @@
 ---
-id: 9a78e6da-2d4f-457b-8f51-10f8de1281cb
+id: G9wFXoaipKfEf6FlKdHH0
 title: Life
 desc: ''
-updated: 1641260005472
+updated: 1642955469782
 created: 1641260005472
-stub: true
 ---
 

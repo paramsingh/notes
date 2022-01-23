@@ -1,9 +1,8 @@
 ---
-id: 89d7e67b-8bc8-446d-872c-b904e2ea8167
+id: Nl8DI8Xn4qs0y5pcg3CXq
 title: Ideas
 desc: ''
-updated: 1640016195070
+updated: 1642955501713
 created: 1640016195070
-stub: true
 ---
 

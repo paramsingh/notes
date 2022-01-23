@@ -1,8 +1,8 @@
 ---
-id: dd8031c3-0558-4e33-8ce5-f18fb80ac895
+id: 9Y8iD0JQqx49Se2FkyG4w
 title: Proportional Representation
 desc: ''
-updated: 1616191799095
+updated: 1642956287755
 created: 1616191767535
 ---
 

@@ -1,8 +1,8 @@
 ---
-id: d6cd8acf-74fa-4555-a5e9-335432252bca
-title: India Pakistan war, 1965
+id: WXPnprSpA1U5HghuSh83D
+title: 'India Pakistan war, 1965'
 desc: ''
-updated: 1616190643598
+updated: 1642956894012
 created: 1616190576415
 ---
 

@@ -1,10 +1,9 @@
 ---
-id: iUIm6UQGbacPjlRf8BeKC
+id: qIDKNY3T3p7TIDspuJyQH
 title: a16z crypto startup school
 desc: ''
-updated: 1637447276362
+updated: 1642955389512
 created: 1637429008124
-stub: true
 ---
 
 https://a16z.com/crypto-startup-school/
