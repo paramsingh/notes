@@ -2,7 +2,7 @@
 id: VIlW7aC9gjhCeho0t838Q
 title: Indira Gandhi
 desc: ''
-updated: 1642956748980
+updated: 1642958592834
 created: 1616190041195
 ---
 
@@ -37,5 +37,3 @@ putting dissenters in jail, press censorship, and extreme implementation of poli
 forced sterilization.
 
 The emergency was eventually lifted 19 months later in 1977.
-
-END

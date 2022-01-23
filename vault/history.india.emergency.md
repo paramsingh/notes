@@ -2,7 +2,7 @@
 id: wlxFd7HbmqxwksWlen6Wp
 title: 'Emergency, 1975'
 desc: ''
-updated: 1642956756004
+updated: 1642958585988
 created: 1616188830030
 ---
 
@@ -18,5 +18,3 @@ Eventually, the emergency was lifted after 2 years, in 1977.
 
 A general election followed where Congress lost by record numbers. Indira lost her seat of Rae Bareilly, while Sanjay
 was defeated in Amethi.
-
-END

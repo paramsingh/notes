@@ -2,7 +2,7 @@
 id: 4MqdHf9zS3B34CIZ80RuM
 title: Pulse of Democracy
 desc: ''
-updated: 1642956384047
+updated: 1642958673103
 created: 1617133893962
 ---
 
@@ -15,5 +15,3 @@ Kind of the same quote as in [[laphams_quarterly.democracy.julius_nyerere]].
 >of constant thought and action on the part of the citizen. It is
 >self-educational. It calls for participation, information, the capacity
 >to make up one's own mind.
-
-topic

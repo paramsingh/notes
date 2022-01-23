@@ -2,7 +2,7 @@
 id: x3Ca36XK9wSfjlZvruuR2
 title: Funnel.fyi
 desc: ''
-updated: 1642956533602
+updated: 1642958610962
 created: 1616321848460
 ---
 
@@ -14,6 +14,3 @@ Some ideas that I think I'd like to do:
 * More analytics, and some way to monetize it.
 * Monetization would mean asking people who are heavier users to pay some money to keep using it.
 * I want to chat with other companies in this space to see if there's any way to partner with them.
-
-
-END

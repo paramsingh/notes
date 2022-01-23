@@ -2,7 +2,7 @@
 id: FnHK0L0VU1Er9BcQxTZZ0
 title: Julius Nyeyere
 desc: ''
-updated: 1642956433691
+updated: 1642958667907
 created: 1617133423040
 ---
 
@@ -18,5 +18,3 @@ Quite interesting quote about Democracy.
 >assassination. An organized opposition is not an essential element,
 >although a society which has no reoom and no time for the harmless
 >eccenteric can hardly be called "democratic"
-
-topic
