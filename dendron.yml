@@ -38,7 +38,7 @@ commands:
         enableMarker: false
     randomNote: {}
 workspace:
-    dendronVersion: 0.70.0
+    dendronVersion: 0.78.0
     vaults:
         -
             fsPath: vault
