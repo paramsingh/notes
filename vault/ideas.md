@@ -8,4 +8,4 @@ created: 1616322117502
 
 * [[ideas.funnelfyi]]
 * [[engineering.gpt3.ideas]]
-* [[weekly.ideas.security]]
+* [[blog.weekly.ideas.security]]
