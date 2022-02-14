@@ -2,7 +2,7 @@
 id: root
 title: Notes
 desc: ''
-updated: 1642958078814
+updated: 1644799406548
 created: 1595961348801
 stub: false
 ---
@@ -26,6 +26,6 @@ Some notes you might find interesting:
 I also keep notes on books I read [[here|books]].
 
 This is built using [[Dendron|engineering.dendron]] and hosted using
-GitHub Pages.
+[GitHub Pages](https://github.com/paramsingh/notes).
 
 Get in touch via [Twitter](https://twitter.com/iliekcomputers) or email me at `me [at] param [dot] codes`!
