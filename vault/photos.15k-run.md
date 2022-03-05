@@ -6,7 +6,7 @@ updated: 1644800338514
 created: 1644799489625
 ---
 
-[[good_things.15k]]
+[[good-things.2022.15k]]
 
 ![](/assets/images/15k.jpg)
 
