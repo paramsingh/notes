@@ -1,8 +1,8 @@
 ---
 id: u7skh7qm0pg1nggwafu199t
-title: For a minimum length code, if probabilities of occurrence of symbols are in descending order, then the length of the symbols should be in ascending order.
+title: For a minimum length code, length of symbols should be in the opposite order of the probability of the symbol occuring.
 desc: ''
-updated: 1649259519515
+updated: 1649259855436
 created: 1649258985673
 ---
 
