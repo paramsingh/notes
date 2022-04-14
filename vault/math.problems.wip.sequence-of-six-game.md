@@ -1,8 +1,8 @@
 ---
 id: boxfrgda797mqtrid28f2oj
-title: "[WIP] Sequence of Six Game"
+title: 'Sequence of Six Game'
 desc: ''
-updated: 1649922072027
+updated: 1649922241526
 created: 1649704636065
 ---
 
