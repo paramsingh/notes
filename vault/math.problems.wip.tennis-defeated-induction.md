@@ -2,9 +2,10 @@
 id: cxrxitu3f0mwbkymb3t367n
 title: Tennis Defeated (Induction)
 desc: ''
-updated: 1650913547870
+updated: 1650913568254
 created: 1650913478417
 ---
+Book: [[books.a-walk-through-combinatorics]]
 
 ## Problem
 At a tennis tournament, every two players played against
