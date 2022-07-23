@@ -8,4 +8,4 @@ created: 1645657499688
 
 I went to Berlin and met friends after a long time.
 
-[[photos.berlin-2022-02]]
+[[art-and-photography.berlin-2022-02]]

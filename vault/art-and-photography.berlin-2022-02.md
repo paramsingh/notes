@@ -1,6 +1,6 @@
 ---
 id: E8shxZygoHhHIgjcz0WP7
-title: Berlin (Feb, 2022)
+title: 'Berlin (Feb, 2022)'
 desc: ''
 updated: 1645657880590
 created: 1645657301731
