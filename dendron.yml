@@ -20,6 +20,7 @@ commands:
         enableMarker: false
     randomNote: {}
     copyNoteLink: {}
+    templateHierarchy: template
 workspace:
     dendronVersion: 0.89.0
     vaults:
@@ -36,6 +37,7 @@ workspace:
         addBehavior: asOwnDomain
     graph:
         zoomSpeed: 1
+        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -63,9 +65,15 @@ workspace:
             L: low
         todoIntegration: false
         createTaskSelectionType: selection2link
+        taskCompleteStatus:
+            - done
+            - x
     enableUserTags: true
     enableHashTags: true
     enableEditorDecorations: true
+    enableHandlebarTemplates: true
+    enableFullHierarchyNoteTitle: false
+    enableSmartRefs: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -104,3 +112,4 @@ publishing:
         editBranch: main
         editViewMode: tree
     enablePrettyLinks: true
+    enableTaskNotes: true
