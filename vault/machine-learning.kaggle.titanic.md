@@ -2,7 +2,7 @@
 id: d168udza8utz7wz8oae3u7x
 title: Titanic
 desc: ''
-updated: 1658683141020
+updated: 1658693349718
 created: 1658682669499
 ---
 
@@ -21,3 +21,6 @@ created: 1658682669499
   * fare - same as class probably?
   * cabin number - shrug, maybe
   * embarked -
+
+
+first cut using [[machine-learning.k-nearest-neighbours]]: https://github.com/paramsingh/ml/blob/eb8ea817e679d070f4da14884865853089f9ac8a/kaggle/titanic/Titanic.ipynb
