@@ -2,7 +2,7 @@
 id: rcc7fayzutpi6l4qvboz0cu
 title: Building Abstractions with Procedures
 desc: ''
-updated: 1675089224488
+updated: 1675096951117
 created: 1675086563525
 ---
 
@@ -60,3 +60,22 @@ created: 1675086563525
           [(even? b) (square (pow a (/ b 2)))]
           [else (* a (pow a (- b 1)))]))
 ```
+* **Fermat's Little Theorem**: If $$n$$ is a prime number and $$a$$ is a positive integer less than $$n$$, then $$a$$ raised to the $$n$$th power is congruent to $$a$$ modulo $$n$$.
+* Prime testing probabilistically
+```
+(define (expmod base exp m)
+    (cond [(= exp 0) 1]
+          [(even? exp) (remainder (square (expmod base (/ exp 2) m)) m)]
+          [else (remainder (* base (expmod base (- exp 1) m)) m)]))
+
+(define (fermat-test n)
+    (define (try-it a)
+        (= (expmod a n n) a))
+    (try-it (+ 1 (random (- n 1)))))
+
+(define (prime? n times)
+    (cond [(= times 0) true]
+          [(fermat-test n) (prime? n (- times 1))]
+          [else false]))
+```
+* Procedures that manipulate procedures are called higher-order procedures.
