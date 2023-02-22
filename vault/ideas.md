@@ -6,6 +6,6 @@ updated: 1642944470246
 created: 1616322117502
 ---
 
-* [[ideas.funnelfyi]]
+* [[ideas.engineering.funnelfyi]]
 * [[engineering.gpt3.ideas]]
 * [[blog.weekly.ideas.engineering.security]]
