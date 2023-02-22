@@ -6,4 +6,4 @@ updated: 1642957282027
 created: 1616338035184
 ---
 
-Successor of [[Angela Merkel|germany.politics.merkel]] in the CDU.
+Successor of [[Angela Merkel|miscellany.germany.politics.merkel]] in the CDU.

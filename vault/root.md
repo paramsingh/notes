@@ -1,10 +1,9 @@
 ---
 id: root
 title: Notes
-desc: ""
+desc: ''
 updated: 1676546314176
 created: 1595961348801
-stub: false
 ---
 
 Hi! I'm Param! This is a place for my personal notes.
@@ -18,7 +17,7 @@ notes could eventually become blog posts.
 
 Some notes you might find interesting:
 
-- [[laphams_quarterly.democracy.campaign_finance]]
+- [[history.laphams_quarterly.democracy.campaign_finance]]
 - [[engineering.being_a_mentor]]
 - [[history.china.dynasties]]
 - [[history.india.indira_gandhi]]

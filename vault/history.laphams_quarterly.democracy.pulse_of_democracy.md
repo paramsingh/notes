@@ -6,7 +6,7 @@ updated: 1642958673103
 created: 1617133893962
 ---
 
-Kind of the same quote as in [[laphams_quarterly.democracy.julius_nyerere]].
+Kind of the same quote as in [[history.laphams_quarterly.democracy.julius_nyerere]].
 
 >the right to vote, to choose between this party or that, is by itself
 >not true democracy. Democracy is more than a legal right that the
