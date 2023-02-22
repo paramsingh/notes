@@ -27,7 +27,7 @@ The questions you should ask yourself while threat modeling are:
 
 There are methods that can be used to come up with threats, for the second question:
 
-* [[STRIDE|security.stride]]
+* [[STRIDE|engineering.security.stride]]
 * Abuser stories
 * Threat Lists ([CAPEC](https://samate.nist.gov/BF/Enlightenment/CAPEC.html))
 * Vulnerability Lists ([OWASP Top 10](https://owasp.org/www-project-top-ten/) etc)
