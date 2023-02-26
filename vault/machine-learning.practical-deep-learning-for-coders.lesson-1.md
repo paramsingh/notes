@@ -2,7 +2,7 @@
 id: aape7dhzwahxzd51op95nlt
 title: "Lesson 1"
 desc: ""
-updated: 1677167986692
+updated: 1677414697854
 created: 1676289393239
 ---
 
@@ -25,3 +25,8 @@ https://www.kaggle.com/code/iliekpython/deep-learning-chapter-1
 
 - Fine-tuning: A transfer learning technique that updates the parameters of a pre-trained model
   by training for additional epochs using a different task from that used for pre-training.
+
+### Solving Digit Recognition using fastai resnet34
+
+- https://www.kaggle.com/code/iliekpython/digit-recognizer-using-fastai
+- https://github.com/paramsingh/ml/blob/main/fast-ai-course/digit-recognizer-using-fastai.ipynb
