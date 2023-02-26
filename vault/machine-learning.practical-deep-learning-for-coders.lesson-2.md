@@ -2,7 +2,7 @@
 id: hndgahatd7bwhgshqjamhkt
 title: Lesson 2
 desc: ""
-updated: 1677218364108
+updated: 1677249184391
 created: 1677167977245
 ---
 
@@ -11,6 +11,8 @@ created: 1677167977245
 - Book chapter: https://github.com/fastai/fastbook/blob/master/02_production.ipynb
 
 # Book notes
+
+- Drivetrain approach to designing great data products: The basic idea is to start with considering your objective, then think about what actions you can take to meet that objective and what data you have (or can acquire) that can help, and then build a model that you can use to determine the best actions to take to get the best results in terms of your objective.
 
 # Lecture notes
 
