@@ -2,13 +2,18 @@
 id: hndgahatd7bwhgshqjamhkt
 title: Lesson 2
 desc: ""
-updated: 1677249184391
+updated: 1677514144661
 created: 1677167977245
 ---
 
 - YouTube: https://www.youtube.com/watch?v=F4tvM4Vb3A0
 - Transcription: https://transcribe.param.codes/result/tr-0a85d5e8-562c-4812-bf4f-a09f4c602075
 - Book chapter: https://github.com/fastai/fastbook/blob/master/02_production.ipynb
+
+## Things I actually learnt
+
+- Clean data before training the model
+- Gradio and huggingface are easy ways to deploy the model.
 
 # Book notes
 
@@ -21,3 +26,11 @@ created: 1677167977245
 - damaged car vs normal car.
 - beard or not
 - food image classifier
+- can squish images.
+- also pad, pad with zeros.
+- `RandomResizedCrop` - get different bits of the image.
+- Data augmentation: creating more data from original data, `aug_transforms`
+- Training the model before we clean it.
+- Confusion matrix: shows what category errors the model is making.
+- Plot top losses to see which images break.
+- Before actually cleaning the data, train the model, plot top losses, use cleaner to clean the data.
