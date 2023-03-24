@@ -2,7 +2,7 @@
 id: 1uoml3dpen7vb528wa5pbw1
 title: "2023-03-24"
 desc: ""
-updated: 1679628045101
+updated: 1679630115617
 created: 1679623157926
 traitIds:
   - journalNote
@@ -28,3 +28,8 @@ AI is coming for our jobs. I think a lot of people who churn code out
 without much sense of what problem the business actually solves are going
 to have a hard time. On the other hand, it's a great time to be a
 solo dev! You have interns and pair programmers available on demand!
+
+Noting down an idea, need to flesh out: if text is the universal interface,
+writing as much as possible is a path to immortality. You're basically
+changing the data in your brain into a format that a computer can read
+and understand.
