@@ -2,7 +2,7 @@
 id: 1uoml3dpen7vb528wa5pbw1
 title: "2023-03-24"
 desc: ""
-updated: 1679630115617
+updated: 1679652501619
 created: 1679623157926
 traitIds:
   - journalNote
@@ -32,4 +32,4 @@ solo dev! You have interns and pair programmers available on demand!
 Noting down an idea, need to flesh out: if text is the universal interface,
 writing as much as possible is a path to immortality. You're basically
 changing the data in your brain into a format that a computer can read
-and understand.
+and understand. (https://twitter.com/iliekcomputers/status/1639163648966004737)
