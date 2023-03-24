@@ -2,7 +2,7 @@
 id: 1uoml3dpen7vb528wa5pbw1
 title: "2023-03-24"
 desc: ""
-updated: 1679659068713
+updated: 1679666683868
 created: 1679623157926
 traitIds:
   - journalNote
@@ -40,3 +40,11 @@ and understand. (https://twitter.com/iliekcomputers/status/1639163648966004737)
 
 Exploring this more, what if I fine-tuned GPT-4 on everything I'd ever written
 and then chatted with it. How would that work? Would it be good or bad?
+
+## Deep learning
+
+Trying to solve this [Patent matching](https://www.kaggle.com/competitions/us-patent-phrase-to-phrase-matching/overview) kaggle problem using things I learned
+from [[machine-learning.practical-deep-learning-for-coders.lesson-4]], but struggling.
+
+I need to spend a lot more time actually coding things before I can say with some
+confidence that I know a little deep learning.
