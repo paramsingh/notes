@@ -2,7 +2,7 @@
 id: 1uoml3dpen7vb528wa5pbw1
 title: "2023-03-24"
 desc: ""
-updated: 1679652501619
+updated: 1679659068713
 created: 1679623157926
 traitIds:
   - journalNote
@@ -29,7 +29,14 @@ without much sense of what problem the business actually solves are going
 to have a hard time. On the other hand, it's a great time to be a
 solo dev! You have interns and pair programmers available on demand!
 
+This seems like something I should read and know about: https://react.dev/learn/you-might-not-need-an-effect
+
+## Uploading myself
+
 Noting down an idea, need to flesh out: if text is the universal interface,
 writing as much as possible is a path to immortality. You're basically
 changing the data in your brain into a format that a computer can read
 and understand. (https://twitter.com/iliekcomputers/status/1639163648966004737)
+
+Exploring this more, what if I fine-tuned GPT-4 on everything I'd ever written
+and then chatted with it. How would that work? Would it be good or bad?
