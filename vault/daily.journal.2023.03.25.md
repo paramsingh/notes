@@ -2,7 +2,7 @@
 id: 282ig15cflovkyb5g4bdsp0
 title: "2023-03-25"
 desc: ""
-updated: 1679742115120
+updated: 1679761142898
 created: 1679723670927
 traitIds:
   - journalNote
@@ -51,3 +51,14 @@ add to the experience I think.
 
 Thinking more about this, what stops me from creating entire books of short stories
 out of this? Or hell, even movies or shows?
+
+one problem is that there's very little shared context between GPT and Dall-E. For example,
+GPT tells Dall-E to draw "creatures" in the same story, but on different prompts and
+Dall-E draws different creatures every time. Ideally
+this should be just the one model doing both the things, so that it knows
+what it's doing.
+
+Talked with Arpit. I'm going to take a shot at automating some data entry startups. Let's
+see if we can make some money there.
+
+Also, wondering if I should just focus every moment of my life on https://scrollprize.org .
