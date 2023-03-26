@@ -10,5 +10,5 @@ for filename in os.listdir():
         image = image.resize((128, 128))
         image.save(new_filename)
         print(
-            f'<a href="/assets/images/ai-art/{filename}"><img src="/assets/images/ai-art/{new_filename}" alt="{filename}" width="128px" height="128px" /></a>\n'
+            f'<a href="/assets/images/ai-art/{filename}"><img src="/assets/images/ai-art/{new_filename}" alt="{filename}" width="128px" height="128px" /></a>'
         )
