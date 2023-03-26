@@ -2,7 +2,7 @@
 id: b1pzhr3d2mr8p0clk0ff1d2
 title: AI Art (Dall-E 2 and Midjourney)
 desc: ""
-updated: 1679823708661
+updated: 1679824544272
 created: 1658574727998
 ---
 
@@ -46,3 +46,14 @@ created: 1658574727998
 <a href="/assets/images/iliekcomputers_gradient_descent_pixel_art_385ea84a-f93e-437b-8919-2bbd14e95bd8.png"><img src="/assets/images/iliekcomputers_gradient_descent_pixel_art_385ea84a-f93e-437b-8919-2bbd14e95bd8-resized.png" alt="iliekcomputers_gradient_descent_pixel_art_385ea84a-f93e-437b-8919-2bbd14e95bd8.png" width="128px" height="128px" /></a>
 <a href="/assets/images/iliekcomputers_a_pile_of_books_on_a_table_in_a_library_digital__a8469195-49fa-4e6a-a0ef-d4b832cb1f89.png"><img src="/assets/images/iliekcomputers_a_pile_of_books_on_a_table_in_a_library_digital__a8469195-49fa-4e6a-a0ef-d4b832cb1f89-resized.png" alt="iliekcomputers_a_pile_of_books_on_a_table_in_a_library_digital__a8469195-49fa-4e6a-a0ef-d4b832cb1f89.png" width="128px" height="128px" /></a>
 <a href="/assets/images/iliekcomputers_a_small_cute_robot_taking_notes_while_watching_a_70f7a2dc-50b4-4acd-8102-2d0e760fd164.png"><img src="/assets/images/iliekcomputers_a_small_cute_robot_taking_notes_while_watching_a_70f7a2dc-50b4-4acd-8102-2d0e760fd164-resized.png" alt="iliekcomputers_a_small_cute_robot_taking_notes_while_watching_a_70f7a2dc-50b4-4acd-8102-2d0e760fd164.png" width="128px" height="128px" /></a>
+<a href="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_bff3d707-164a-4fda-a8a7-cc370f0c5cb5.png"><img src="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_bff3d707-164a-4fda-a8a7-cc370f0c5cb5-resized.png" alt="iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_bff3d707-164a-4fda-a8a7-cc370f0c5cb5.png" width="128px" height="128px" /></a>
+
+<a href="/assets/images/ai-art/DALL·E 2023-03-26 15.22.50 - robots writing code at a rave with a dj playing techno, digital art.png"><img src="/assets/images/ai-art/DALL·E 2023-03-26 15.22.50 - robots writing code at a rave with a dj playing techno, digital art-resized.png" alt="DALL·E 2023-03-26 15.22.50 - robots writing code at a rave with a dj playing techno, digital art.png" width="128px" height="128px" /></a>
+
+<a href="/assets/images/ai-art/iliekcomputers_a_futuristic_synthwave_rendering_of_lord_shiva_m_5dc47202-bd24-424a-9237-fce86355743f.png"><img src="/assets/images/ai-art/iliekcomputers_a_futuristic_synthwave_rendering_of_lord_shiva_m_5dc47202-bd24-424a-9237-fce86355743f-resized.png" alt="iliekcomputers_a_futuristic_synthwave_rendering_of_lord_shiva_m_5dc47202-bd24-424a-9237-fce86355743f.png" width="128px" height="128px" /></a>
+
+<a href="/assets/images/ai-art/iliekcomputers_a_futuristic_city_on_mars_in_the_year_2100_large_89b83d44-7e71-4f17-a606-162801b3216d.png"><img src="/assets/images/ai-art/iliekcomputers_a_futuristic_city_on_mars_in_the_year_2100_large_89b83d44-7e71-4f17-a606-162801b3216d-resized.png" alt="iliekcomputers_a_futuristic_city_on_mars_in_the_year_2100_large_89b83d44-7e71-4f17-a606-162801b3216d.png" width="128px" height="128px" /></a>
+
+<a href="/assets/images/ai-art/iliekcomputers_rainy_season_in_Delhi_skyscrapers_optimistic_nig_6cb56b08-ab30-462f-9ffa-6637d966a47a.png"><img src="/assets/images/ai-art/iliekcomputers_rainy_season_in_Delhi_skyscrapers_optimistic_nig_6cb56b08-ab30-462f-9ffa-6637d966a47a-resized.png" alt="iliekcomputers_rainy_season_in_Delhi_skyscrapers_optimistic_nig_6cb56b08-ab30-462f-9ffa-6637d966a47a.png" width="128px" height="128px" /></a>
+
+<a href="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf.png"><img src="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf-resized.png" alt="iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf.png" width="128px" height="128px" /></a>
