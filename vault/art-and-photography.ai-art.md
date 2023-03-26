@@ -2,7 +2,7 @@
 id: b1pzhr3d2mr8p0clk0ff1d2
 title: AI Art (Dall-E 2 and Midjourney)
 desc: ""
-updated: 1679819435717t
+updated: 1679823708661
 created: 1658574727998
 ---
 
