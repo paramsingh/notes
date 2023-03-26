@@ -2,9 +2,9 @@ import os
 from PIL import Image
 
 for filename in os.listdir():
-    if filename.endswith(".png"):
+    if filename.endswith(".png") and not filename.endswith("-resized.png"):
         image = Image.open(filename)
-        image = image.resize((256, 256))
+        image = image.resize((128, 128))
         new_filename = f"{filename[:-4]}-resized.png"
         image.save(new_filename)
         print(
