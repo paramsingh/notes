@@ -8,5 +8,5 @@ for filename in os.listdir():
         new_filename = f"{filename[:-4]}-resized.png"
         image.save(new_filename)
         print(
-            f'<a href="/assets/images/{filename}"><img src="/assets/images/{new_filename}" alt="{filename}" width="256px" height="256px" /></a>\n'
+            f'<a href="/assets/images/{filename}"><img src="/assets/images/{new_filename}" alt="{filename}" width="128px" height="128px" /></a>\n'
         )
