@@ -6,25 +6,25 @@ updated: 1679819435717t
 created: 1658574727998
 ---
 
-<img src="/assets/images/dall-e/buddha.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/buddha.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/chandragupta-maurya.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/chandragupta-maurya.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/cherry-blossoms.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/cherry-blossoms.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/dyson-sphere.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/dyson-sphere.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/file-scanner.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/file-scanner.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/lion.jpg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/lion.jpg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/shiva.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/shiva.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/solarpunk-delhi-akshardham.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/solarpunk-delhi-akshardham.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/solarpunk-delhi-india-gate.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/solarpunk-delhi-india-gate.jpeg" width="128px" height="128px"/>
 
-<img src="/assets/images/dall-e/solarpunk-varanasi-ghats.jpeg" width="256px" height="256px"/>
+<img src="/assets/images/dall-e/solarpunk-varanasi-ghats.jpeg" width="128px" height="128px"/>
 
 <a href="/assets/images/DALL·E 2023-01-29 12.25.35 - a silhouette of software engineer leaving his office building in Dublin waving goodbye with bright blue sky in the background, digital art.png"><img src="/assets/images/DALL·E 2023-01-29 12.25.35 - a silhouette of software engineer leaving his office building in Dublin waving goodbye with bright blue sky in the background, digital art-resized.png" alt="DALL·E 2023-01-29 12.25.35 - a silhouette of software engineer leaving his office building in Dublin waving goodbye with bright blue sky in the background, digital art.png" width="128px" height="128px" /></a>
 
