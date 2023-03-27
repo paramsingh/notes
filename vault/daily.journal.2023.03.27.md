@@ -2,7 +2,7 @@
 id: lbja30b6220704og4w9hwjq
 title: '2023-03-27'
 desc: ''
-updated: 1679897987498
+updated: 1679910398545
 created: 1679896827037
 traitIds:
   - journalNote
@@ -23,3 +23,9 @@ Some choice comments for adventures from twitter:
 * i play it while my uber rides are getting cancelled.
 
 I should put these on the website.
+
+People like the idea. One person is making the same thing but for
+romance movies like Before Sunrise etc. Quite cool.
+
+I've been added to a group of anon/pseudo-anon twitter engineers.
+Also quite cool, making friends on the internet seems like a nice idea.
