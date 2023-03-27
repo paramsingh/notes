@@ -5,3 +5,5 @@ build
 .next
 
 .backup
+vault/temp.md
+vault/private.*
