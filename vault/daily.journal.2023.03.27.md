@@ -1,13 +1,12 @@
 ---
 id: lbja30b6220704og4w9hwjq
-title: '2023-03-27'
-desc: ''
-updated: 1679910398545
+title: "2023-03-27"
+desc: ""
+updated: 1679941054743
 created: 1679896827037
 traitIds:
   - journalNote
 ---
-
 
 One of my tweets went viral yesterday. I didn't really like seeing reddit
 people fighting in my replies. This was the kind of thing that made
@@ -18,9 +17,10 @@ great. I only need to fix the story now for it to be quite good. GPT-3 forgets
 how long the story has gone, so I need to keep reminding it.
 
 Some choice comments for adventures from twitter:
-* infinite zork but with images
-* bandersnatch but better
-* i play it while my uber rides are getting cancelled.
+
+- infinite zork but with images
+- bandersnatch but better
+- i play it while my uber rides are getting cancelled.
 
 I should put these on the website.
 
@@ -29,3 +29,6 @@ romance movies like Before Sunrise etc. Quite cool.
 
 I've been added to a group of anon/pseudo-anon twitter engineers.
 Also quite cool, making friends on the internet seems like a nice idea.
+
+[[todo]]: TDM gave me the idea of prefetching the next 4 options async so
+that things are faster. that's a great idea!
