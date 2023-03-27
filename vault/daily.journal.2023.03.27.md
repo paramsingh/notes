@@ -2,7 +2,7 @@
 id: lbja30b6220704og4w9hwjq
 title: "2023-03-27"
 desc: ""
-updated: 1679941054743
+updated: 1679941237203
 created: 1679896827037
 traitIds:
   - journalNote
@@ -32,3 +32,7 @@ Also quite cool, making friends on the internet seems like a nice idea.
 
 [[todo]]: TDM gave me the idea of prefetching the next 4 options async so
 that things are faster. that's a great idea!
+
+I need to dive a bit deep into this: https://github.com/educelab/volume-cartographer/discussions/10
+This seems like a software engineering task that I could actually do, and it lines up with my
+own python expertise too.
