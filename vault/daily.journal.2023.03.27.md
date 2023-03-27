@@ -2,7 +2,7 @@
 id: lbja30b6220704og4w9hwjq
 title: "2023-03-27"
 desc: ""
-updated: 1679941237203
+updated: 1679941426020
 created: 1679896827037
 traitIds:
   - journalNote
@@ -36,3 +36,6 @@ that things are faster. that's a great idea!
 I need to dive a bit deep into this: https://github.com/educelab/volume-cartographer/discussions/10
 This seems like a software engineering task that I could actually do, and it lines up with my
 own python expertise too.
+
+Ok, I left a comment, probably going nowhere but let's see. Maybe I spend some time doing
+research this week.
