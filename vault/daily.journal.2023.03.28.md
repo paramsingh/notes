@@ -2,7 +2,7 @@
 id: vshou6d27ciywghbghf3zzc
 title: "2023-03-28"
 desc: ""
-updated: 1680009244019
+updated: 1680009294014
 created: 1679980369981
 traitIds:
   - journalNote
@@ -23,3 +23,5 @@ is not a good idea. Going to go for a long run.
 
 After that look at parsing junit xmls and then python
 bindings.
+
+[[todo]]: use gpt-4 for adventures.
