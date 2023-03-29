@@ -2,7 +2,7 @@
 id: vshou6d27ciywghbghf3zzc
 title: "2023-03-28"
 desc: ""
-updated: 1680009294014
+updated: 1680031262075
 created: 1679980369981
 traitIds:
   - journalNote
@@ -25,3 +25,17 @@ After that look at parsing junit xmls and then python
 bindings.
 
 [[todo]]: use gpt-4 for adventures.
+
+looking at the python bindings for volume-cartographer thing.
+i think next steps should be for me to look at the
+python bindings and see what i can improve. this might not be
+the right project for me because i think it might involve more
+C++ than python, which isn't really what i want to do.
+
+i added some pre-fetching to the adventures site. matt said it's
+a bit too fast now, which is good feedback imo :D
+
+i'll add some streaming code, I think. but first i need to make the
+text static.
+
+also wrote some tests to help vijaya out.

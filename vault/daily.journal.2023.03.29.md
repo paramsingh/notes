@@ -1,13 +1,12 @@
 ---
 id: bwr5emsl34aisoum3hyhdsd
-title: '2023-03-29'
-desc: ''
-updated: 1680080210964
+title: "2023-03-29"
+desc: ""
+updated: 1680115207033
 created: 1680080108531
 traitIds:
   - journalNote
 ---
-
 
 Looks like Stripe's equity has been converted to actual shares.
 They've withheld Irish taxes.
@@ -21,3 +20,9 @@ I made more money than I'll make in the next 3 years based on my
 salary here. Ugh.
 
 And I don't know what to do with this money.
+
+Tired as fuck. Basically pulling 12 hours days these days with office
+work, helping Vijaya and personal projects. Interesting thing is
+that I feel zero fatigue when working on personal projects, but it
+hits very obviously when working on work stuff that actually
+pays me and sponsors the personal projects.
