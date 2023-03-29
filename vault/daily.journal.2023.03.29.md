@@ -2,7 +2,7 @@
 id: bwr5emsl34aisoum3hyhdsd
 title: "2023-03-29"
 desc: ""
-updated: 1680115207033
+updated: 1680115295582
 created: 1680080108531
 traitIds:
   - journalNote
@@ -26,3 +26,9 @@ work, helping Vijaya and personal projects. Interesting thing is
 that I feel zero fatigue when working on personal projects, but it
 hits very obviously when working on work stuff that actually
 pays me and sponsors the personal projects.
+
+GPT-4 is kinda expensive. I need to figure out a way to integrate it
+without breaking the bank. It seems to be much better at stories though.
+I wasn't able to try it too much on local dev, because my local environment
+seems to send two requests every time for some reason. Can't
+reproduce the same bug in production.
