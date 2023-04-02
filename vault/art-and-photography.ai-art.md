@@ -2,7 +2,7 @@
 id: b1pzhr3d2mr8p0clk0ff1d2
 title: AI Art (Dall-E 2 and Midjourney)
 desc: ""
-updated: 1679825124151
+updated: 1680419185219
 created: 1658574727998
 ---
 
@@ -50,3 +50,5 @@ created: 1658574727998
 <a href="/assets/images/ai-art/iliekcomputers_a_futuristic_city_on_mars_in_the_year_2100_large_89b83d44-7e71-4f17-a606-162801b3216d.png"><img src="/assets/images/ai-art/iliekcomputers_a_futuristic_city_on_mars_in_the_year_2100_large_89b83d44-7e71-4f17-a606-162801b3216d-resized.png" alt="iliekcomputers_a_futuristic_city_on_mars_in_the_year_2100_large_89b83d44-7e71-4f17-a606-162801b3216d.png" width="128px" height="128px" /></a>
 <a href="/assets/images/ai-art/iliekcomputers_rainy_season_in_Delhi_skyscrapers_optimistic_nig_6cb56b08-ab30-462f-9ffa-6637d966a47a.png"><img src="/assets/images/ai-art/iliekcomputers_rainy_season_in_Delhi_skyscrapers_optimistic_nig_6cb56b08-ab30-462f-9ffa-6637d966a47a-resized.png" alt="iliekcomputers_rainy_season_in_Delhi_skyscrapers_optimistic_nig_6cb56b08-ab30-462f-9ffa-6637d966a47a.png" width="128px" height="128px" /></a>
 <a href="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf.png"><img src="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf-resized.png" alt="iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf.png" width="128px" height="128px" /></a>
+<a href="/assets/images/ai-art/iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8.png"><img src="/assets/images/ai-art/iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8-resized.png" alt="iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8.png" width="128px" height="128px" /></a>
+<a href="/assets/images/ai-art/iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618.png"><img src="/assets/images/ai-art/iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618-resized.png" alt="iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618.png" width="128px" height="128px" /></a>
