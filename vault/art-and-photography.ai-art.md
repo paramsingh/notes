@@ -2,7 +2,7 @@
 id: b1pzhr3d2mr8p0clk0ff1d2
 title: AI Art (Dall-E 2 and Midjourney)
 desc: ""
-updated: 1680419185219
+updated: 1680584131782
 created: 1658574727998
 ---
 
@@ -52,3 +52,4 @@ created: 1658574727998
 <a href="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf.png"><img src="/assets/images/ai-art/iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf-resized.png" alt="iliekcomputers_morning_vibes_sunny_optimistic_lush_green_city_a_526a9e7e-2100-422a-8f5b-4b85600983cf.png" width="128px" height="128px" /></a>
 <a href="/assets/images/ai-art/iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8.png"><img src="/assets/images/ai-art/iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8-resized.png" alt="iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8.png" width="128px" height="128px" /></a>
 <a href="/assets/images/ai-art/iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618.png"><img src="/assets/images/ai-art/iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618-resized.png" alt="iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618.png" width="128px" height="128px" /></a>
+<a href="/assets/images/ai-art/iliekcomputers_man_climbing_down_a_mountain_tired_at_night_star_9ec2c1b5-fa61-4992-8ce2-1b4c31eb2bbe.png"><img src="/assets/images/ai-art/iliekcomputers_man_climbing_down_a_mountain_tired_at_night_star_9ec2c1b5-fa61-4992-8ce2-1b4c31eb2bbe-resized.png" alt="iliekcomputers_man_climbing_down_a_mountain_tired_at_night_star_9ec2c1b5-fa61-4992-8ce2-1b4c31eb2bbe.png" width="128px" height="128px" /></a>
