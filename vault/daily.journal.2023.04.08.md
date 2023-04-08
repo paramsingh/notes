@@ -2,7 +2,7 @@
 id: ge4pfttacj237tzemmg0li6
 title: "2023-04-08"
 desc: ""
-updated: 1680948448443
+updated: 1680953333673
 created: 1680946835724
 traitIds:
   - journalNote
@@ -18,3 +18,14 @@ High level learnings from Chapter 5:
 - Kaggle is slow as fuck. Things that take 20s in the fastai notebook take 2 minutes on the kaggle notebook.
 
 I still need to figure out a good small project to start with.
+
+[[ideas]]: Re-build something like AlphaGo from scratch, should be a nice learning exercise.
+
+Had a pretty long conversation with Shikhar yesterday (we met after an year). One thing that I'll note down
+is that optimizing for money and making money your goal seems to demonstrate lack of meaning in life to me.
+Money isn't really anything other than a number on a screen. I don't really know what I want to do either,
+but I think I've made progress in knowing that saying "I'll make X money and then I'll actually do what I want
+to do" is a huge trap.
+
+However, another good point was that I still need to sustain myself. So I need to figure out a way to be
+able to do cool things while still being reasonably ok moneywise.
