@@ -2,7 +2,7 @@
 id: ge4pfttacj237tzemmg0li6
 title: "2023-04-08"
 desc: ""
-updated: 1680953333673
+updated: 1680953528818
 created: 1680946835724
 traitIds:
   - journalNote
@@ -19,7 +19,7 @@ High level learnings from Chapter 5:
 
 I still need to figure out a good small project to start with.
 
-[[ideas]]: Re-build something like AlphaGo from scratch, should be a nice learning exercise.
+[[ideas]]: Re-build something like AlphaGo from scratch, should be a nice learning exercise.: https://arxiv.org/pdf/1712.01815.pdf
 
 Had a pretty long conversation with Shikhar yesterday (we met after an year). One thing that I'll note down
 is that optimizing for money and making money your goal seems to demonstrate lack of meaning in life to me.

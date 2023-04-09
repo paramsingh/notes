@@ -2,7 +2,7 @@
 id: b1pzhr3d2mr8p0clk0ff1d2
 title: AI Art (Dall-E 2 and Midjourney)
 desc: ""
-updated: 1680584131782
+updated: 1681064017435
 created: 1658574727998
 ---
 
@@ -53,3 +53,4 @@ created: 1658574727998
 <a href="/assets/images/ai-art/iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8.png"><img src="/assets/images/ai-art/iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8-resized.png" alt="iliekcomputers_a_painting_in_the_style_of_Andy_warhol_of_a_prog_24a1908a-2809-4d5f-b073-f55ab27855c8.png" width="128px" height="128px" /></a>
 <a href="/assets/images/ai-art/iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618.png"><img src="/assets/images/ai-art/iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618-resized.png" alt="iliekcomputers_a_sage_meditating_in_the_himalayas_sunny_mountai_9b37d987-cbaa-4778-932e-9e805273a618.png" width="128px" height="128px" /></a>
 <a href="/assets/images/ai-art/iliekcomputers_man_climbing_down_a_mountain_tired_at_night_star_9ec2c1b5-fa61-4992-8ce2-1b4c31eb2bbe.png"><img src="/assets/images/ai-art/iliekcomputers_man_climbing_down_a_mountain_tired_at_night_star_9ec2c1b5-fa61-4992-8ce2-1b4c31eb2bbe-resized.png" alt="iliekcomputers_man_climbing_down_a_mountain_tired_at_night_star_9ec2c1b5-fa61-4992-8ce2-1b4c31eb2bbe.png" width="128px" height="128px" /></a>
+<a href="/assets/images/ai-art/iliekcomputers_a_programmer_developing_a_game_on_his_apple_ii_b_f1579a45-a307-45bc-85c9-9b7b47d31261.png"><img src="/assets/images/ai-art/iliekcomputers_a_programmer_developing_a_game_on_his_apple_ii_b_f1579a45-a307-45bc-85c9-9b7b47d31261-resized.png" alt="iliekcomputers_a_programmer_developing_a_game_on_his_apple_ii_b_f1579a45-a307-45bc-85c9-9b7b47d31261.png" width="128px" height="128px" /></a>
