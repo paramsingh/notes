@@ -1,0 +1,21 @@
+---
+id: 4ku1i32u2fab3riyyquo7ol
+title: "2023-04-11"
+desc: ""
+updated: 1681213711284
+created: 1681213611534
+traitIds:
+  - journalNote
+---
+
+I think I have a good idea on my hands.
+
+I was watching "The fable of the dragon tyrant" video and noticed that
+it's not really huge animations. So I'm going to convert stories
+from https://adventures.param.codes to video. The Dall-E images
+can be frames and I could use elevenlabs for TTS. I'll
+experiment and see how they turn out, but overall sounds like a fun
+project.
+
+I'm basically making art using AI, this is kind of incredible to be
+honest.
