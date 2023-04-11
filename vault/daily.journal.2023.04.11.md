@@ -2,7 +2,7 @@
 id: 4ku1i32u2fab3riyyquo7ol
 title: "2023-04-11"
 desc: ""
-updated: 1681213711284
+updated: 1681217569811
 created: 1681213611534
 traitIds:
   - journalNote
@@ -19,3 +19,8 @@ project.
 
 I'm basically making art using AI, this is kind of incredible to be
 honest.
+
+---
+
+Thinking about it more, I could even make good content out of this.
+zines like julia evans and suyash.
