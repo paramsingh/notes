@@ -2,7 +2,7 @@
 id: 4ku1i32u2fab3riyyquo7ol
 title: "2023-04-11"
 desc: ""
-updated: 1681217569811
+updated: 1681274341179
 created: 1681213611534
 traitIds:
   - journalNote
@@ -17,8 +17,7 @@ can be frames and I could use elevenlabs for TTS. I'll
 experiment and see how they turn out, but overall sounds like a fun
 project.
 
-I'm basically making art using AI, this is kind of incredible to be
-honest.
+I'm basically making art using AI, this is kind of incredible to be.
 
 ---
 
