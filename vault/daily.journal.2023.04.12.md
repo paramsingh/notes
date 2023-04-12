@@ -2,7 +2,7 @@
 id: lg2h4bif79t335d4gapux1g
 title: "2023-04-12"
 desc: ""
-updated: 1681278967355
+updated: 1681279004290
 created: 1681278906430
 traitIds:
   - journalNote
@@ -15,3 +15,5 @@ new ones manually which was a pain in the ass.
 
 GPT-4 basically wrote the entire script for me, so that
 was pretty cool.
+
+Next step: videos!
