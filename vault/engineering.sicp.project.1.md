@@ -2,9 +2,11 @@
 id: 64rzkg3ywelj4ihita1ag0b
 title: "1"
 desc: ""
-updated: 1690438826647
+updated: 1690467065748
 created: 1690437914386
 ---
+
+My solutions: https://github.com/paramsingh/sicp/blob/main/projects/1/basebot.rkt
 
 https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/700dcbfebdb06b0d2cff19c8f8f8e85a_project1.pdf
 
