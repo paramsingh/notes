@@ -1,0 +1,47 @@
+<h1 id="chapter-1---reliable-scalable-and-maintainable-applications">Chapter 1 - Reliable, Scalable and maintainable applications<a aria-hidden="true" class="anchor-heading icon-link" href="#chapter-1---reliable-scalable-and-maintainable-applications"></a></h1>
+<p>Chapter 1 of <a href="/notes/2d23c8c0-c34d-4482-8263-5f71ec04aa94">Designing Data Intensive Applications</a></p>
+<ul>
+<li>Data systems don't fit into clear categories now, redis is used for queues, kafka has database like durability guarantees.</li>
+<li>Application code is responsible for making sure data remains consistent between any number of data systems the application might not be using.</li>
+<li>Each application made from smaller data systems is a new data system. You're also a data system designer.</li>
+<li>Lots of tricky questions: ensure correctness, design a good API, reliability, performance.</li>
+<li>Many factors influence design: skills and experience of people, timescale for delivery etc.</li>
+<li>Three concerns that are most important in systems:
+<ul>
+<li>Reliability</li>
+<li>Scalability</li>
+<li>Maintainability</li>
+</ul>
+</li>
+</ul>
+<h3 id="reliability">Reliability<a aria-hidden="true" class="anchor-heading icon-link" href="#reliability"></a></h3>
+<ul>
+<li>Application should performs the function that the user expected</li>
+<li>Should tolerate the user making mistakes.</li>
+<li>Performance should be good enough</li>
+<li>Should prevent unauthorized access and abuse</li>
+<li>Things that can go wrong are called <em>faults</em>.</li>
+<li><em>Failures</em> are when the system as a whole stops providing the required service to the user.</li>
+<li>Fault tolerance doesn't mean being tolerant of ALL faults.</li>
+<li>It's best to try to design a system that prevents faults from causing failures, i.e it tolerates faults.</li>
+<li>You also want to prevent certain types of faults like security issues.</li>
+</ul>
+<h4 id="hardware-faults">Hardware faults<a aria-hidden="true" class="anchor-heading icon-link" href="#hardware-faults"></a></h4>
+<ul>
+<li>Hard disk crashes, power faults etc.</li>
+<li>Usually, add redundancy to mitigate this issue.</li>
+</ul>
+<h4 id="software-errors">Software errors<a aria-hidden="true" class="anchor-heading icon-link" href="#software-errors"></a></h4>
+<ul>
+<li>Hardware failures are generally not related, but correlated software bugs can cause the entire system to go down.</li>
+<li>Systematic errors can be avoided by thorough testing, carefully thinking about assumptions and interactions in the system.</li>
+</ul>
+<h4 id="human-errors">Human errors<a aria-hidden="true" class="anchor-heading icon-link" href="#human-errors"></a></h4>
+<ul>
+<li>Humans are unreliable.</li>
+<li>Make it easy to do the right thing.</li>
+<li>Decouple experimentation by providing a sandbox environment.</li>
+<li>Test thoroughly.</li>
+<li>Allow quick and easy recovery from human errors.</li>
+<li>Set up detailed and clear monitoring.</li>
+</ul>

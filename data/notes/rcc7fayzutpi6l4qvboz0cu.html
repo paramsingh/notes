@@ -1,0 +1,82 @@
+<h1 id="building-abstractions-with-procedures">Building Abstractions with Procedures<a aria-hidden="true" class="anchor-heading icon-link" href="#building-abstractions-with-procedures"></a></h1>
+<ul>
+<li>Procedures should suppress details. </li>
+<li>Users should not have to know how the procedure was implemented to use it.</li>
+<li>If you only want to write a sqrt procedure, the other procedures can be scoped inside sqrt.</li>
+</ul>
+<pre><code>(define (sqrt x)
+    (define (good-enough? guess x)
+        (&#x3C; (abs (- (square guess) x)) 0.001))
+    (define (improve guess x) 
+        (average guess (/ x guess)))
+    (define (sqrt-iter guess x)
+        (if (good-enough? guess x)
+            guess
+            (sqrt-iter (improve guess x) x)))
+    (sqrt-iter 1.0 x))
+</code></pre>
+<ul>
+<li>Another way to improve this code is to allow x to be a free variable, instead of passing it around. This is known as <em>lexical scoping</em>.</li>
+</ul>
+<pre><code>(define (sqrt x)
+    (define (average a b) (/ (+ a b) 2.0))
+    (define (good-enough? guess)
+        (&#x3C; (abs (- (square guess) x)) 0.001))
+    (define (improve guess) 
+        (average guess (/ x guess)))
+    (define (sqrt-iter guess)
+        (if (good-enough? guess)
+            guess
+            (sqrt-iter (improve guess))))
+    (sqrt-iter 1.0))
+</code></pre>
+<ul>
+<li>Knowing that a program consists of data and operations is similar to knowing how the pieces move in chess. You still need to know tactics, strategy to know what moves are worth making.</li>
+<li>An expert programmer can visualize the consequences of their actions vividly, just like any other creative activity.</li>
+<li>Linear recursion</li>
+</ul>
+<pre><code>(define (factorial x) 
+    (if (= x 1) 1
+    (* x (factorial (- x 1)))))
+</code></pre>
+<ul>
+<li>Linear iteration</li>
+</ul>
+<pre><code>(define (factorial x) 
+    (define (iter product counter)
+        (if (> counter x) 
+            product
+            (iter (* product counter) (+ counter 1))))
+    (iter 1 1))
+</code></pre>
+<ul>
+<li>In most languages, the amount of memory grows with the number of recursive calls, even when the process is, in principle, iterative. If a language executes an iterative process in constant space, it's called <strong>tail recursive</strong>.</li>
+<li>Fast exponentiation</li>
+</ul>
+<pre><code>(define (pow a b)
+    (cond [(= b 0) 1]
+          [(even? b) (square (pow a (/ b 2)))]
+          [else (* a (pow a (- b 1)))]))
+</code></pre>
+<ul>
+<li><strong>Fermat's Little Theorem</strong>: If <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> is a prime number and <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> is a positive integer less than <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>, then <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> raised to the <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>th power is congruent to <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> modulo <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>.</li>
+<li>Prime testing probabilistically</li>
+</ul>
+<pre><code>(define (expmod base exp m)
+    (cond [(= exp 0) 1]
+          [(even? exp) (remainder (square (expmod base (/ exp 2) m)) m)]
+          [else (remainder (* base (expmod base (- exp 1) m)) m)]))
+
+(define (fermat-test n)
+    (define (try-it a)
+        (= (expmod a n n) a))
+    (try-it (+ 1 (random (- n 1)))))
+
+(define (prime? n times)
+    (cond [(= times 0) true]
+          [(fermat-test n) (prime? n (- times 1))]
+          [else false]))
+</code></pre>
+<ul>
+<li>Procedures that manipulate procedures are called higher-order procedures.</li>
+</ul>
