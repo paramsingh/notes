@@ -21,7 +21,7 @@ jobs:
         ## Install latest version
         # This always publishes with the latest dendron version
         # Uncomment the next line, and comment out any other `npm install ...` line
-        run: npm install @dendronhq/dendron-cli@^0.78.4
+        run: npm install @dendronhq/dendron-cli@0.124.1
 
         ## OPTIONALLY: Install specific version
         # Available versions: https://www.npmjs.com/package/@dendronhq/dendron-cli
