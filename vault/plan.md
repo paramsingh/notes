@@ -2,11 +2,13 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1735806115944
+updated: 1735806527204
 created: 1734181349831
 ---
 
 _inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
+
+---
 
 ## 2025-01-02
 
@@ -55,6 +57,7 @@ quote:
 
 >10Xers then bring this idea to life by a triad of core behaviors: fanatic discipline, empirical creativity, and productive paranoia. Animating these three core behaviors is a central motivating force, Level 5 ambition.
 
+---
 
 ## 2024-12-31
 
