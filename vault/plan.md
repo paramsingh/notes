@@ -2,16 +2,43 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1735753913223
+updated: 1735797673971
 created: 1734181349831
 ---
 
 _inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
 
+## 2025-01-02
+
+- need to finish sign in etc today.
+- the sign in flow is weird, it seems to be starting, but not ending correctly
+- there is an allowlist of redirect urls for mobile apps on the clerk dashboard but it won't let me add anything to it
+- i'm pretty sure it's a bug in the oauth thing, sad that clerk doesn't have prebuilt expo components i can use here.
+- seems to work normally in this video: https://www.youtube.com/watch?v=xp4fd78Hh5A so i'm not sure what i'm doing wrong
+- lmfao the bug was that ClerkProvider need to be actually at the top level, and I had TamaguiProvider above it.
+- diff looks like this
+
+```diff
+   return (
+-    <TamaguiProvider config={tamaguiConfig}>
+-      <ClerkProvider publishableKey={publishableKey}>
++    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
++      <TamaguiProvider config={tamaguiConfig}>
+         <ClerkLoaded>
+           <Slot />
+         </ClerkLoaded>
+-      </ClerkProvider>
+-    </TamaguiProvider>
++      </TamaguiProvider>
++    </ClerkProvider>
+   );
+```
+
 ## 2025-01-01
 
 - sign in is _working_ on the app (for some definition of working).
-- reading [great by choice](https://www.amazon.in/gp/product/B005VB99GE/ref=ppx_yo_dt_b_d_asin_title_351_o00?ie=UTF8&psc=1)
+- need to build a sign out for better devexp
+- reading [[books.great-by-choice]]
 - some notes:
     - 10xers have a few qualities
     - discipline
