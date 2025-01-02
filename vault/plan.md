@@ -2,7 +2,7 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1735797673971
+updated: 1735806115944
 created: 1734181349831
 ---
 
@@ -33,6 +33,11 @@ _inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/jo
 +    </ClerkProvider>
    );
 ```
+
+- ok now that sign in works, i guess i should move on to the main focus to actually building functionality.
+- need to understand how to make api requests.
+
+---
 
 ## 2025-01-01
 
