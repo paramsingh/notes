@@ -1,0 +1,94 @@
+<h1 id="paramplan">param.plan<a aria-hidden="true" class="anchor-heading icon-link" href="#paramplan"></a></h1>
+<p><em>daily notes inspired by (but not exactly) <a href="https://github.com/ESWAT/john-carmack-plan-archive">john carmack's plan</a></em></p>
+<h2 id="2025-01-03">2025-01-03<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-03"></a></h2>
+<p>what do i need to do to ship the app</p>
+<ol>
+<li>user must be able to sign up and sign in</li>
+<li>there needs to be an onboarding flow so that they can add lichess username etc.</li>
+<li>game review must work</li>
+</ol>
+<p>#1 is near done, i need to figure out how to integrate sign up into the stuff
+#2 is less complicated than game review, so most probably i should focus on making game review work first.</p>
+<p>first a haircut, then we get back to this.</p>
+<hr>
+<h2 id="2025-01-02">2025-01-02<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-02"></a></h2>
+<ul>
+<li>need to finish sign in etc today.</li>
+<li>the sign in flow is weird, it seems to be starting, but not ending correctly</li>
+<li>there is an allowlist of redirect urls for mobile apps on the clerk dashboard but it won't let me add anything to it</li>
+<li>i'm pretty sure it's a bug in the oauth thing, sad that clerk doesn't have prebuilt expo components i can use here.</li>
+<li>seems to work normally in this video: <a href="https://www.youtube.com/watch?v=xp4fd78Hh5A">https://www.youtube.com/watch?v=xp4fd78Hh5A</a> so i'm not sure what i'm doing wrong</li>
+<li>lmfao the bug was that ClerkProvider need to be actually at the top level, and I had TamaguiProvider above it.</li>
+<li>diff looks like this</li>
+</ul>
+<pre class="language-diff"><code class="language-diff"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">  return (
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">    &#x3C;TamaguiProvider config={tamaguiConfig}>
+</span><span class="token prefix deleted">-</span><span class="token line">      &#x3C;ClerkProvider publishableKey={publishableKey}>
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">    &#x3C;ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
+</span><span class="token prefix inserted">+</span><span class="token line">      &#x3C;TamaguiProvider config={tamaguiConfig}>
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">        &#x3C;ClerkLoaded>
+</span><span class="token prefix unchanged"> </span><span class="token line">          &#x3C;Slot />
+</span><span class="token prefix unchanged"> </span><span class="token line">        &#x3C;/ClerkLoaded>
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">      &#x3C;/ClerkProvider>
+</span><span class="token prefix deleted">-</span><span class="token line">    &#x3C;/TamaguiProvider>
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">      &#x3C;/TamaguiProvider>
+</span><span class="token prefix inserted">+</span><span class="token line">    &#x3C;/ClerkProvider>
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">  );
+</span></span></code></pre>
+<ul>
+<li>ok now that sign in works, i guess i should move on to the main focus to actually building functionality.</li>
+<li>need to understand how to make api requests.</li>
+<li>ran 8 km to make up for only running 2 km on tuesday.</li>
+</ul>
+<hr>
+<h2 id="2025-01-01">2025-01-01<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-01"></a></h2>
+<ul>
+<li>sign in is <em>working</em> on the app (for some definition of working).</li>
+<li>need to build a sign out for better devexp</li>
+<li>reading <a href="/notes/9wx0wvntmahvcor2sx1cre5">great by choice</a></li>
+<li>some notes:
+<ul>
+<li>10xers have a few qualities</li>
+<li>discipline</li>
+<li>belief in empirical evidence</li>
+<li>paranoia</li>
+<li>ambition</li>
+</ul>
+</li>
+</ul>
+<p>quote:</p>
+<blockquote>
+<p>10Xers then bring this idea to life by a triad of core behaviors: fanatic discipline, empirical creativity, and productive paranoia. Animating these three core behaviors is a central motivating force, Level 5 ambition.</p>
+</blockquote>
+<hr>
+<h2 id="2024-12-31">2024-12-31<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-31"></a></h2>
+<ul>
+<li>trying to get sign in stuff working</li>
+<li>claude capacity issues pita</li>
+</ul>
+<h2 id="2024-12-16">2024-12-16<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-16"></a></h2>
+<ul>
+<li>no run today</li>
+<li>travel back to blr, took a good photo</li>
+<li>renewed the domain for blunderfest</li>
+<li>also bought blunderfest.com</li>
+</ul>
+<h2 id="2024-12-15">2024-12-15<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-15"></a></h2>
+<ul>
+<li>no run yet, but hoping to run in the evening</li>
+<li>aus 301/3, rohit needs to retire</li>
+</ul>
+<h2 id="2024-12-14">2024-12-14<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-14"></a></h2>
+<ul>
+<li>run 5k</li>
+<li>figure out where to go next with blunderfest</li>
+<li>potential ideas
+<ul>
+<li>app</li>
+</ul>
+</li>
+</ul>
+<p>notes:</p>
+<ul>
+<li><a href="https://x.com/iliekcomputers/status/1867984093440602224">https://x.com/iliekcomputers/status/1867984093440602224</a></li>
+</ul>
