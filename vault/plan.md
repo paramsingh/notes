@@ -2,11 +2,27 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1735806527204
+updated: 1735884163270
 created: 1734181349831
 ---
 
-_inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
+_daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
+
+## 2025-01-03
+
+what do i need to do to ship the app
+
+1. user must be able to sign up and sign in
+2. there needs to be an onboarding flow so that they can add lichess username etc.
+3. game review must work
+
+
+#1 is near done, i need to figure out how to integrate sign up into the stuff
+#2 is less complicated than game review, so most probably i should focus on making game review work first.
+
+first a haircut, then we get back to this.
+
+
 
 ---
 
@@ -38,6 +54,7 @@ _inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/jo
 
 - ok now that sign in works, i guess i should move on to the main focus to actually building functionality.
 - need to understand how to make api requests.
+- ran 8 km to make up for only running 2 km on tuesday.
 
 ---
 
