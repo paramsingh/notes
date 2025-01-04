@@ -2,12 +2,19 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1735884163270
+updated: 1735965597097
 created: 1734181349831
 ---
 
 _daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
 
+# 2025-01-04
+
+- ran 10k slow, supposed to be easy but my heart rate did get into 160s by the middle of it
+- need to build more stamina, should maybe keep running this pace until hr starts staying in 150
+- unsure if i'll be able to sit for much time today with apartment viewings etc
+
+---
 ## 2025-01-03
 
 what do i need to do to ship the app
@@ -22,7 +29,17 @@ what do i need to do to ship the app
 
 first a haircut, then we get back to this.
 
+during haircut some reading [[books.great-by-choice]].
 
+7:30 pm
+
+haircut etc done, now to get back to coding.
+
+- ig we start by creating a game review page and then adding a chessboard.
+- will just use a hardcoded game for now.
+- okay game review page created, and a button added that takes the user there when
+logged in
+- game review page now has a chess board rendering (that's admittedly a little slow).
 
 ---
 
