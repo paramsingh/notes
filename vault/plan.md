@@ -2,11 +2,23 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1735965597097
+updated: 1736065731492
 created: 1734181349831
 ---
 
 _daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
+
+
+# 2025-01-05
+
+
+- watched [[films.whisper-of-the-heart]].
+- disappointing that i won't be able to ship the app after the holidays but excited that at least i'm working on it.
+- i am obsessed with getting blunderfest to be more successful.
+- first we ship the app to myself, make it addictive to myself and then go from there.
+
+
+---
 
 # 2025-01-04
 
