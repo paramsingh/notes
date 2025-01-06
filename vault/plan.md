@@ -2,12 +2,18 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1736065731492
+updated: 1736170822317
 created: 1734181349831
 ---
 
 _daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
 
+
+# 2025-01-06
+
+
+
+---
 
 # 2025-01-05
 
@@ -16,6 +22,9 @@ _daily notes inspired by (but not exactly) [john carmack's plan](https://github.
 - disappointing that i won't be able to ship the app after the holidays but excited that at least i'm working on it.
 - i am obsessed with getting blunderfest to be more successful.
 - first we ship the app to myself, make it addictive to myself and then go from there.
+- seperated the api client into a new package, blunderfest is becoming a real monorepo at this point lmao
+- average dev doing a refactor instead of building the damn feature.
+- watched [[films.my-neighbour-totoro]]
 
 
 ---
