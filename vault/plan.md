@@ -2,16 +2,36 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1736170822317
+updated: 1736772817952
 created: 1734181349831
 ---
 
 _daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
 
+# 2025-01-13
+
+- it's 4 am right now, woke up at 2:30 am and haven't slept since.
+- simple solution to fix sleep is to stay awake until ~8 in the evening tonight
+- writing a [[blog|blog.great-by-choice]] about [[books.great-by-choice]]
+- shipped a version: https://newsletter.param.codes/p/great-by-choice
+
+--
+
+# 2025-01-12
+
+- in the us, can't sleep. will just remain awake until the evening and see if i can sleep then.
+- did some clean up of blunderfest
+- creating a `@blunderfest/core` package that i can share code with was a good idea.
+- am i weird for travelling so many miles to san francisco for work and then doing nothing but
+staying in the hotel room on the laptop?
+--
 
 # 2025-01-06
 
-
+- office has started
+- i need to figure out how to reuse code between the webapp and the phone app
+for game review. i don't want to rewrite the entire thing but maybe that is what is needed actually?
+- need claude rn
 
 ---
 
