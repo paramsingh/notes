@@ -2,7 +2,7 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1736772817952
+updated: 1736773213841
 created: 1734181349831
 ---
 
@@ -14,8 +14,8 @@ _daily notes inspired by (but not exactly) [john carmack's plan](https://github.
 - simple solution to fix sleep is to stay awake until ~8 in the evening tonight
 - writing a [[blog|blog.great-by-choice]] about [[books.great-by-choice]]
 - shipped a version: https://newsletter.param.codes/p/great-by-choice
+- why am i doing everything except writing code for blunderfest?
 
---
 
 # 2025-01-12
 
