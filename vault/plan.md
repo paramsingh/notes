@@ -2,11 +2,18 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1736773213841
+updated: 1737901250057
 created: 1734181349831
 ---
 
 _daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
+
+# 2025-01-26
+
+- i start with the intention to write an actual feature for the blunderfest app
+but then fall into the rabbithole of sharing code as much as possible with the
+frontend app and then suddenly it's two hours with nothing to show for it
+but a bunch of refactoring and errored out code.
 
 # 2025-01-13
 
