@@ -1,0 +1,32 @@
+<h1 id="listenbrainz-release-process-changes">ListenBrainz release process changes<a aria-hidden="true" class="anchor-heading icon-link" href="#listenbrainz-release-process-changes"></a></h1>
+<p>Over the past year, I've made a major change in how we think about releases for <a href="https://listenbrainz.org">ListenBrainz</a>.</p>
+<h2 id="before">Before<a aria-hidden="true" class="anchor-heading icon-link" href="#before"></a></h2>
+<p>There were no real expectations around deployment after pull requests got merged.
+There were two branches -- <code>master</code> and <code>production</code>. The HEAD of <code>production</code> is
+what the site was running at any moment. People made pull requests based off <code>master</code>, stuff got merged into <code>master</code>
+and <em>eventually</em> got released.</p>
+<p>Each release required merging master into production. However, there may have been hotfixes to production in the meanwhile
+as well. So what we ended up doing to bring master and production into sync was:</p>
+<ol>
+<li>Merge <code>master</code> into <code>production</code>.</li>
+<li>Deploy the <code>production</code> branch.</li>
+<li>Merge <code>production</code> back into <code>master</code>.</li>
+</ol>
+<p>The time between releases could be months! The commit difference between master and production
+was often in the order of hundreds. This made releases painful and we had to be extra careful. If there
+was a schema change involved, that made things even more complicated.</p>
+<h2 id="after">After<a aria-hidden="true" class="anchor-heading icon-link" href="#after"></a></h2>
+<p>The change that we made is merging stuff into master as often as possible. And as soon as it's merged, release
+the changes into production. This set up a decent pipeline where each release consisted of a small number of pull requests,
+making it much easier to release stuff.</p>
+<p>Over the last 3 months, we've done 33 releases (almost 3 deploys a week), which account for ~400 commits.</p>
+<p>There have been a number of advantages to this approach. The deployer doesn't feel as concerned releasing 1 small pull
+request vs releasing 100 huge pull requests merged into master a few months ago. It also sets up a quick feedback loop
+for the developer who gets to see their changes working in real life as soon as their pull request gets merged.</p>
+<p>Given our engineering capacity, this new method of releasing stuff often has really helped in making ListenBrainz
+a more active project.</p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/3ef975da-c18f-45b4-a95f-532c7d20d83f">Being a GSoC mentor</a></li>
+</ul>
