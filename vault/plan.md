@@ -2,7 +2,7 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1737901250057
+updated: 1737905604429
 created: 1734181349831
 ---
 
@@ -14,6 +14,7 @@ _daily notes inspired by (but not exactly) [john carmack's plan](https://github.
 but then fall into the rabbithole of sharing code as much as possible with the
 frontend app and then suddenly it's two hours with nothing to show for it
 but a bunch of refactoring and errored out code.
+- [[blunderfest.what-it-needs]]
 
 # 2025-01-13
 
