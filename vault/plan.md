@@ -2,11 +2,16 @@
 id: njqts253mv1fp9o0jkcw1fe
 title: param.plan
 desc: ''
-updated: 1737905604429
+updated: 1738077473064
 created: 1734181349831
 ---
 
 _daily notes inspired by (but not exactly) [john carmack's plan](https://github.com/ESWAT/john-carmack-plan-archive)_
+
+# 2025-01-28
+
+- i'm gonna work on a single review button today
+- goal is to write as much of the code with ai as possible to ship quickly
 
 # 2025-01-26
 
