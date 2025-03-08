@@ -1,0 +1,72 @@
+<h1 id="map-reduce">Map Reduce<a aria-hidden="true" class="anchor-heading icon-link" href="#map-reduce"></a></h1>
+<p><a href="/notes/naccvbzk14d5xi46rmz5or8">MIT 6.824</a></p>
+<pre><code>Input1 -> Map -> a,1 b,1
+Input2 -> Map ->     b,1
+Input3 -> Map -> a,1     c,1
+                |   |   |
+                |   |   -> Reduce -> c,1
+                |   -----> Reduce -> b,2
+                ---------> Reduce -> a,2
+</code></pre>
+<p>Paper: <a href="https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf">https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf</a></p>
+<h2 id="blog-post-notes">Blog post notes<a aria-hidden="true" class="anchor-heading icon-link" href="#blog-post-notes"></a></h2>
+<h3 id="what-is-mapreduce">What is mapreduce?<a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-mapreduce"></a></h3>
+<ul>
+<li>A way to run large parallel jobs for processing large datasets easily.</li>
+<li>Paper by Jeffrey Dean and Sanjay Ghemawat</li>
+</ul>
+<h3 id="paradigm">Paradigm<a aria-hidden="true" class="anchor-heading icon-link" href="#paradigm"></a></h3>
+<ul>
+<li>User writes simple map and reduce functions.</li>
+<li>The MapReduce implementation takes input, calls map over the input to
+create intermediate output and then calls reduce over this intermediate
+output to get the final form.</li>
+</ul>
+<p>Let's show the canonical word count example:</p>
+<p>map and reduce functions has the following signature</p>
+<pre class="language-go"><code class="language-go"><span class="token keyword">type</span> KeyValue <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    Key <span class="token builtin">string</span>
+    Value <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">Map</span><span class="token punctuation">(</span><span class="token builtin">string</span> key<span class="token punctuation">,</span> <span class="token builtin">string</span> value<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>KeyValue <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">func</span> <span class="token function">Reduce</span><span class="token punctuation">(</span><span class="token builtin">string</span> key<span class="token punctuation">,</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> values<span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As we can see from the signatures:</p>
+<ul>
+<li>Map takes a key and a value as input, and then creates a list of key, value pairs from this input</li>
+<li>Reduce then takes all the values for each intermediate key, and uses these values to generate the final result for the key</li>
+</ul>
+<p>For word count, let's set some background</p>
+<p>TODO: BACKGROUND HERE</p>
+<ul>
+<li>files with lots of words.</li>
+<li>want to count the frequency of each word across the dataset</li>
+</ul>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">Map</span><span class="token punctuation">(</span><span class="token builtin">string</span> key<span class="token punctuation">,</span> <span class="token builtin">string</span> contents<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>KeyValue <span class="token punctuation">{</span>
+    <span class="token comment">// function to detect word separators.</span>
+	ff <span class="token operator">:=</span> <span class="token keyword">func</span><span class="token punctuation">(</span>r <span class="token builtin">rune</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token operator">!</span>unicode<span class="token punctuation">.</span><span class="token function">IsLetter</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+
+	<span class="token comment">// split contents into an array of words.</span>
+	words <span class="token operator">:=</span> strings<span class="token punctuation">.</span><span class="token function">FieldsFunc</span><span class="token punctuation">(</span>contents<span class="token punctuation">,</span> ff<span class="token punctuation">)</span>
+
+	kva <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>KeyValue<span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> w <span class="token operator">:=</span> <span class="token keyword">range</span> words <span class="token punctuation">{</span>
+		kv <span class="token operator">:=</span> mr<span class="token punctuation">.</span>KeyValue<span class="token punctuation">{</span>w<span class="token punctuation">,</span> <span class="token string">"1"</span><span class="token punctuation">}</span>
+		kva <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>kva<span class="token punctuation">,</span> kv<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> kva
+<span class="token punctuation">}</span>
+</code></pre>
+<p>TODO: Explain what map does here</p>
+<pre class="language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">Reduce</span><span class="token punctuation">(</span><span class="token builtin">string</span> key<span class="token punctuation">,</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> values<span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> strconv<span class="token punctuation">.</span><span class="token function">Itoa</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>TODO: Explain what reduce does here</p>
+<h3 id="implementation">Implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#implementation"></a></h3>
+<p>TODO</p>

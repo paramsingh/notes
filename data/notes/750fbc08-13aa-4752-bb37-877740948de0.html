@@ -1,0 +1,22 @@
+<h1 id="alert-fatigue">Alert Fatigue<a aria-hidden="true" class="anchor-heading icon-link" href="#alert-fatigue"></a></h1>
+<p>Notes from <a href="https://vimeo.com/274820572">this tech talk</a> by Aditya Mukherjee.</p>
+<h1 id="stat-framework-for-thinking-about-each-alert">STAT framework for thinking about each alert<a aria-hidden="true" class="anchor-heading icon-link" href="#stat-framework-for-thinking-about-each-alert"></a></h1>
+<ul>
+<li>Supported</li>
+<li>Trustworthy
+<ul>
+<li>Do I trust this alert to notify me when a problem happens?</li>
+<li>Will it stay silent if things are ok?</li>
+<li>Will it give me enough info to diagnose problems?</li>
+</ul>
+</li>
+<li>Actionable
+<ul>
+<li>At most one decision should be required ideally, the decision to whether take an action or not.</li>
+<li>Alerts that are difficult to action become alerts that are ignored. If an alert is painful or annoying to action, you'll feel fatigued next time.</li>
+<li>Should try to avoid stuff like "investigate" etc, make things more optional. Decision trees, interactive tooling etc is much better.</li>
+<li>If it's unclear who should be taking action, the alert is not actionable.</li>
+</ul>
+</li>
+<li>Triaged</li>
+</ul>
