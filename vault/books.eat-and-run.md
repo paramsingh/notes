@@ -1,7 +1,9 @@
 ---
 id: pcn49mwenhuuadtiwqbuso7
-title: Eat and Run
+title: eat and run
 desc: ''
-updated: 1740900400893
+updated: 1741946573113
 created: 1740900400893
 ---
+
+this book made me want to be a vegetarian.
