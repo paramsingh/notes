@@ -1,0 +1,14 @@
+<h1 id="deploy-to-pypi">Deploy to PyPI<a aria-hidden="true" class="anchor-heading icon-link" href="#deploy-to-pypi"></a></h1>
+<p>Each package needs a <code>setup.py</code> file which pip will use to install the package.</p>
+<p>Install the dependencies needed.</p>
+<pre><code>$ pip install --upgrade setuptools wheel twine
+</code></pre>
+<p>First, create the files that need to be uploaded.</p>
+<pre><code>$ python setup.py sdist bdist_wheel
+</code></pre>
+<p>This should create two files in the <code>dist</code> folder.</p>
+<p>Create an account on <a href="https://pypi.org">https://pypi.org</a> and a upload token.
+Then, upload the file using twine. The username should be <code>__token__</code>
+and password should be the token.</p>
+<pre><code>$ python3 -m twine upload dist/*
+</code></pre>

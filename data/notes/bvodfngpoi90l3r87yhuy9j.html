@@ -1,0 +1,31 @@
+<h1 id="lesson-3">Lesson 3<a aria-hidden="true" class="anchor-heading icon-link" href="#lesson-3"></a></h1>
+<p>Lesson 3 is about <a href="/notes/r83snmkrap1ye2sclhjpsot">Gradient Descent</a>.</p>
+<p>Corresponds to chapter 4 of the book.</p>
+<h2 id="book-notes">Book notes<a aria-hidden="true" class="anchor-heading icon-link" href="#book-notes"></a></h2>
+<ul>
+<li>Tensor jargon - rank is the number of dimensions, shape is the size of each of the axes.</li>
+</ul>
+<blockquote>
+<p>A PyTorch tensor is nearly the same thing as a NumPy array, but with an additional restriction that unlocks some additional capabilities. It's the same in that it, too, is a multidimensional table of data, with all items of the same type. However, the restriction is that a tensor cannot use just any old type—it has to use a single basic numeric type for all components. For example, a PyTorch tensor cannot be jagged. It is always a regularly shaped multidimensional rectangular structure.</p>
+</blockquote>
+<p>To be more specific, here are the steps that we are going to require, to turn create a machine learning classifier:</p>
+<ol>
+<li><em>Initialize</em> the weights.</li>
+<li>For each image, use these weights to <em>predict</em> whether it appears to be a 3 or a 7.</li>
+<li>Based on these predictions, calculate how good the model is (its <em>loss</em>).</li>
+<li>Calculate the <em>gradient</em>, which measures for each weight, how changing that weight would change the loss</li>
+<li><em>Step</em> (that is, change) all the weights based on that calculation.</li>
+<li>Go back to the step 2, and <em>repeat</em> the process.</li>
+<li>Iterate until you decide to <em>stop</em> the training process (for instance, because the model is good enough or you don't want to wait any longer).</li>
+</ol>
+<p><img src="/assets/images/gradient-descent.png"></p>
+<p><code>tensor.backward()</code> calculates the gradient of the function at a particular value.</p>
+<p>Example:</p>
+<pre><code>def f(x): return x**2
+
+xt = tensor(3.0).requires_grad_() # requires_grad mentions that pytorch should calculate gradients
+yt = f(xt)
+yt.backward()
+grad = xt.grad
+
+</code></pre>
