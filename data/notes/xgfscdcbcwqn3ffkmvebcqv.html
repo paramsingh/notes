@@ -1,0 +1,20 @@
+<h1 id="strava-integration">Strava Integration<a aria-hidden="true" class="anchor-heading icon-link" href="#strava-integration"></a></h1>
+<p>Things to do:</p>
+<ol>
+<li>give permission flow: the user needs to be redirected to strava and then strava sends back a "exchange token", this exchange token, then needs to be exchanged for the actual auth bearer token and the refresh token.</li>
+<li>refresh when auth token has expired: the auth token expires often and the refresh token is needed to get a new auth token</li>
+<li>once done we cna use the api to get activities</li>
+</ol>
+<p>next: webhooks</p>
+<ol>
+<li>need to make a manual post request to subscribe to the webhook</li>
+<li>webhooks are sent when
+<ul>
+<li>access to the app is revoked in strava</li>
+<li>activity is created</li>
+<li>activity is deleted</li>
+<li>activity fields are updated: title, type, privacy</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://developers.strava.com/docs/webhooks/">https://developers.strava.com/docs/webhooks/</a></p>
