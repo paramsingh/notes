@@ -105,7 +105,7 @@ publishing:
     writeStubs: false
     seo:
         title: /param/notes
-        description: My notes
+        description: param's notes
     github:
         enableEditLink: true
         editLinkText: Edit this page on GitHub
