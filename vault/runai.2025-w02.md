@@ -5,7 +5,7 @@ created: 2025-01-05
 updated: 2025-01-05
 ---
 
-# Week 2 (Jan 6-12)
+# Week 2 (Jan 3-9)
 
 ## Theme
 Launch prep - get ready to charge
@@ -41,19 +41,19 @@ Launch prep - get ready to charge
 
 ## Daily
 
-### Mon Jan 6
+### Sat Jan 3
 
-### Tue Jan 7
+### Sun Jan 4
 
-### Wed Jan 8
+### Mon Jan 5
 
-### Thu Jan 9
+### Tue Jan 6
 
-### Fri Jan 10
+### Wed Jan 7
 
-### Sat Jan 11
+### Thu Jan 8
 
-### Sun Jan 12
+### Fri Jan 9
 
 ## Review
 <!-- End of week: what got done, what didn't, why, revenue impact -->
