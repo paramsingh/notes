@@ -30,6 +30,19 @@ npx dendron publish export --target github --yes
 
 Notes use hierarchical naming with dots as separators (e.g., `books.the_three_body_problem.md`, `chess.kingside_attack.md`). This creates a tree structure where `chess.md` is the parent of `chess.kingside_attack.md`.
 
+**Frontmatter format** - all notes must have this structure:
+```yaml
+---
+id: some-unique-id-abc123
+title: Note Title
+desc: ''
+updated: 1736092800000
+created: 1736092800000
+---
+```
+- `id`: alphanumeric with hyphens (NOT dot notation like `runai.backlog`)
+- `created`/`updated`: Unix timestamps in milliseconds (NOT date strings)
+
 ## AI-Generated Content
 
 Any note written by AI must include this disclaimer at the top of the file (after the frontmatter):
