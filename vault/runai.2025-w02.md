@@ -1,8 +1,9 @@
 ---
-id: runai.2025-w02
-title: RunAI Week 2 (Jan 6-12)
-created: 2025-01-05
-updated: 2025-01-05
+id: runai-2025-w02-9pq3n7
+title: RunAI Week 2 (Jan 3-9)
+desc: ''
+updated: 1736092800000
+created: 1736092800000
 ---
 
 # Week 2 (Jan 3-9)
