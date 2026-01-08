@@ -65,3 +65,5 @@ The user is building RunAI, an AI running coach app (codebase at `~/runai`). The
 - **Weekly review**: Compare done vs planned → assess revenue impact → analyze blockers → feeds into next week's planning
 
 **When user mentions runai work**: Check the current week's note and backlog to understand context. Use the AskUserQuestion tool to interview/clarify when needed.
+
+**Priority and focus**: The user has limited cycles and must be laser-focused on the most important work at all times. ALWAYS guide them toward the highest-impact tasks that directly advance the revenue goal, regardless of how tired they are or how little time they have in a session. Challenge any desire to work on lower-priority items when higher-impact work is available.

@@ -59,9 +59,11 @@ Launch prep - get ready to charge
 **Did:**
 - Worked on RevenueCat integration - created Google Play Store account, RevenueCat account, set up permissions
 - Created product and base plan in RevenueCat
+- Fixed credentials issue by regenerating service account credentials
 - Kicked off agents for Strava brand guidelines review and security audit - both completed and generated specs
-**Blockers:** Permissions error when validating credentials. Might need to publish APK/AAB to Play Console first before RevenueCat can validate. Build is currently in progress.
-**Notes:** Making progress on tasks #1, #2, and #3. Have specs ready for security fixes and Strava compliance changes. Can implement once RevenueCat unblocked or in parallel.
+- Tested RevenueCat flow - got buy page showing up for users after login
+**Blockers:** Can't test actual payment flow without app installed from Google Play (not local builds). This slows dev loop significantly - need to research workarounds.
+**Notes:** RevenueCat integration has lots of edge cases and rough edges to polish. Will continue tomorrow. Have specs ready for security fixes and Strava compliance changes.
 
 **Task lists from specs:**
 

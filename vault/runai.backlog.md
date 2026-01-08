@@ -22,3 +22,4 @@ Ordered by priority (top = do first). New ideas go to the bottom.
 8. Publish to Play Store
 9. Feature: Auto-generate run summary on import
 10. Feature: Coach can search/analyze past runs
+11. Design and implement onboarding screens with 30-day free trial messaging
