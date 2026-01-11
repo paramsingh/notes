@@ -1,0 +1,237 @@
+<h1 id="runai-strava-developer-application">RunAI Strava Developer Application<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-strava-developer-application"></a></h1>
+<h1 id="runai-strava-developer-application-1">RunAI Strava Developer Application<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-strava-developer-application-1"></a></h1>
+<blockquote>
+<p>This note was generated with AI assistance.</p>
+</blockquote>
+<p>Application materials for Strava Developer Program to increase athlete capacity beyond Single Player Mode.</p>
+<h2 id="application-email-draft">Application Email Draft<a aria-hidden="true" class="anchor-heading icon-link" href="#application-email-draft"></a></h2>
+<p><strong>To:</strong> <a href="/mailto:developers@strava.com">developers@strava.com</a>
+<strong>Subject:</strong> Strava Developer Program Application - RunAI (Client ID: [YOUR_CLIENT_ID])</p>
+<hr>
+<p>Hello Strava Developer Team,</p>
+<p>I'm applying to the Strava Developer Program to increase the athlete capacity for my application <strong>RunAI</strong>, an AI-powered running coach.</p>
+<p><strong>Application Details:</strong></p>
+<p><strong>App Name:</strong> RunAI
+<strong>Client ID:</strong> [INSERT YOUR STRAVA CLIENT ID]
+<strong>Developer:</strong> [YOUR NAME]
+<strong>Contact Email:</strong> [YOUR EMAIL]
+<strong>Target Launch Date:</strong> Late January 2026
+<strong>Hosting:</strong> Fly.io (backend), Google Play Store (mobile app)</p>
+<h3 id="what-runai-does">What RunAI Does<a aria-hidden="true" class="anchor-heading icon-link" href="#what-runai-does"></a></h3>
+<p>RunAI is a personal AI running coach that provides individualized training guidance through natural conversation. The app:</p>
+<ul>
+<li>Analyzes runners' workout data to provide specific, personalized feedback</li>
+<li>Generates adaptive training plans based on individual fitness levels and goals</li>
+<li>Learns each athlete's unique patterns over time to deliver increasingly relevant coaching</li>
+<li>Offers 24/7 availability at a fraction of the cost of human coaching ($10-12/month vs $50-100/session)</li>
+</ul>
+<p>Unlike generic training apps with rigid templates, RunAI builds genuine understanding of each runner through conversational AI, adapting to their life circumstances, feedback, and performance patterns.</p>
+<h3 id="how-we-use-strava-data">How We Use Strava Data<a aria-hidden="true" class="anchor-heading icon-link" href="#how-we-use-strava-data"></a></h3>
+<p><strong>Primary Use Cases:</strong></p>
+<ol>
+<li><strong>Authentication:</strong> Strava OAuth is our sole authentication method (no separate passwords)</li>
+<li><strong>Automatic Run Syncing:</strong> Real-time activity import via Strava webhooks</li>
+<li><strong>AI Coaching Analysis:</strong> Run metrics fuel personalized training recommendations</li>
+</ol>
+<p><strong>Strava Data Displayed:</strong></p>
+<ul>
+<li>Distance, duration, pace, speed</li>
+<li>Heart rate data (average and maximum)</li>
+<li>Elevation gain</li>
+<li>Cadence, power, and temperature (when available)</li>
+<li>GPS route data and split breakdowns</li>
+<li>Activity timestamps and types</li>
+</ul>
+<p><strong>OAuth Scopes Requested:</strong>
+<code>read,activity:read_all,read_all</code></p>
+<p><strong>Data Flow:</strong></p>
+<ul>
+<li>User authenticates via Strava OAuth</li>
+<li>Strava webhook notifications trigger automatic run imports</li>
+<li>AI coach analyzes run data to provide feedback and generate training plans</li>
+<li>Users chat with AI coach about their runs and training goals</li>
+</ul>
+<h3 id="strava-brand-compliance">Strava Brand Compliance<a aria-hidden="true" class="anchor-heading icon-link" href="#strava-brand-compliance"></a></h3>
+<p>We have implemented all required Strava branding guidelines:</p>
+<p>✅ <strong>Official "Connect with Strava" Button:</strong></p>
+<ul>
+<li>Using official orange button asset from Strava's brand guidelines</li>
+<li>Implemented in login screen with proper dimensions (48px height)</li>
+<li>Links to official Strava OAuth endpoint</li>
+</ul>
+<p>✅ <strong>"Powered by Strava" Attribution:</strong></p>
+<ul>
+<li>Horizontal logo displayed in app Settings screen</li>
+<li>Proper sizing and placement per brand guidelines</li>
+<li>Uses official gray variant asset</li>
+</ul>
+<p>✅ <strong>App Naming:</strong></p>
+<ul>
+<li>App name "RunAI" does not contain Strava references</li>
+<li>No Strava marks in app icon or branding</li>
+</ul>
+<p>✅ <strong>Data Attribution:</strong></p>
+<ul>
+<li>Clear indication that run data comes from Strava</li>
+<li>Proper Strava branding prominence</li>
+</ul>
+<p><strong>Screenshots:</strong> (See attached)</p>
+<ol>
+<li>Login screen with official "Connect with Strava" button</li>
+<li>Settings screen showing "Powered by Strava" logo</li>
+<li>Run detail screen displaying Strava activity data</li>
+<li>Chat interface with AI coach analyzing Strava runs</li>
+</ol>
+<h3 id="why-we-need-increased-capacity">Why We Need Increased Capacity<a aria-hidden="true" class="anchor-heading icon-link" href="#why-we-need-increased-capacity"></a></h3>
+<p>RunAI is ready for public launch within 1-2 weeks. We've completed:</p>
+<ul>
+<li>Multi-user authentication system with full data isolation</li>
+<li>Production deployment on Fly.io</li>
+<li>RevenueCat subscription integration for monetization</li>
+<li>Play Store submission preparation</li>
+<li>Comprehensive Strava brand compliance</li>
+</ul>
+<p>We need to move beyond Single Player Mode (1 athlete limit) to:</p>
+<ol>
+<li>Conduct beta testing with initial users</li>
+<li>Launch publicly on Google Play Store</li>
+<li>Serve paying customers seeking personalized AI coaching</li>
+</ol>
+<h3 id="technical-implementation">Technical Implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#technical-implementation"></a></h3>
+<p><strong>Architecture:</strong></p>
+<ul>
+<li>Backend: Python Flask (Fly.io)</li>
+<li>Mobile: React Native/Expo (Google Play Store)</li>
+<li>Database: SQLite with multi-user support</li>
+<li>AI: Anthropic Claude, OpenAI, Google Gemini</li>
+</ul>
+<p><strong>Security &#x26; Privacy:</strong></p>
+<ul>
+<li>HTTPS encryption for all data in transit</li>
+<li>Secure JWT session management</li>
+<li>Complete data isolation between users</li>
+<li>Strava tokens stored securely and refreshed automatically</li>
+<li>Webhook signature validation for security</li>
+</ul>
+<p><strong>Webhook Integration:</strong></p>
+<ul>
+<li>Subscribed to Strava webhook events for activity creation</li>
+<li>Automatic run import when athletes complete activities</li>
+<li>Only processes run-type activities (Run, TrailRun, VirtualRun)</li>
+<li>Generates AI summaries automatically on import</li>
+</ul>
+<h3 id="expected-api-usage">Expected API Usage<a aria-hidden="true" class="anchor-heading icon-link" href="#expected-api-usage"></a></h3>
+<p><strong>Rate Limits:</strong></p>
+<ul>
+<li>Current default limits (200 requests/15 min, 2000/day) should be sufficient initially</li>
+<li>Primary API calls: OAuth token exchange, webhook event processing, activity detail fetching</li>
+<li>Webhook-driven architecture minimizes polling needs</li>
+</ul>
+<p><strong>User Growth:</strong></p>
+<ul>
+<li>Target: 50-100 beta users in first month</li>
+<li>Expected growth: 200-500 users within first 3 months post-launch</li>
+<li>Will request rate limit increases if we approach capacity with 100+ active users</li>
+</ul>
+<h3 id="commitment-to-strava-community">Commitment to Strava Community<a aria-hidden="true" class="anchor-heading icon-link" href="#commitment-to-strava-community"></a></h3>
+<p>RunAI enhances the Strava ecosystem by:</p>
+<ul>
+<li>Providing valuable AI coaching services that complement Strava's platform</li>
+<li>Encouraging consistent training and engagement with Strava</li>
+<li>Maintaining high standards for data privacy and security</li>
+<li>Following all Strava API terms and brand guidelines</li>
+</ul>
+<p>We're committed to being a responsible developer partner and will:</p>
+<ul>
+<li>Keep Strava branding updated with any guideline changes</li>
+<li>Monitor and optimize API usage efficiency</li>
+<li>Respond promptly to any compliance concerns</li>
+<li>Provide excellent user experience that reflects well on Strava</li>
+</ul>
+<h3 id="next-steps">Next Steps<a aria-hidden="true" class="anchor-heading icon-link" href="#next-steps"></a></h3>
+<p>Please let me know if you need any additional information or screenshots. I'm happy to provide:</p>
+<ul>
+<li>Demo access to the application</li>
+<li>Additional technical documentation</li>
+<li>More detailed screenshots of Strava integration</li>
+<li>Answers to any questions about our implementation</li>
+</ul>
+<p>Thank you for considering this application. I look forward to joining the Strava Developer Program and bringing RunAI's personalized AI coaching to the running community.</p>
+<p>Best regards,
+[YOUR NAME][YOUR EMAIL]
+[OPTIONAL: Website URL]</p>
+<hr>
+<h2 id="attachments-checklist">Attachments Checklist<a aria-hidden="true" class="anchor-heading icon-link" href="#attachments-checklist"></a></h2>
+<p>Before sending, prepare these screenshots:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Login screen with "Connect with Strava" button (clear, high-res)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Settings screen showing "Powered by Strava" logo</li>
+<li class="task-list-item"><input type="checkbox" disabled> Run detail screen with Strava data displayed</li>
+<li class="task-list-item"><input type="checkbox" disabled> Example of AI coach analyzing a run</li>
+<li class="task-list-item"><input type="checkbox" disabled> Chat interface showing personalized training plan</li>
+<li class="task-list-item"><input type="checkbox" disabled> (Optional) App icon and branding</li>
+</ul>
+<p><strong>Screenshot Guidelines:</strong></p>
+<ul>
+<li>High resolution (2x or 3x scale if possible)</li>
+<li>Show the app in use with real data (can blur personal info)</li>
+<li>Highlight Strava branding elements clearly</li>
+<li>Include different screens to show full integration</li>
+</ul>
+<h2 id="application-form-if-web-form-exists">Application Form (if web form exists)<a aria-hidden="true" class="anchor-heading icon-link" href="#application-form-if-web-form-exists"></a></h2>
+<p>If submitting via web form instead of email, use these responses:</p>
+<p><strong>App Name:</strong> RunAI</p>
+<p><strong>App Description (short):</strong>
+AI-powered running coach providing personalized training plans and feedback through natural conversation. Uses Strava for authentication and automatic run syncing.</p>
+<p><strong>App Description (detailed):</strong>
+[Use "What RunAI Does" section above]</p>
+<p><strong>Website URL:</strong>
+[Your website or landing page URL - create if needed]</p>
+<p><strong>Privacy Policy URL:</strong>
+[Host the privacy policy and provide URL]</p>
+<p><strong>How does your app use Strava data?</strong>
+[Use "How We Use Strava Data" section above]</p>
+<p><strong>What Strava API scopes do you request?</strong>
+<code>read,activity:read_all,read_all</code></p>
+<p><strong>OAuth scopes justification:</strong></p>
+<ul>
+<li><code>read</code>: Access to basic athlete profile information for account creation</li>
+<li><code>activity:read_all</code>: Read all activity data including runs for AI coaching analysis</li>
+<li><code>read_all</code>: Access to detailed activity metrics (heart rate, pace, splits, etc.) needed for personalized feedback</li>
+</ul>
+<p><strong>How have you implemented Strava branding?</strong>
+[Use "Strava Brand Compliance" section above]</p>
+<p><strong>Expected number of users:</strong>
+50-100 beta users initially, growing to 200-500 within 3 months of public launch</p>
+<p><strong>Expected API request volume:</strong>
+Within default rate limits (200/15min, 2000/day). Will request increases if we approach capacity with 100+ active users.</p>
+<h2 id="before-submitting">Before Submitting<a aria-hidden="true" class="anchor-heading icon-link" href="#before-submitting"></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Insert your actual Strava Client ID</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add your name and email</li>
+<li class="task-list-item"><input type="checkbox" disabled> Take all required screenshots</li>
+<li class="task-list-item"><input type="checkbox" disabled> Ensure "View on Strava" links are implemented (currently missing)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Host privacy policy and add URL</li>
+<li class="task-list-item"><input type="checkbox" disabled> Create website/landing page if needed</li>
+<li class="task-list-item"><input type="checkbox" disabled> Review all screenshots for quality and clarity</li>
+<li class="task-list-item"><input type="checkbox" disabled> Double-check all Strava branding is visible and correct</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test the full OAuth flow one more time</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verify webhook integration is working</li>
+</ul>
+<h2 id="action-items">Action Items<a aria-hidden="true" class="anchor-heading icon-link" href="#action-items"></a></h2>
+<p><strong>CRITICAL - Implement before submission:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Add "View on Strava" deep links to run detail screens (per Strava brand guidelines)
+<ul>
+<li>Link format: <code>https://www.strava.com/activities/{activity_id}</code></li>
+<li>Style: Orange color (#FC5200), bold, or underlined</li>
+<li>Location: Run detail screens where activity data is shown</li>
+</ul>
+</li>
+</ul>
+<p><strong>Nice to have:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Create simple landing page (runai.com or GitHub Pages)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Host privacy policy at public URL</li>
+<li class="task-list-item"><input type="checkbox" disabled> Prepare demo video (optional but impressive)</li>
+</ul>

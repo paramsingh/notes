@@ -1,0 +1,48 @@
+<h1 id="chapter-3-storage-and-retrieval">Chapter 3 Storage and Retrieval<a aria-hidden="true" class="anchor-heading icon-link" href="#chapter-3-storage-and-retrieval"></a></h1>
+<ul>
+<li>
+<p>Hash indexes</p>
+</li>
+<li>
+<p>Append only logs are good becasue appending and merging are sequential, hence faster than random writes.</p>
+</li>
+<li>
+<p>Concurrency and crash recovery is much easier if the files are append-only</p>
+</li>
+<li>
+<p>If we only append, we risk running out of storage</p>
+</li>
+<li>
+<p>One strategy is to divide data into segments, close segment when it reaches a certain size and perform compaction on these segments</p>
+</li>
+<li>
+<p>Compaction means throwing away duplicate keys in the log.</p>
+</li>
+<li>
+<p>Sorted String tables and Log-structured Merge Tree</p>
+</li>
+<li>
+<p>Keep sorted key-value files in storage</p>
+</li>
+<li>
+<p>Keep an index of some of the keys in memory.</p>
+</li>
+<li>
+<p>on retrieval, if the key is in memory, just get it from memory</p>
+</li>
+<li>
+<p>if not in memory, we get the closest and then start scanning storage from there.</p>
+</li>
+<li>
+<p>The index can be a balanced binary search tree (red-black or AVL) so that we insert randomly but can access in sorted order easily.</p>
+</li>
+<li>
+<p>B-Trees</p>
+</li>
+<li>
+<p>If an index stores the row value for the key inside the index (as opposed to storing a reference to the value), it's called a clustered index.</p>
+</li>
+<li>
+<p>If the index stores only some columns of the row inside the index, it's a covering index.</p>
+</li>
+</ul>
