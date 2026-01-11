@@ -62,16 +62,17 @@ Launch prep - get ready to charge
 - Fixed credentials issue by regenerating service account credentials
 - Kicked off agents for Strava brand guidelines review and security audit - both completed and generated specs
 - Tested RevenueCat flow - got buy page showing up for users after login
+- Implemented Strava branding compliance: downloaded official assets, replaced button, added 'Powered by Strava' logo to Settings, added 'View on Strava' deep links (branch ready for manual testing)
 **Blockers:** Can't test actual payment flow without app installed from Google Play (not local builds). This slows dev loop significantly - need to research workarounds.
-**Notes:** RevenueCat integration has lots of edge cases and rough edges to polish. Will continue tomorrow. Have specs ready for security fixes and Strava compliance changes.
+**Notes:** RevenueCat integration has lots of edge cases and rough edges to polish. Will continue tomorrow. Strava branding work complete and ready for testing. Have security fixes spec ready to implement.
 
 **Task lists from specs:**
 
 **Strava Branding Compliance:**
-- [ ] Download official Strava button and logo assets
-- [ ] Replace custom Strava button with official 'Connect with Strava' asset
-- [ ] Add 'Powered by Strava' logo to Settings screen
-- [ ] Add 'View on Strava' deep links to activity detail screens
+- [x] Download official Strava button and logo assets
+- [x] Replace custom Strava button with official 'Connect with Strava' asset
+- [x] Add 'Powered by Strava' logo to Settings screen
+- [x] Add 'View on Strava' deep links to activity detail screens
 - ✓ App name "RunAI" is compliant (no Strava references)
 
 **Security Audit - Critical/High:**
@@ -90,6 +91,44 @@ Launch prep - get ready to charge
 - [ ] Add OAuth state parameter and PKCE for CSRF protection
 
 ### Fri Jan 9
+**Did:**
+- Manual tested Strava branding changes - looks good, merged to main
+- Set up license testing for RevenueCat in Google Play Console - should unblock payment flow testing
+- Created comprehensive Play Store listing content (descriptions, keywords, screenshot plan)
+- Drafted privacy policy for Play Store submission
+- Identified critical launch blockers: Strava user limit approval, pull recent runs on signup, new user UX review
+- Started planning Week 3 focus
+**Blockers:** None currently - license testing should unblock RevenueCat
+**Notes:** Play Store listing materials ready to publish once we have screenshots and privacy policy hosting. Ready to submit Strava approval request.
+
+### Sat Jan 10
+
+### Sun Jan 11
 
 ## Review
-<!-- End of week: what got done, what didn't, why, revenue impact -->
+
+**What got done:**
+- ✅ **Task #3: Strava branding** (100%) - Fully implemented, tested, merged. Official button, "Powered by Strava" logo, compliant.
+- 🟡 **Task #1: RevenueCat integration** (40%) - Accounts created, products configured, buy page working, license testing enabled. Payment flow testing NOT done.
+- 🟡 **Task #4: Play Store prep** (60%) - Descriptions, privacy policy, and screenshot plan drafted. Need to take actual screenshots, host privacy policy, finalize icon.
+- ❌ **Task #2: Security audit** (0%) - None of the 11 critical/medium fixes implemented.
+
+**What didn't get done:**
+- RevenueCat end-to-end payment testing (waiting for license testing to work)
+- All security fixes (11 items)
+- Play Store submission (need screenshots, privacy hosting)
+- Strava Developer Program application (drafted but not submitted)
+
+**Why:**
+- Blocked on RevenueCat payment testing (resolved Fri with license testing)
+- Didn't work Sat/Sun
+- Focused on planning and documentation over implementation
+
+**Revenue impact:**
+Moderate progress toward launch. Can't charge users until RevenueCat fully tested. Can't launch publicly until Strava approval received (could take 1-2 weeks). Still 1-2 weeks away from being able to generate revenue.
+
+**Critical path blockers identified:**
+1. Strava user limit approval (1-2 week wait)
+2. Pull recent runs from Strava on signup (new users need data)
+3. Complete RevenueCat testing
+4. New user UX review and polish
