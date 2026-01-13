@@ -79,13 +79,21 @@ First Launch - Get Live
 
 ### Mon Jan 12
 **Did:**
-**Blockers:**
-**Notes:**
+- Fixed bug where app always redirected to runs page even without login (used Codex)
+- Fixed EAS autoincrement
+- Fixed navigation bug - clicking anything flickered back to main page (Codex fix, verified working)
+**Blockers:** Blocked on builds for a while
+**Notes:** Heavy debugging day. Both critical auth/nav bugs from Sunday now fixed - new user flow should be unblocked.
 
 ### Tue Jan 13
 **Did:**
-**Blockers:**
-**Notes:**
+- Fixed bug where every login started a new trial (subscription tracking issue)
+- Added "manage subscription" flow (cancel, etc.)
+- Decided on new app name: **Coach Vayu** (coachvayu.com) - domain purchased, landing page deployed with privacy policy & terms of service
+- Fixed privacy policy & terms links in app paywall
+- Fixed restore purchases - clearer verbiage
+**Blockers:** None
+**Notes:** Huge progress day. Name decided, domain bought, landing page live, all critical bugs cleared. RevenueCat testing in progress - need to verify cancellation, expiration, and restore flows with new build.
 
 ### Wed Jan 14
 **Did:**
