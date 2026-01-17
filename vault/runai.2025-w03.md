@@ -14,11 +14,12 @@ First Launch - Get Live
 ## This Week
 
 ### 1. Submit Strava approval request (CRITICAL - DO SUNDAY)
-- [ ] Implement "View on Strava" deep links on run detail screens
-- [ ] Take required screenshots (login, settings, run details, AI chat)
-- [ ] Review and customize application email draft
-- [ ] Fill in Client ID, contact info, URLs
-- [ ] Submit to developers@strava.com
+- [x] Implement "View on Strava" deep links on run detail screens ✓ already done
+- [x] Implement deauthorization webhook handler (required for approval)
+- [x] Take required screenshots (login, settings, run details, AI chat)
+- [x] Review and customize application email draft (RunAI → Coach Vayu)
+- [x] Fill in Client ID, contact info, URLs
+- [x] Submit to developers@strava.com ✓ sent Jan 16
 **Why critical:** 1-2 week approval wait. Blocks public launch. Start clock ASAP.
 
 ### 2. Pull recent runs from Strava during signup (LAUNCH BLOCKER)
@@ -97,18 +98,31 @@ First Launch - Get Live
 
 ### Wed Jan 14
 **Did:**
-**Blockers:**
-**Notes:**
+- Renaming app to Coach Vayu (agent working on it)
+- Testing RevenueCat cancellation flow
+- Fixed manage subscription to show cancelled status/expiry (using RevenueCat directly instead of backend)
+**Blockers:** Build times slowing iteration
+**Notes:** Started RevenueCat testing, found and fixed subscription state display issues.
 
 ### Thu Jan 15
 **Did:**
-**Blockers:**
-**Notes:**
+- Fixed subscription state not auto-updating
+- Coach Vayu rename complete throughout frontend
+- Attempted local build for faster testing
+**Blockers:** Local build credentials mismatch - need to debug or wait for EAS
+**Notes:** RevenueCat testing continuing. Build iteration speed is the main bottleneck.
 
 ### Fri Jan 16
 **Did:**
-**Blockers:**
-**Notes:**
+- Debugging credentials mismatch - fixed
+- Researched Strava submission requirements - discovered deep links already implemented
+- Identified missing deauthorization webhook handler (critical for approval)
+- Implemented deauth webhook ✓
+- Took Strava submission screenshots (login, settings, run detail, AI chat)
+- Submitted Strava Developer Program application via email → got auto-reply pointing to form
+- Submitted via form ✓ - review takes 7-10 business days
+**Blockers:** None
+**Notes:** Deep links ("View on Strava") already in `mobile/components/run/RunHeader.tsx`. Main blocker for Strava submission is deauth webhook - when user revokes access, app must delete their token/data. Currently silently ignored in `backend/strava.py`.
 
 ## Review
 <!-- End of week: what got done, what didn't, why, revenue impact -->

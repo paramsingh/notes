@@ -16,18 +16,18 @@ Ordered by priority (top = do first). New ideas go to the bottom.
 
 - [x] Choose new app name (RunAI is taken) → **Coach Vayu** (coachvayu.com)
   - Blocks: domain, landing page, privacy policy, Strava approval, Play Store
-  - [ ] Update name throughout frontend (app title, strings, etc.)
+  - [x] Update name throughout frontend (app title, strings, etc.)
 - [x] Buy domain and set up landing page
   - [x] Buy domain (coachvayu.com)
   - [x] Host landing page with privacy policy and terms of service
 - [ ] Pull recent runs from Strava API during signup (last 30-60 days) - LAUNCH BLOCKER
-- [ ] Get Strava approval (brand guidelines review)
-  - [ ] Review and customize Strava Developer Program application email draft
-  - [ ] Fill in Client ID, name, email, website URL, privacy policy URL
-  - [ ] Take required screenshots (login, settings, run details, AI chat)
-  - [ ] Implement "View on Strava" deep links (REQUIRED before submission)
-  - [ ] Implement deauthorization webhook (delete user data when they disconnect)
-  - [ ] Submit application to developers@strava.com
+- [x] Get Strava approval (brand guidelines review) - form submitted Jan 16, 7-10 business days
+  - [x] Review and customize Strava Developer Program application email draft (RunAI → Coach Vayu)
+  - [x] Fill in Client ID, name, email, website URL, privacy policy URL
+  - [x] Take required screenshots (login, settings, run details, AI chat)
+  - [x] Implement "View on Strava" deep links ✓
+  - [x] Implement deauthorization webhook ✓
+  - [x] Submit application to developers@strava.com ✓
 - [ ] Test RevenueCat integration
   - [ ] Cancellation - Play Store → cancel → verify webhook updates status, still have access until expiry
   - [ ] Expiration - Wait for sandbox sub to expire → verify redirect to paywall (status = expired)
@@ -69,5 +69,6 @@ Ordered by priority (top = do first). New ideas go to the bottom.
 - [x] Restore purchases button unclear - needs better UX and verification it works
 
 **Medium priority:**
+- [x] Manage subscription page should show cancelled status and expiry date when subscription is cancelled
 - [ ] Chat page doesn't auto-refresh the chats on opening
 - [ ] Onboarding flow should allow going back to previous slide

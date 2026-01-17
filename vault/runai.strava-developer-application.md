@@ -2,254 +2,171 @@
 id: runai-strava-dev-app-p7k4n2
 title: RunAI Strava Developer Application
 desc: ''
-updated: 1736438400000
+updated: 1768570313593
 created: 1736438400000
 ---
 
-# RunAI Strava Developer Application
+# Coach Vayu Strava Developer Application
 
 > This note was generated with AI assistance.
 
-Application materials for Strava Developer Program to increase athlete capacity beyond Single Player Mode.
+Application materials for Strava Developer Program to increase athlete capacity beyond Single Player Mode. App formerly known as RunAI, now Coach Vayu.
 
 ## Application Email Draft
 
-**To:** developers@strava.com
-**Subject:** Strava Developer Program Application - RunAI (Client ID: [YOUR_CLIENT_ID])
+To: developers@strava.com
+Subject: Developer Program Application & Athlete Limit Increase - Coach Vayu (Client ID: 157267)
 
 ---
 
-Hello Strava Developer Team,
+Hi,
 
-I'm applying to the Strava Developer Program to increase the athlete capacity for my application **RunAI**, an AI-powered running coach.
+I'm Param, and I'm building Coach Vayu - an AI running coach that syncs with Strava. I've been using it myself for the past few months and I'm ready to expand to a limited beta with friends and other running enthusiasts. I'd like to apply for the Developer Program to get my app reviewed and increase the athlete limit (currently 1) to around 100.
 
-**Application Details:**
+Since this is an early beta, the landing page and screenshots aren't super polished yet - but the app itself is functional and ready for testing.
 
-**App Name:** RunAI
-**Client ID:** [INSERT YOUR STRAVA CLIENT ID]
-**Developer:** [YOUR NAME]
-**Contact Email:** [YOUR EMAIL]
-**Target Launch Date:** Late January 2026
-**Hosting:** Fly.io (backend), Google Play Store (mobile app)
+App Details:
+  Name: Coach Vayu
+  Client ID: 157267
+  Website: https://coachvayu.com (work in progress)
+  Privacy Policy: https://coachvayu.com/privacy
+  Terms of Service: https://coachvayu.com/terms
+  Contact: me@param.codes
 
-### What RunAI Does
 
-RunAI is a personal AI running coach that provides individualized training guidance through natural conversation. The app:
+What it does
 
-- Analyzes runners' workout data to provide specific, personalized feedback
-- Generates adaptive training plans based on individual fitness levels and goals
-- Learns each athlete's unique patterns over time to deliver increasingly relevant coaching
-- Offers 24/7 availability at a fraction of the cost of human coaching ($10-12/month vs $50-100/session)
+Coach Vayu is a conversational AI running coach. Users connect their Strava, and the app automatically imports their runs via webhooks. They can then chat with the AI coach to get personalized feedback on their training - things like pacing analysis, recovery suggestions, and training plans based on their actual run history.
 
-Unlike generic training apps with rigid templates, RunAI builds genuine understanding of each runner through conversational AI, adapting to their life circumstances, feedback, and performance patterns.
 
-### How We Use Strava Data
+How I use Strava data
 
-**Primary Use Cases:**
-1. **Authentication:** Strava OAuth is our sole authentication method (no separate passwords)
-2. **Automatic Run Syncing:** Real-time activity import via Strava webhooks
-3. **AI Coaching Analysis:** Run metrics fuel personalized training recommendations
+  Authentication: Strava OAuth only (no separate passwords)
+  Run syncing: Webhook-driven automatic imports
+  Data displayed: Distance, duration, pace, heart rate, cadence, splits
+  Scopes: read,activity:read_all,read_all
 
-**Strava Data Displayed:**
-- Distance, duration, pace, speed
-- Heart rate data (average and maximum)
-- Elevation gain
-- Cadence, power, and temperature (when available)
-- GPS route data and split breakdowns
-- Activity timestamps and types
 
-**OAuth Scopes Requested:**
-`read,activity:read_all,read_all`
+Brand compliance
 
-**Data Flow:**
-- User authenticates via Strava OAuth
-- Strava webhook notifications trigger automatic run imports
-- AI coach analyzes run data to provide feedback and generate training plans
-- Users chat with AI coach about their runs and training goals
+I've followed the Strava brand guidelines:
+  - Official "Connect with Strava" orange button on login (see screenshot 1)
+  - "Powered by Strava" logo in Settings (see screenshot 2)
+  - "View on Strava" deep links on run details (see screenshot 3)
+  - No Strava marks in app name or icon
 
-### Strava Brand Compliance
+I've also implemented the deauthorization webhook - when a user revokes access, I delete their tokens and delete their data immediately.
 
-We have implemented all required Strava branding guidelines:
 
-✅ **Official "Connect with Strava" Button:**
-- Using official orange button asset from Strava's brand guidelines
-- Implemented in login screen with proper dimensions (48px height)
-- Links to official Strava OAuth endpoint
+Screenshots attached
 
-✅ **"Powered by Strava" Attribution:**
-- Horizontal logo displayed in app Settings screen
-- Proper sizing and placement per brand guidelines
-- Uses official gray variant asset
+  1. Login screen with Connect with Strava button
+  2. Settings with Powered by Strava
+  3. Run detail with View on Strava link
+  4. AI coach chat analyzing a run
 
-✅ **App Naming:**
-- App name "RunAI" does not contain Strava references
-- No Strava marks in app icon or branding
 
-✅ **Data Attribution:**
-- Clear indication that run data comes from Strava
-- Proper Strava branding prominence
+Technical details
 
-**Screenshots:** (See attached)
-1. Login screen with official "Connect with Strava" button
-2. Settings screen showing "Powered by Strava" logo
-3. Run detail screen displaying Strava activity data
-4. Chat interface with AI coach analyzing Strava runs
+Stack:
+  - Backend: Python Flask on Fly.io
+  - Mobile: React Native/Expo (Google Play Store)
+  - Database: SQLite with multi-user support
+  - AI: Claude
 
-### Why We Need Increased Capacity
+Webhook integration:
+  - Subscribed to activity creation events
+  - Auto-imports runs when athletes complete activities
+  - Only processes run-type activities (Run, TrailRun, VirtualRun)
+  - Deauthorization webhook deletes tokens and all user data immediately
 
-RunAI is ready for public launch within 1-2 weeks. We've completed:
-- Multi-user authentication system with full data isolation
-- Production deployment on Fly.io
-- RevenueCat subscription integration for monetization
-- Play Store submission preparation
-- Comprehensive Strava brand compliance
+Security:
+  - HTTPS everywhere
+  - JWT session management
+  - Complete data isolation between users
+  - Strava tokens stored securely, refreshed automatically
 
-We need to move beyond Single Player Mode (1 athlete limit) to:
-1. Conduct beta testing with initial users
-2. Launch publicly on Google Play Store
-3. Serve paying customers seeking personalized AI coaching
 
-### Technical Implementation
+Expected API usage
 
-**Architecture:**
-- Backend: Python Flask (Fly.io)
-- Mobile: React Native/Expo (Google Play Store)
-- Database: SQLite with multi-user support
-- AI: Anthropic Claude, OpenAI, Google Gemini
+  - Default rate limits (200/15min, 2000/day) should be plenty for now
+  - Main API calls: OAuth token exchange, webhook processing, activity fetching
+  - Webhook-driven = minimal polling
+  - Targeting 50-100 users initially, maybe 200-500 in first 6 months
+  - Will request increases if I approach limits
 
-**Security & Privacy:**
-- HTTPS encryption for all data in transit
-- Secure JWT session management
-- Complete data isolation between users
-- Strava tokens stored securely and refreshed automatically
-- Webhook signature validation for security
 
-**Webhook Integration:**
-- Subscribed to Strava webhook events for activity creation
-- Automatic run import when athletes complete activities
-- Only processes run-type activities (Run, TrailRun, VirtualRun)
-- Generates AI summaries automatically on import
+Current status
 
-### Expected API Usage
+Ready to launch:
+  - Production backend deployed
+  - RevenueCat subscriptions working
+  - Multi-user data isolation
+  - Play Store submission in progress
 
-**Rate Limits:**
-- Current default limits (200 requests/15 min, 2000/day) should be sufficient initially
-- Primary API calls: OAuth token exchange, webhook event processing, activity detail fetching
-- Webhook-driven architecture minimizes polling needs
+Let me know if you need anything else.
 
-**User Growth:**
-- Target: 50-100 beta users in first month
-- Expected growth: 200-500 users within first 3 months post-launch
-- Will request rate limit increases if we approach capacity with 100+ active users
-
-### Commitment to Strava Community
-
-RunAI enhances the Strava ecosystem by:
-- Providing valuable AI coaching services that complement Strava's platform
-- Encouraging consistent training and engagement with Strava
-- Maintaining high standards for data privacy and security
-- Following all Strava API terms and brand guidelines
-
-We're committed to being a responsible developer partner and will:
-- Keep Strava branding updated with any guideline changes
-- Monitor and optimize API usage efficiency
-- Respond promptly to any compliance concerns
-- Provide excellent user experience that reflects well on Strava
-
-### Next Steps
-
-Please let me know if you need any additional information or screenshots. I'm happy to provide:
-- Demo access to the application
-- Additional technical documentation
-- More detailed screenshots of Strava integration
-- Answers to any questions about our implementation
-
-Thank you for considering this application. I look forward to joining the Strava Developer Program and bringing RunAI's personalized AI coaching to the running community.
-
-Best regards,
-[YOUR NAME]
-[YOUR EMAIL]
-[OPTIONAL: Website URL]
+Thanks,
+Param Singh
+me@param.codes
+https://coachvayu.com
 
 ---
 
-## Attachments Checklist
+## Form Submission Cheat Sheet
 
-Before sending, prepare these screenshots:
+Form URL: https://share.hsforms.com/1VXSwPUYqSH6IxK0y51FjHwcnkd8
 
-- [ ] Login screen with "Connect with Strava" button (clear, high-res)
-- [ ] Settings screen showing "Powered by Strava" logo
-- [ ] Run detail screen with Strava data displayed
-- [ ] Example of AI coach analyzing a run
-- [ ] Chat interface showing personalized training plan
-- [ ] (Optional) App icon and branding
+Fill in with these values:
 
-**Screenshot Guidelines:**
-- High resolution (2x or 3x scale if possible)
-- Show the app in use with real data (can blur personal info)
-- Highlight Strava branding elements clearly
-- Include different screens to show full integration
+App/Client ID: 157267
+App Name: Coach Vayu
+Your Name: Param Singh
+Email: me@param.codes
+Website: https://coachvayu.com
+Privacy Policy: https://coachvayu.com/privacy
+Terms of Service: https://coachvayu.com/terms
+Support URL: https://coachvayu.com
 
-## Application Form (if web form exists)
+What does your app do?
+Coach Vayu is a conversational AI running coach. Users connect their Strava, and the app automatically imports their runs via webhooks. They can chat with the AI coach to get personalized feedback - pacing analysis, recovery suggestions, and training plans based on their actual run history.
 
-If submitting via web form instead of email, use these responses:
+How do you use Strava data?
+- Authentication: Strava OAuth only (no separate passwords)
+- Run syncing: Webhook-driven automatic imports
+- Data displayed: Distance, duration, pace, heart rate, cadence, splits
+- Scopes: read,activity:read_all,read_all
 
-**App Name:** RunAI
+How many athletes/users do you need?
+Around 100 - this is for a limited beta with friends and running enthusiasts. I've been testing the app myself for months and am ready to expand.
 
-**App Description (short):**
-AI-powered running coach providing personalized training plans and feedback through natural conversation. Uses Strava for authentication and automatic run syncing.
+How have you implemented Strava branding?
+- Official "Connect with Strava" orange button on login
+- "Powered by Strava" logo in Settings
+- "View on Strava" deep links on run details
+- No Strava marks in app name or icon
+- Deauthorization webhook implemented - deletes tokens and all user data immediately when user revokes access
 
-**App Description (detailed):**
-[Use "What RunAI Does" section above]
+Expected API usage?
+- Default rate limits (200/15min, 2000/day) should be plenty
+- Webhook-driven architecture = minimal polling
+- Targeting 50-100 users initially
 
-**Website URL:**
-[Your website or landing page URL - create if needed]
+Anything else?
+This is an early beta - the landing page and screenshots aren't super polished yet, but the app is functional and ready for testing.
 
-**Privacy Policy URL:**
-[Host the privacy policy and provide URL]
+Attach screenshots:
+1. coach-vayu-01-login-strava-connect.png
+2. coach-vayu-02-settings-powered-by-strava.png
+3. coach-vayu-03-run-detail-view-on-strava.png
+4. coach-vayu-04-ai-coach-chat.png
 
-**How does your app use Strava data?**
-[Use "How We Use Strava Data" section above]
+---
 
-**What Strava API scopes do you request?**
-`read,activity:read_all,read_all`
+## Attachments
 
-**OAuth scopes justification:**
-- `read`: Access to basic athlete profile information for account creation
-- `activity:read_all`: Read all activity data including runs for AI coaching analysis
-- `read_all`: Access to detailed activity metrics (heart rate, pace, splits, etc.) needed for personalized feedback
-
-**How have you implemented Strava branding?**
-[Use "Strava Brand Compliance" section above]
-
-**Expected number of users:**
-50-100 beta users initially, growing to 200-500 within 3 months of public launch
-
-**Expected API request volume:**
-Within default rate limits (200/15min, 2000/day). Will request increases if we approach capacity with 100+ active users.
-
-## Before Submitting
-
-- [ ] Insert your actual Strava Client ID
-- [ ] Add your name and email
-- [ ] Take all required screenshots
-- [ ] Ensure "View on Strava" links are implemented (currently missing)
-- [ ] Host privacy policy and add URL
-- [ ] Create website/landing page if needed
-- [ ] Review all screenshots for quality and clarity
-- [ ] Double-check all Strava branding is visible and correct
-- [ ] Test the full OAuth flow one more time
-- [ ] Verify webhook integration is working
-
-## Action Items
-
-**CRITICAL - Implement before submission:**
-- [ ] Add "View on Strava" deep links to run detail screens (per Strava brand guidelines)
-  - Link format: `https://www.strava.com/activities/{activity_id}`
-  - Style: Orange color (#FC5200), bold, or underlined
-  - Location: Run detail screens where activity data is shown
-
-**Nice to have:**
-- [ ] Create simple landing page (runai.com or GitHub Pages)
-- [ ] Host privacy policy at public URL
-- [ ] Prepare demo video (optional but impressive)
+Screenshots ready in `~/Downloads/`:
+- [x] `coach-vayu-01-login-strava-connect.png` - Login with "Connect with Strava" button
+- [x] `coach-vayu-02-settings-powered-by-strava.png` - Settings with "Powered by Strava" logo
+- [x] `coach-vayu-03-run-detail-view-on-strava.png` - Run detail with "View on Strava" link
+- [x] `coach-vayu-04-ai-coach-chat.png` - AI coach analyzing a run
