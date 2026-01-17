@@ -28,19 +28,20 @@ Ordered by priority (top = do first). New ideas go to the bottom.
   - [x] Implement "View on Strava" deep links ✓
   - [x] Implement deauthorization webhook ✓
   - [x] Submit application to developers@strava.com ✓
-- [ ] Test RevenueCat integration
-  - [ ] Cancellation - Play Store → cancel → verify webhook updates status, still have access until expiry
-  - [ ] Expiration - Wait for sandbox sub to expire → verify redirect to paywall (status = expired)
-  - [ ] Restore purchases - Log out, log back in → "Already subscribed? Tap here" → verify restores access
-  - [ ] Plan upgrade - Switch monthly to annual (tests PRODUCT_CHANGE webhook)
-  - [ ] Resubscribe after cancel - After cancelling, subscribe again from management screen
-  - [ ] New user flow - Fresh account → sees paywall after trial expires
-  - [ ] iOS testing - TestFlight if available
+- [x] Test RevenueCat integration ✓ (verified Jan 17)
+  - [x] Cancellation ✓
+  - [x] Expiration ✓
+  - [x] Restore purchases ✓
+  - [x] Plan upgrade ✓
+  - [x] Resubscribe after cancel ✓
+  - [ ] New user flow - double check before release
+  - [ ] iOS testing - later
 - [ ] Security audit
 - [ ] Publish to Play Store
 
 **UX Improvements:**
 
+- [ ] Add loading/status messages during AI coach tool calls (e.g., "Analyzing your runs...", "Looking at your pace data...")
 - [ ] Remove "upload FIT file" feature
 - [ ] Review end-to-end UX - make sure flows make sense for new users
 - [ ] Add tooltips/coach marks for first-time viewing of key pages

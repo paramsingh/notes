@@ -8,6 +8,8 @@ created: 1736611200000
 
 # Week 3 (Jan 10-16)
 
+[[runai.2025-w02|← prev]] | [[runai.2026-w04|next →]]
+
 ## Theme
 First Launch - Get Live
 
@@ -125,4 +127,21 @@ First Launch - Get Live
 **Notes:** Deep links ("View on Strava") already in `mobile/components/run/RunHeader.tsx`. Main blocker for Strava submission is deauth webhook - when user revokes access, app must delete their token/data. Currently silently ignored in `backend/strava.py`.
 
 ## Review
-<!-- End of week: what got done, what didn't, why, revenue impact -->
+
+**Done:**
+- Strava Developer Program submitted ✓ (7-10 day wait started)
+- Coach Vayu rebrand complete (domain, landing page, privacy/terms)
+- Deauth webhook implemented
+- Multiple critical bugs fixed (auth, nav, subscription tracking)
+- Build automation working
+
+**Not done:**
+- Pull recent runs (PR ready, not merged)
+- RevenueCat full testing (partial)
+- Play Store submission (blocked on Strava)
+- Security fixes
+- UX review
+
+**Why:** Week was heavy on bug fixing from prior technical debt. Strava submission was the critical time-gated item and got done Friday.
+
+**Revenue impact:** No revenue yet. Clock started on Strava approval - launch possible ~Jan 30 if everything else is ready.

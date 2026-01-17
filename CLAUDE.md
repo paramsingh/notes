@@ -67,3 +67,22 @@ The user is building RunAI, an AI running coach app (codebase at `~/runai`). The
 **When user mentions runai work**: Check the current week's note and backlog to understand context. Use the AskUserQuestion tool to interview/clarify when needed.
 
 **Priority and focus**: The user has limited cycles and must be laser-focused on the most important work at all times. ALWAYS guide them toward the highest-impact tasks that directly advance the revenue goal, regardless of how tired they are or how little time they have in a session. Challenge any desire to work on lower-priority items when higher-impact work is available.
+
+## Nutrition Tracking
+
+The user tracks nutrition and body composition weekly (Sat-Sat).
+
+**Files:**
+- `vault/nutrition.YYYY-wWW.md` - Weekly nutrition notes
+
+**Saturday routine**: During weekly planning, ask about nutrition:
+- Food log for the week
+- Body composition readings (weight, body fat %, muscle %)
+- How they're feeling energy-wise
+- Any patterns or goals for next week
+
+**Guidance:**
+- Be skeptical of body comp scale readings (bioelectrical impedance is noisy)
+- Focus on weekly weight averages and monthly body comp trends
+- Protein target: 110g/day, Calorie target: 2,200 kcal
+- User is doing body recomposition (lose fat, gain muscle)

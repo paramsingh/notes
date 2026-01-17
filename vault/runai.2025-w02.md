@@ -8,6 +8,8 @@ created: 1736092800000
 
 # Week 2 (Jan 3-9)
 
+← prev | [[runai.2025-w03|next →]]
+
 ## Theme
 Launch prep - get ready to charge
 
