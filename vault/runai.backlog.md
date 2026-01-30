@@ -141,11 +141,12 @@ Post-launch:
 
 ## New Project Ideas
 
-**Claude Code Mobile** (exploring while waiting on Strava)
+**Grimoire** (exploring while waiting on Strava)
 - Mobile app that brings Claude Code experience to phone
 - Chat with Claude, it can read/write files in a notes folder
 - "Claude that knows your life and can read/write your second brain"
-- Design doc: [[engineering.claude-code-mobile]]
+- BYOK (Bring Your Own Key), Android-first, dark mode, fantasy-themed
+- Design doc: [[engineering.grimoire]]
 
 ---
 

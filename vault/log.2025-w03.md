@@ -8,7 +8,7 @@ created: 1736611200000
 
 # Week 3 (Jan 10-16)
 
-[[runai.2025-w02|← prev]] | [[runai.2026-w04|next →]]
+[[log.2025-w02|← prev]] | [[log.2026-w04|next →]]
 
 ## Theme
 First Launch - Get Live

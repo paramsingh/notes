@@ -8,7 +8,7 @@ created: 1737100800000
 
 # Week 4 (Jan 17-23)
 
-[[runai.2025-w03|← prev]] | [[runai.2026-w05|next →]]
+[[log.2025-w03|← prev]] | [[log.2026-w05|next →]]
 
 ## Theme
 Launch Ready + AI Quality - Minimum launch prep, then make the coach worth paying for

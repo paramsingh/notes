@@ -8,7 +8,7 @@ created: 1738195200000
 
 # Week 5 (Jan 24-30)
 
-[[runai.2026-w04|← prev]] | next →
+[[log.2026-w04|← prev]] | next →
 
 ## Theme
 Strava Response + New Project Exploration
@@ -25,8 +25,10 @@ Strava responded on Jan 29 asking for more details about AI usage. Resubmitted w
 - [x] Research Strava's history with AI app approvals/rejections
 - [x] Submit resubmission
 
-### New Project: Claude Code Mobile
-- [x] Create design doc (engineering.claude-code-mobile.md)
+### New Project: Grimoire
+- [x] Create design doc v1 (engineering.claude-code-mobile.md)
+- [x] Design interview and v2 design doc (engineering.grimoire.md)
+- [x] Clone Codex CLI for architecture reference
 - [x] Extract reusable libraries from RunAI codebase
 
 ### Library Extraction
@@ -88,8 +90,16 @@ GitHub repos:
 
 ### Thu Jan 30
 **Did:**
+- Deep design session for Grimoire (Claude Code mobile app)
+- Cloned Codex CLI repo for architecture reference
+- Created comprehensive v2 design doc with all decisions locked
+- Researched Codex context management, tools, conversation history
 **Blockers:**
+- Still waiting on Strava approval
 **Notes:**
+- Key patterns from Codex: on-demand tools, append-only history, session persistence, truncation
+- Grimoire: BYOK, Opus, Android-first, session-based chat, fantasy-themed loading messages
+- Ready to start building v0.1 when time allows
 
 ## Review
 <!-- End of week: what got done, what didn't, why, revenue impact -->
