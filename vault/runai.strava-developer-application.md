@@ -170,3 +170,117 @@ Screenshots ready in `~/Downloads/`:
 - [x] `coach-vayu-02-settings-powered-by-strava.png` - Settings with "Powered by Strava" logo
 - [x] `coach-vayu-03-run-detail-view-on-strava.png` - Run detail with "View on Strava" link
 - [x] `coach-vayu-04-ai-coach-chat.png` - AI coach analyzing a run
+
+---
+
+## Resubmission (2026-01-29)
+
+Strava requested more information about AI usage. This is the follow-up submission.
+
+### Form Submission Cheat Sheet
+
+Form URL: https://share.hsforms.com/1VXSwPUYqSH6IxK0y51FjHwcnkd8
+
+**First name:** Param
+**Last name:** Singh
+**Email Address:** me@param.codes
+**Company Name:** Coach Vayu
+**API Application Name:** Coach Vayu
+**Strava Client ID:** 157267
+**Additional Apps:** 193648
+**Number of Currently Authenticated Users:** 1
+**Number of Intended Users:** 100
+**Support URL:** https://coachvayu.com/support
+
+**Application Description:** (copy below)
+
+---
+
+This is a resubmission for Client ID 157267, following your email requesting more information about AI usage.
+
+Coach Vayu is a conversational AI running coach. Users connect their Strava, and the app automatically imports their runs via webhooks. They can chat with the AI coach to get personalized feedback—pacing analysis, recovery suggestions, and training plans based on their actual run history.
+
+**AI Usage & Compliance**
+
+1. Does the app involve AI?
+Yes—users chat with an AI coach (Claude, via Anthropic's API) to get feedback on their training.
+
+2. How is Strava data used with AI?
+When a user asks for coaching advice, their activity data is included as context in the request to Claude. The AI analyzes it and returns personalized feedback. No Strava data is ever used to train, fine-tune, or pre-train any AI model—it's only used for real-time analysis to help that individual user.
+
+3. Compliance with your training restrictions?
+No Strava data is used to train AI models. Claude is a pre-trained model; we only use it for inference. Anthropic's Commercial Terms (https://www.anthropic.com/legal/commercial-terms) explicitly state "Anthropic may not train models on Customer Content from Services"—so even our AI provider is contractually prohibited from training on this data.
+
+4. Third-party access?
+Only Anthropic's Claude API processes the data (for generating responses). They cannot use it for training. No other third parties have access. Each user's data is completely isolated.
+
+**Other API Agreement Compliance**
+
+- Data deletion: Deauthorization webhook immediately deletes all user tokens and data. Activity deletion webhooks remove activities from our database. Users can request full data deletion at any time.
+- Data isolation: Each user only sees their own activities. No data is aggregated or shared across users.
+- Security: All data transmitted over HTTPS. Strava tokens stored securely and refreshed automatically. JWT-based session management.
+- Monetization: Subscription fees are for AI coaching functionality, not for access to Strava data.
+- Brand compliance: "Connect with Strava" button on login, "Powered by Strava" in settings, "View on Strava" deep links on activities.
+
+Our privacy policy (https://coachvayu.com/privacy) and terms of service (https://coachvayu.com/terms) explicitly document our AI data practices.
+
+Happy to clarify anything else.
+
+---
+
+**TOS Compliance:** ✓ (check)
+**Brand Guidelines Review:** ✓ (check)
+
+**App Images:** (same screenshots as before)
+1. coach-vayu-01-login-strava-connect.png
+2. coach-vayu-02-settings-powered-by-strava.png
+3. coach-vayu-03-run-detail-view-on-strava.png
+4. coach-vayu-04-ai-coach-chat.png
+
+---
+
+## If Rejected: Research & Contingency Plan
+
+### Strava API Policy Context (Nov 2024 changes)
+
+Key restrictions:
+1. **AI/ML Prohibition** - Third parties cannot use Strava data for AI model training OR AI processing
+2. **Data privacy** - Cannot show user data to anyone other than that user (breaks coach-athlete relationships)
+3. **No replicating Strava** - Can't copy their look/feel/functionality
+
+### Precedent: Apps That Got Approved Despite Using AI
+
+**Roast My Strava** - AI app that generates humorous commentary from Strava data. Approved, won award at 2025 Strava Developer Summit, 75k+ users. Key pattern: AI analyzes individual user's own data, returns insights to that same user only.
+
+### The Critical Distinction
+
+- **Prohibited**: Training models on Strava data, sharing data with third parties/coaches
+- **Potentially allowed**: AI processing individual user's own data to provide insights back to them
+
+Coach Vayu fits the "potentially allowed" pattern:
+- Only processes each user's own data ✓
+- Insights go back only to that same user ✓
+- No model training (Anthropic contractually prohibited too) ✓
+- Doesn't replicate Strava functionality ✓
+
+### Risk: Strava Acquired Runna (April 2025)
+
+Runna is an AI running coaching app. Strava may want to own this space themselves and view third-party AI coaches as competition.
+
+### Workarounds Other Devs Have Used
+
+1. **Direct Garmin Connect integration** - TrainerRoad, Intervals.icu did this
+2. **Apple Health / device sources** - Bypass Strava entirely
+3. **Minimal feature approach** - Strip down to essentials
+4. **Appeal with "user-only insights" framing** - Cite Roast My Strava precedent
+
+### Contingency: Open Source
+
+If rejected outright, open source the app (minus RevenueCat/payment bits). Let others self-host with their own Strava API keys in single-player mode.
+
+### Sources
+
+- [Strava's Big Changes Aim To Kill Off Apps - DC Rainmaker](https://www.dcrainmaker.com/2024/11/stravas-changes-to-kill-off-apps.html)
+- [Updates to Strava's API Agreement - Strava Press](https://press.strava.com/articles/updates-to-stravas-api-agreement)
+- [Developer Voices: Roast My Strava - Strava Community Hub](https://communityhub.strava.com/insider-journal-9/developer-voices-from-weekend-side-project-to-community-sensation-how-i-built-roast-my-strava-12288)
+- [Strava to Acquire Runna - Strava Press](https://press.strava.com/articles/strava-to-acquire-runna-a-leading-running-training-app)

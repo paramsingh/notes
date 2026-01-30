@@ -8,48 +8,59 @@ created: 1737100800000
 
 # Week 4 (Jan 17-23)
 
-[[runai.2025-w03|← prev]] | next →
+[[runai.2025-w03|← prev]] | [[runai.2026-w05|next →]]
 
 ## Theme
-Launch Ready - Everything prepared to submit Play Store the day Strava approves
+Launch Ready + AI Quality - Minimum launch prep, then make the coach worth paying for
 
 ## Context
-Strava approval submitted Jan 16, expect response ~Jan 27-30 (7-10 business days). Play Store submission blocked until Strava increases athlete limit (reviewers need to log in). Use this week to get everything else done.
+Strava approval submitted Jan 16, expect response ~Jan 27-30 (7-10 business days). Play Store submission blocked until Strava increases athlete limit (reviewers need to log in). Use this time wisely: do minimum launch prep, then focus on AI quality - the thing that actually determines whether users pay.
+
+**Reality check:** "I wouldn't pay $10 for my own app" - the AI coach isn't good enough yet.
 
 ## This Week
 
-### 1. Complete RevenueCat testing (LAUNCH BLOCKER)
-- [ ] Cancellation - cancel via Play Store → verify still have access until expiry
-- [ ] Expiration - wait for sandbox sub to expire → verify redirect to paywall
-- [ ] Restore purchases - log out, log back in → tap restore → verify access
-- [ ] New user flow - fresh account → sees paywall after trial expires
-**Why:** Can't charge users until payment flow is bulletproof.
+### Launch Prep (minimum viable)
 
-### 2. Merge auto-import runs PR (LAUNCH BLOCKER)
-- [ ] Test the PR locally/on device
-- [ ] Verify runs import correctly after OAuth
-- [ ] Handle edge cases (no runs, API errors)
-- [ ] Merge to main
+**1. Merge auto-import runs PR (LAUNCH BLOCKER)** ✓
+- [x] Merge to main (tested properly at pre-launch check when Strava limit increases)
 **Why:** New users with zero runs = no value = churn.
 
-### 3. Prepare Play Store submission (READY TO SHIP)
-- [ ] Take 5-7 marketing-quality screenshots
-- [ ] Write store listing (title, short desc, full desc)
-- [ ] Fill out data safety form (Strava data, analytics, etc.)
-- [ ] Finalize app icon
-- [ ] Have everything ready to submit in <1 hour when Strava approves
-**Why:** Don't want Play Store prep to delay launch after Strava approves.
-
-### 4. Security fixes
+**2. Security fixes (LAUNCH BLOCKER)** (IN PROGRESS)
 - [ ] Remove DB files from repo, purge git history
 - [ ] Remove hardcoded secrets from backend/settings.py
 - [ ] Rotate any exposed tokens
 **Why:** Can't launch with user data exposed in git history.
 
-### 5. UX polish (if time)
-- [ ] Walk through full new user flow
-- [ ] Fix any rough edges
-- [ ] Test on fresh device/account
+**3. RevenueCat - final verification** ✓
+- [x] New user flow - double check before release
+**Why:** Most testing done, just need final sanity check.
+
+**4. Play Store assets (can do last minute)**
+- [ ] Take screenshots (doesn't need to be perfect for soft launch)
+- [ ] Basic store listing
+- [ ] Data safety form
+**Why:** Don't gold-plate this - can iterate post-launch.
+
+### AI Quality (the real work)
+
+**5. Streaming status messages (IN PROGRESS)**
+- [ ] Add loading/status messages during AI coach tool calls
+- [ ] "Analyzing your runs...", "Looking at your pace data...", etc.
+**Why:** Makes app feel faster and more responsive.
+
+**6. Fix AI coach bugs**
+- [ ] Date/day off-by-one errors in training plans
+- [ ] Tool call confusion - AI doesn't realize what happened
+- [ ] Uses markdown formatting in chat (should be plain text)
+- [ ] Analysis errors - wrong conclusions about runs
+**Why:** These make the coach look dumb. Users won't pay for a dumb coach.
+
+**7. Explore core flow rethink (if time)**
+- [ ] Sketch out single coach relationship model
+- [ ] What would home screen look like?
+- [ ] How do runs feed into conversation?
+**Why:** Multiple chats feels like customer support tickets, not coaching.
 
 ## Daily
 
@@ -70,8 +81,12 @@ Strava approval submitted Jan 16, expect response ~Jan 27-30 (7-10 business days
 
 ### Tue Jan 20
 **Did:**
+- Removed hardcoded/fallback JWT secrets, enforced JWT_SECRET usage (jwt_auth.py + tests), verified prod secrets in Fly
+- Replaced JWT/session IDs in OAuth redirect URLs with one-time auth-code exchange (new auth_codes table + migration, /api/auth/exchange endpoint, updated mobile/web callbacks)
+- (in progress) RevenueCat webhook auth - require secret at startup, reject if missing
 **Blockers:**
 **Notes:**
+- Before next deploy: test phone login with auth-code changes, run migrations (automatic run import + auth_codes)
 
 ### Wed Jan 21
 **Did:**
