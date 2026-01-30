@@ -1,0 +1,160 @@
+<h1 id="paramplan">param.plan<a aria-hidden="true" class="anchor-heading icon-link" href="#paramplan"></a></h1>
+<p><em>daily notes inspired by (but not exactly) <a href="https://github.com/ESWAT/john-carmack-plan-archive">john carmack's plan</a></em></p>
+<h1 id="2025-01-28">2025-01-28<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-28"></a></h1>
+<ul>
+<li>i'm gonna work on a single review button today</li>
+<li>goal is to write as much of the code with ai as possible to ship quickly</li>
+</ul>
+<h1 id="2025-01-26">2025-01-26<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-26"></a></h1>
+<ul>
+<li>i start with the intention to write an actual feature for the blunderfest app
+but then fall into the rabbithole of sharing code as much as possible with the
+frontend app and then suddenly it's two hours with nothing to show for it
+but a bunch of refactoring and errored out code.</li>
+<li><a href="/notes/0s81gzskv1jytkh5jpnan2p">What It Needs</a></li>
+</ul>
+<h1 id="2025-01-13">2025-01-13<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-13"></a></h1>
+<ul>
+<li>it's 4 am right now, woke up at 2:30 am and haven't slept since.</li>
+<li>simple solution to fix sleep is to stay awake until ~8 in the evening tonight</li>
+<li>writing a <a href="/notes/i9rs9qzz8drla9qn3y3mk7p">blog</a> about <a href="/notes/9wx0wvntmahvcor2sx1cre5">great by choice</a></li>
+<li>shipped a version: <a href="https://newsletter.param.codes/p/great-by-choice">https://newsletter.param.codes/p/great-by-choice</a></li>
+<li>why am i doing everything except writing code for blunderfest?</li>
+</ul>
+<h1 id="2025-01-12">2025-01-12<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-12"></a></h1>
+<ul>
+<li>in the us, can't sleep. will just remain awake until the evening and see if i can sleep then.</li>
+<li>did some clean up of blunderfest</li>
+<li>creating a <code>@blunderfest/core</code> package that i can share code with was a good idea.</li>
+<li>am i weird for travelling so many miles to san francisco for work and then doing nothing but
+<h2 id="staying-in-the-hotel-room-on-the-laptop">staying in the hotel room on the laptop?<a aria-hidden="true" class="anchor-heading icon-link" href="#staying-in-the-hotel-room-on-the-laptop"></a></h2>
+</li>
+</ul>
+<h1 id="2025-01-06">2025-01-06<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-06"></a></h1>
+<ul>
+<li>office has started</li>
+<li>i need to figure out how to reuse code between the webapp and the phone app
+for game review. i don't want to rewrite the entire thing but maybe that is what is needed actually?</li>
+<li>need claude rn</li>
+</ul>
+<hr>
+<h1 id="2025-01-05">2025-01-05<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-05"></a></h1>
+<ul>
+<li>watched <a href="/notes/n1verdja7su3uysbixcg1nf">Whisper of the Heart</a>.</li>
+<li>disappointing that i won't be able to ship the app after the holidays but excited that at least i'm working on it.</li>
+<li>i am obsessed with getting blunderfest to be more successful.</li>
+<li>first we ship the app to myself, make it addictive to myself and then go from there.</li>
+<li>seperated the api client into a new package, blunderfest is becoming a real monorepo at this point lmao</li>
+<li>average dev doing a refactor instead of building the damn feature.</li>
+<li>watched <a href="/notes/6iuasgx8qevcfsg6xi5zz1j">My Neighbour Totoro</a></li>
+</ul>
+<hr>
+<h1 id="2025-01-04">2025-01-04<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-04"></a></h1>
+<ul>
+<li>ran 10k slow, supposed to be easy but my heart rate did get into 160s by the middle of it</li>
+<li>need to build more stamina, should maybe keep running this pace until hr starts staying in 150</li>
+<li>unsure if i'll be able to sit for much time today with apartment viewings etc</li>
+</ul>
+<hr>
+<h2 id="2025-01-03">2025-01-03<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-03"></a></h2>
+<p>what do i need to do to ship the app</p>
+<ol>
+<li>user must be able to sign up and sign in</li>
+<li>there needs to be an onboarding flow so that they can add lichess username etc.</li>
+<li>game review must work</li>
+</ol>
+<p>#1 is near done, i need to figure out how to integrate sign up into the stuff
+#2 is less complicated than game review, so most probably i should focus on making game review work first.</p>
+<p>first a haircut, then we get back to this.</p>
+<p>during haircut some reading <a href="/notes/9wx0wvntmahvcor2sx1cre5">great by choice</a>.</p>
+<p>7:30 pm</p>
+<p>haircut etc done, now to get back to coding.</p>
+<ul>
+<li>ig we start by creating a game review page and then adding a chessboard.</li>
+<li>will just use a hardcoded game for now.</li>
+<li>okay game review page created, and a button added that takes the user there when
+logged in</li>
+<li>game review page now has a chess board rendering (that's admittedly a little slow).</li>
+</ul>
+<hr>
+<h2 id="2025-01-02">2025-01-02<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-02"></a></h2>
+<ul>
+<li>need to finish sign in etc today.</li>
+<li>the sign in flow is weird, it seems to be starting, but not ending correctly</li>
+<li>there is an allowlist of redirect urls for mobile apps on the clerk dashboard but it won't let me add anything to it</li>
+<li>i'm pretty sure it's a bug in the oauth thing, sad that clerk doesn't have prebuilt expo components i can use here.</li>
+<li>seems to work normally in this video: <a href="https://www.youtube.com/watch?v=xp4fd78Hh5A">https://www.youtube.com/watch?v=xp4fd78Hh5A</a> so i'm not sure what i'm doing wrong</li>
+<li>lmfao the bug was that ClerkProvider need to be actually at the top level, and I had TamaguiProvider above it.</li>
+<li>diff looks like this</li>
+</ul>
+<pre class="language-diff"><code class="language-diff"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">  return (
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">    &#x3C;TamaguiProvider config={tamaguiConfig}>
+</span><span class="token prefix deleted">-</span><span class="token line">      &#x3C;ClerkProvider publishableKey={publishableKey}>
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">    &#x3C;ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
+</span><span class="token prefix inserted">+</span><span class="token line">      &#x3C;TamaguiProvider config={tamaguiConfig}>
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">        &#x3C;ClerkLoaded>
+</span><span class="token prefix unchanged"> </span><span class="token line">          &#x3C;Slot />
+</span><span class="token prefix unchanged"> </span><span class="token line">        &#x3C;/ClerkLoaded>
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">      &#x3C;/ClerkProvider>
+</span><span class="token prefix deleted">-</span><span class="token line">    &#x3C;/TamaguiProvider>
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">      &#x3C;/TamaguiProvider>
+</span><span class="token prefix inserted">+</span><span class="token line">    &#x3C;/ClerkProvider>
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">  );
+</span></span></code></pre>
+<ul>
+<li>ok now that sign in works, i guess i should move on to the main focus to actually building functionality.</li>
+<li>need to understand how to make api requests.</li>
+<li>ran 8 km to make up for only running 2 km on tuesday.</li>
+</ul>
+<hr>
+<h2 id="2025-01-01">2025-01-01<a aria-hidden="true" class="anchor-heading icon-link" href="#2025-01-01"></a></h2>
+<ul>
+<li>sign in is <em>working</em> on the app (for some definition of working).</li>
+<li>need to build a sign out for better devexp</li>
+<li>reading <a href="/notes/9wx0wvntmahvcor2sx1cre5">great by choice</a></li>
+<li>some notes:
+<ul>
+<li>10xers have a few qualities</li>
+<li>discipline</li>
+<li>belief in empirical evidence</li>
+<li>paranoia</li>
+<li>ambition</li>
+</ul>
+</li>
+</ul>
+<p>quote:</p>
+<blockquote>
+<p>10Xers then bring this idea to life by a triad of core behaviors: fanatic discipline, empirical creativity, and productive paranoia. Animating these three core behaviors is a central motivating force, Level 5 ambition.</p>
+</blockquote>
+<hr>
+<h2 id="2024-12-31">2024-12-31<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-31"></a></h2>
+<ul>
+<li>trying to get sign in stuff working</li>
+<li>claude capacity issues pita</li>
+</ul>
+<h2 id="2024-12-16">2024-12-16<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-16"></a></h2>
+<ul>
+<li>no run today</li>
+<li>travel back to blr, took a good photo</li>
+<li>renewed the domain for blunderfest</li>
+<li>also bought blunderfest.com</li>
+</ul>
+<h2 id="2024-12-15">2024-12-15<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-15"></a></h2>
+<ul>
+<li>no run yet, but hoping to run in the evening</li>
+<li>aus 301/3, rohit needs to retire</li>
+</ul>
+<h2 id="2024-12-14">2024-12-14<a aria-hidden="true" class="anchor-heading icon-link" href="#2024-12-14"></a></h2>
+<ul>
+<li>run 5k</li>
+<li>figure out where to go next with blunderfest</li>
+<li>potential ideas
+<ul>
+<li>app</li>
+</ul>
+</li>
+</ul>
+<p>notes:</p>
+<ul>
+<li><a href="https://x.com/iliekcomputers/status/1867984093440602224">https://x.com/iliekcomputers/status/1867984093440602224</a></li>
+</ul>

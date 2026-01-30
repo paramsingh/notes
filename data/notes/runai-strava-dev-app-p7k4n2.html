@@ -1,0 +1,240 @@
+<h1 id="runai-strava-developer-application">RunAI Strava Developer Application<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-strava-developer-application"></a></h1>
+<h1 id="coach-vayu-strava-developer-application">Coach Vayu Strava Developer Application<a aria-hidden="true" class="anchor-heading icon-link" href="#coach-vayu-strava-developer-application"></a></h1>
+<blockquote>
+<p>This note was generated with AI assistance.</p>
+</blockquote>
+<p>Application materials for Strava Developer Program to increase athlete capacity beyond Single Player Mode. App formerly known as RunAI, now Coach Vayu.</p>
+<h2 id="application-email-draft">Application Email Draft<a aria-hidden="true" class="anchor-heading icon-link" href="#application-email-draft"></a></h2>
+<p>To: <a href="/mailto:developers@strava.com">developers@strava.com</a>
+Subject: Developer Program Application &#x26; Athlete Limit Increase - Coach Vayu (Client ID: 157267)</p>
+<hr>
+<p>Hi,</p>
+<p>I'm Param, and I'm building Coach Vayu - an AI running coach that syncs with Strava. I've been using it myself for the past few months and I'm ready to expand to a limited beta with friends and other running enthusiasts. I'd like to apply for the Developer Program to get my app reviewed and increase the athlete limit (currently 1) to around 100.</p>
+<p>Since this is an early beta, the landing page and screenshots aren't super polished yet - but the app itself is functional and ready for testing.</p>
+<p>App Details:
+Name: Coach Vayu
+Client ID: 157267
+Website: <a href="https://coachvayu.com">https://coachvayu.com</a> (work in progress)
+Privacy Policy: <a href="https://coachvayu.com/privacy">https://coachvayu.com/privacy</a>
+Terms of Service: <a href="https://coachvayu.com/terms">https://coachvayu.com/terms</a>
+Contact: <a href="/mailto:me@param.codes">me@param.codes</a></p>
+<p>What it does</p>
+<p>Coach Vayu is a conversational AI running coach. Users connect their Strava, and the app automatically imports their runs via webhooks. They can then chat with the AI coach to get personalized feedback on their training - things like pacing analysis, recovery suggestions, and training plans based on their actual run history.</p>
+<p>How I use Strava data</p>
+<p>  Authentication: Strava OAuth only (no separate passwords)
+Run syncing: Webhook-driven automatic imports
+Data displayed: Distance, duration, pace, heart rate, cadence, splits
+Scopes: read,activity:read_all,read_all</p>
+<p>Brand compliance</p>
+<p>I've followed the Strava brand guidelines:</p>
+<ul>
+<li>Official "Connect with Strava" orange button on login (see screenshot 1)</li>
+<li>"Powered by Strava" logo in Settings (see screenshot 2)</li>
+<li>"View on Strava" deep links on run details (see screenshot 3)</li>
+<li>No Strava marks in app name or icon</li>
+</ul>
+<p>I've also implemented the deauthorization webhook - when a user revokes access, I delete their tokens and delete their data immediately.</p>
+<p>Screenshots attached</p>
+<ol>
+<li>Login screen with Connect with Strava button</li>
+<li>Settings with Powered by Strava</li>
+<li>Run detail with View on Strava link</li>
+<li>AI coach chat analyzing a run</li>
+</ol>
+<p>Technical details</p>
+<p>Stack:</p>
+<ul>
+<li>Backend: Python Flask on Fly.io</li>
+<li>Mobile: React Native/Expo (Google Play Store)</li>
+<li>Database: SQLite with multi-user support</li>
+<li>AI: Claude</li>
+</ul>
+<p>Webhook integration:</p>
+<ul>
+<li>Subscribed to activity creation events</li>
+<li>Auto-imports runs when athletes complete activities</li>
+<li>Only processes run-type activities (Run, TrailRun, VirtualRun)</li>
+<li>Deauthorization webhook deletes tokens and all user data immediately</li>
+</ul>
+<p>Security:</p>
+<ul>
+<li>HTTPS everywhere</li>
+<li>JWT session management</li>
+<li>Complete data isolation between users</li>
+<li>Strava tokens stored securely, refreshed automatically</li>
+</ul>
+<p>Expected API usage</p>
+<ul>
+<li>Default rate limits (200/15min, 2000/day) should be plenty for now</li>
+<li>Main API calls: OAuth token exchange, webhook processing, activity fetching</li>
+<li>Webhook-driven = minimal polling</li>
+<li>Targeting 50-100 users initially, maybe 200-500 in first 6 months</li>
+<li>Will request increases if I approach limits</li>
+</ul>
+<p>Current status</p>
+<p>Ready to launch:</p>
+<ul>
+<li>Production backend deployed</li>
+<li>RevenueCat subscriptions working</li>
+<li>Multi-user data isolation</li>
+<li>Play Store submission in progress</li>
+</ul>
+<p>Let me know if you need anything else.</p>
+<p>Thanks,
+Param Singh
+<a href="/mailto:me@param.codes">me@param.codes</a>
+<a href="https://coachvayu.com">https://coachvayu.com</a></p>
+<hr>
+<h2 id="form-submission-cheat-sheet">Form Submission Cheat Sheet<a aria-hidden="true" class="anchor-heading icon-link" href="#form-submission-cheat-sheet"></a></h2>
+<p>Form URL: <a href="https://share.hsforms.com/1VXSwPUYqSH6IxK0y51FjHwcnkd8">https://share.hsforms.com/1VXSwPUYqSH6IxK0y51FjHwcnkd8</a></p>
+<p>Fill in with these values:</p>
+<p>App/Client ID: 157267
+App Name: Coach Vayu
+Your Name: Param Singh
+Email: <a href="/mailto:me@param.codes">me@param.codes</a>
+Website: <a href="https://coachvayu.com">https://coachvayu.com</a>
+Privacy Policy: <a href="https://coachvayu.com/privacy">https://coachvayu.com/privacy</a>
+Terms of Service: <a href="https://coachvayu.com/terms">https://coachvayu.com/terms</a>
+Support URL: <a href="https://coachvayu.com">https://coachvayu.com</a></p>
+<p>What does your app do?
+Coach Vayu is a conversational AI running coach. Users connect their Strava, and the app automatically imports their runs via webhooks. They can chat with the AI coach to get personalized feedback - pacing analysis, recovery suggestions, and training plans based on their actual run history.</p>
+<p>How do you use Strava data?</p>
+<ul>
+<li>Authentication: Strava OAuth only (no separate passwords)</li>
+<li>Run syncing: Webhook-driven automatic imports</li>
+<li>Data displayed: Distance, duration, pace, heart rate, cadence, splits</li>
+<li>Scopes: read,activity:read_all,read_all</li>
+</ul>
+<p>How many athletes/users do you need?
+Around 100 - this is for a limited beta with friends and running enthusiasts. I've been testing the app myself for months and am ready to expand.</p>
+<p>How have you implemented Strava branding?</p>
+<ul>
+<li>Official "Connect with Strava" orange button on login</li>
+<li>"Powered by Strava" logo in Settings</li>
+<li>"View on Strava" deep links on run details</li>
+<li>No Strava marks in app name or icon</li>
+<li>Deauthorization webhook implemented - deletes tokens and all user data immediately when user revokes access</li>
+</ul>
+<p>Expected API usage?</p>
+<ul>
+<li>Default rate limits (200/15min, 2000/day) should be plenty</li>
+<li>Webhook-driven architecture = minimal polling</li>
+<li>Targeting 50-100 users initially</li>
+</ul>
+<p>Anything else?
+This is an early beta - the landing page and screenshots aren't super polished yet, but the app is functional and ready for testing.</p>
+<p>Attach screenshots:</p>
+<ol>
+<li>coach-vayu-01-login-strava-connect.png</li>
+<li>coach-vayu-02-settings-powered-by-strava.png</li>
+<li>coach-vayu-03-run-detail-view-on-strava.png</li>
+<li>coach-vayu-04-ai-coach-chat.png</li>
+</ol>
+<hr>
+<h2 id="attachments">Attachments<a aria-hidden="true" class="anchor-heading icon-link" href="#attachments"></a></h2>
+<p>Screenshots ready in <code>~/Downloads/</code>:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> <code>coach-vayu-01-login-strava-connect.png</code> - Login with "Connect with Strava" button</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> <code>coach-vayu-02-settings-powered-by-strava.png</code> - Settings with "Powered by Strava" logo</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> <code>coach-vayu-03-run-detail-view-on-strava.png</code> - Run detail with "View on Strava" link</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> <code>coach-vayu-04-ai-coach-chat.png</code> - AI coach analyzing a run</li>
+</ul>
+<hr>
+<h2 id="resubmission-2026-01-29">Resubmission (2026-01-29)<a aria-hidden="true" class="anchor-heading icon-link" href="#resubmission-2026-01-29"></a></h2>
+<p>Strava requested more information about AI usage. This is the follow-up submission.</p>
+<h3 id="form-submission-cheat-sheet-1">Form Submission Cheat Sheet<a aria-hidden="true" class="anchor-heading icon-link" href="#form-submission-cheat-sheet-1"></a></h3>
+<p>Form URL: <a href="https://share.hsforms.com/1VXSwPUYqSH6IxK0y51FjHwcnkd8">https://share.hsforms.com/1VXSwPUYqSH6IxK0y51FjHwcnkd8</a></p>
+<p><strong>First name:</strong> Param
+<strong>Last name:</strong> Singh
+<strong>Email Address:</strong> <a href="/mailto:me@param.codes">me@param.codes</a>
+<strong>Company Name:</strong> Coach Vayu
+<strong>API Application Name:</strong> Coach Vayu
+<strong>Strava Client ID:</strong> 157267
+<strong>Additional Apps:</strong> 193648
+<strong>Number of Currently Authenticated Users:</strong> 1
+<strong>Number of Intended Users:</strong> 100
+<strong>Support URL:</strong> <a href="https://coachvayu.com/support">https://coachvayu.com/support</a></p>
+<p><strong>Application Description:</strong> (copy below)</p>
+<hr>
+<p>This is a resubmission for Client ID 157267, following your email requesting more information about AI usage.</p>
+<p>Coach Vayu is a conversational AI running coach. Users connect their Strava, and the app automatically imports their runs via webhooks. They can chat with the AI coach to get personalized feedback—pacing analysis, recovery suggestions, and training plans based on their actual run history.</p>
+<p><strong>AI Usage &#x26; Compliance</strong></p>
+<ol>
+<li>
+<p>Does the app involve AI?
+Yes—users chat with an AI coach (Claude, via Anthropic's API) to get feedback on their training.</p>
+</li>
+<li>
+<p>How is Strava data used with AI?
+When a user asks for coaching advice, their activity data is included as context in the request to Claude. The AI analyzes it and returns personalized feedback. No Strava data is ever used to train, fine-tune, or pre-train any AI model—it's only used for real-time analysis to help that individual user.</p>
+</li>
+<li>
+<p>Compliance with your training restrictions?
+No Strava data is used to train AI models. Claude is a pre-trained model; we only use it for inference. Anthropic's Commercial Terms (<a href="https://www.anthropic.com/legal/commercial-terms">https://www.anthropic.com/legal/commercial-terms</a>) explicitly state "Anthropic may not train models on Customer Content from Services"—so even our AI provider is contractually prohibited from training on this data.</p>
+</li>
+<li>
+<p>Third-party access?
+Only Anthropic's Claude API processes the data (for generating responses). They cannot use it for training. No other third parties have access. Each user's data is completely isolated.</p>
+</li>
+</ol>
+<p><strong>Other API Agreement Compliance</strong></p>
+<ul>
+<li>Data deletion: Deauthorization webhook immediately deletes all user tokens and data. Activity deletion webhooks remove activities from our database. Users can request full data deletion at any time.</li>
+<li>Data isolation: Each user only sees their own activities. No data is aggregated or shared across users.</li>
+<li>Security: All data transmitted over HTTPS. Strava tokens stored securely and refreshed automatically. JWT-based session management.</li>
+<li>Monetization: Subscription fees are for AI coaching functionality, not for access to Strava data.</li>
+<li>Brand compliance: "Connect with Strava" button on login, "Powered by Strava" in settings, "View on Strava" deep links on activities.</li>
+</ul>
+<p>Our privacy policy (<a href="https://coachvayu.com/privacy">https://coachvayu.com/privacy</a>) and terms of service (<a href="https://coachvayu.com/terms">https://coachvayu.com/terms</a>) explicitly document our AI data practices.</p>
+<p>Happy to clarify anything else.</p>
+<hr>
+<p><strong>TOS Compliance:</strong> ✓ (check)
+<strong>Brand Guidelines Review:</strong> ✓ (check)</p>
+<p><strong>App Images:</strong> (same screenshots as before)</p>
+<ol>
+<li>coach-vayu-01-login-strava-connect.png</li>
+<li>coach-vayu-02-settings-powered-by-strava.png</li>
+<li>coach-vayu-03-run-detail-view-on-strava.png</li>
+<li>coach-vayu-04-ai-coach-chat.png</li>
+</ol>
+<hr>
+<h2 id="if-rejected-research--contingency-plan">If Rejected: Research &#x26; Contingency Plan<a aria-hidden="true" class="anchor-heading icon-link" href="#if-rejected-research--contingency-plan"></a></h2>
+<h3 id="strava-api-policy-context-nov-2024-changes">Strava API Policy Context (Nov 2024 changes)<a aria-hidden="true" class="anchor-heading icon-link" href="#strava-api-policy-context-nov-2024-changes"></a></h3>
+<p>Key restrictions:</p>
+<ol>
+<li><strong>AI/ML Prohibition</strong> - Third parties cannot use Strava data for AI model training OR AI processing</li>
+<li><strong>Data privacy</strong> - Cannot show user data to anyone other than that user (breaks coach-athlete relationships)</li>
+<li><strong>No replicating Strava</strong> - Can't copy their look/feel/functionality</li>
+</ol>
+<h3 id="precedent-apps-that-got-approved-despite-using-ai">Precedent: Apps That Got Approved Despite Using AI<a aria-hidden="true" class="anchor-heading icon-link" href="#precedent-apps-that-got-approved-despite-using-ai"></a></h3>
+<p><strong>Roast My Strava</strong> - AI app that generates humorous commentary from Strava data. Approved, won award at 2025 Strava Developer Summit, 75k+ users. Key pattern: AI analyzes individual user's own data, returns insights to that same user only.</p>
+<h3 id="the-critical-distinction">The Critical Distinction<a aria-hidden="true" class="anchor-heading icon-link" href="#the-critical-distinction"></a></h3>
+<ul>
+<li><strong>Prohibited</strong>: Training models on Strava data, sharing data with third parties/coaches</li>
+<li><strong>Potentially allowed</strong>: AI processing individual user's own data to provide insights back to them</li>
+</ul>
+<p>Coach Vayu fits the "potentially allowed" pattern:</p>
+<ul>
+<li>Only processes each user's own data ✓</li>
+<li>Insights go back only to that same user ✓</li>
+<li>No model training (Anthropic contractually prohibited too) ✓</li>
+<li>Doesn't replicate Strava functionality ✓</li>
+</ul>
+<h3 id="risk-strava-acquired-runna-april-2025">Risk: Strava Acquired Runna (April 2025)<a aria-hidden="true" class="anchor-heading icon-link" href="#risk-strava-acquired-runna-april-2025"></a></h3>
+<p>Runna is an AI running coaching app. Strava may want to own this space themselves and view third-party AI coaches as competition.</p>
+<h3 id="workarounds-other-devs-have-used">Workarounds Other Devs Have Used<a aria-hidden="true" class="anchor-heading icon-link" href="#workarounds-other-devs-have-used"></a></h3>
+<ol>
+<li><strong>Direct Garmin Connect integration</strong> - TrainerRoad, Intervals.icu did this</li>
+<li><strong>Apple Health / device sources</strong> - Bypass Strava entirely</li>
+<li><strong>Minimal feature approach</strong> - Strip down to essentials</li>
+<li><strong>Appeal with "user-only insights" framing</strong> - Cite Roast My Strava precedent</li>
+</ol>
+<h3 id="contingency-open-source">Contingency: Open Source<a aria-hidden="true" class="anchor-heading icon-link" href="#contingency-open-source"></a></h3>
+<p>If rejected outright, open source the app (minus RevenueCat/payment bits). Let others self-host with their own Strava API keys in single-player mode.</p>
+<h3 id="sources">Sources<a aria-hidden="true" class="anchor-heading icon-link" href="#sources"></a></h3>
+<ul>
+<li><a href="https://www.dcrainmaker.com/2024/11/stravas-changes-to-kill-off-apps.html">Strava's Big Changes Aim To Kill Off Apps - DC Rainmaker</a></li>
+<li><a href="https://press.strava.com/articles/updates-to-stravas-api-agreement">Updates to Strava's API Agreement - Strava Press</a></li>
+<li><a href="https://communityhub.strava.com/insider-journal-9/developer-voices-from-weekend-side-project-to-community-sensation-how-i-built-roast-my-strava-12288">Developer Voices: Roast My Strava - Strava Community Hub</a></li>
+<li><a href="https://press.strava.com/articles/strava-to-acquire-runna-a-leading-running-training-app">Strava to Acquire Runna - Strava Press</a></li>
+</ul>

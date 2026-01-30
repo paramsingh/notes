@@ -1,0 +1,156 @@
+<h1 id="research---llm-temporal-reasoning-failures">Research - LLM Temporal Reasoning Failures<a aria-hidden="true" class="anchor-heading icon-link" href="#research---llm-temporal-reasoning-failures"></a></h1>
+<h1 id="llm-temporal-reasoning-failures">LLM Temporal Reasoning Failures<a aria-hidden="true" class="anchor-heading icon-link" href="#llm-temporal-reasoning-failures"></a></h1>
+<p>Side project idea: Study when/why LLMs mess up dates and days, test interventions.</p>
+<h2 id="hook">Hook<a aria-hidden="true" class="anchor-heading icon-link" href="#hook"></a></h2>
+<p>"Your AI assistant probably can't tell you what day January 17th is. Here's why, and how to fix it."</p>
+<h2 id="prior-art">Prior Art<a aria-hidden="true" class="anchor-heading icon-link" href="#prior-art"></a></h2>
+<ul>
+<li><strong>Test of Time (ToT)</strong> - ICLR 2025. Off-by-one errors are most common (~21% of GPT-4 errors exactly 1 day off)</li>
+<li><strong>DATETIME benchmark</strong> - Even trivial tasks show poor performance</li>
+<li><strong>TIME benchmark</strong> - Real-world temporal reasoning</li>
+</ul>
+<h2 id="gap--contribution">Gap / Contribution<a aria-hidden="true" class="anchor-heading icon-link" href="#gap--contribution"></a></h2>
+<p>Existing work = benchmarks. Missing:</p>
+<ol>
+<li>Day-of-week ↔ date mismatch specifically</li>
+<li>Intervention testing (what actually fixes it?)</li>
+<li>Practical recommendations for developers</li>
+</ol>
+<h2 id="research-questions">Research Questions<a aria-hidden="true" class="anchor-heading icon-link" href="#research-questions"></a></h2>
+<ol>
+<li>How often do models get day-of-week wrong for a given date?</li>
+<li>Does the error rate change for near dates vs far dates?</li>
+<li>Do planning tasks (multi-day, multi-week) compound errors?</li>
+<li>Which interventions help?
+<ul>
+<li>Explicit date context</li>
+<li>Chain-of-thought</li>
+<li>Calendar tool access</li>
+<li>Few-shot examples</li>
+</ul>
+</li>
+</ol>
+<h2 id="test-categories">Test Categories<a aria-hidden="true" class="anchor-heading icon-link" href="#test-categories"></a></h2>
+<h3 id="category-1-simple-day-of-week">Category 1: Simple Day-of-Week<a aria-hidden="true" class="anchor-heading icon-link" href="#category-1-simple-day-of-week"></a></h3>
+<ul>
+<li>"What day of the week is January 17, 2026?"</li>
+<li>"What day of the week is March 3, 2026?"</li>
+<li>"What day of the week was December 25, 2025?"</li>
+</ul>
+<h3 id="category-2-relative-date-calculation">Category 2: Relative Date Calculation<a aria-hidden="true" class="anchor-heading icon-link" href="#category-2-relative-date-calculation"></a></h3>
+<ul>
+<li>"If today is Saturday January 17, what date is next Wednesday?"</li>
+<li>"What's the date 10 days from January 17, 2026?"</li>
+<li>"If today is Thursday, and the date is January 15, what was last Monday's date?"</li>
+</ul>
+<h3 id="category-3-day-date-consistency-the-coach-vayu-bug">Category 3: Day-Date Consistency (the Coach Vayu bug)<a aria-hidden="true" class="anchor-heading icon-link" href="#category-3-day-date-consistency-the-coach-vayu-bug"></a></h3>
+<ul>
+<li>"Create a workout plan for Monday, Wednesday, Friday starting January 20, 2026. Include the dates."</li>
+<li>"Schedule meetings for every Tuesday in February 2026. List all dates."</li>
+<li>"Plan a 4-week training program starting January 20. Show each day with its date."</li>
+</ul>
+<h3 id="category-4-duration-and-counting">Category 4: Duration and Counting<a aria-hidden="true" class="anchor-heading icon-link" href="#category-4-duration-and-counting"></a></h3>
+<ul>
+<li>"How many days between January 17 and February 14, 2026?"</li>
+<li>"How many Mondays are in January 2026?"</li>
+<li>"If I run every other day starting January 17, list my next 10 run dates."</li>
+</ul>
+<h3 id="category-5-edge-cases">Category 5: Edge Cases<a aria-hidden="true" class="anchor-heading icon-link" href="#category-5-edge-cases"></a></h3>
+<ul>
+<li>Month boundaries ("What day is February 1 if January 31 is a Friday?")</li>
+<li>Leap years ("Is 2024 a leap year? What day is February 29, 2024?")</li>
+<li>Year boundaries ("If December 31, 2025 is Wednesday, what day is January 1, 2026?")</li>
+</ul>
+<h2 id="interventions-to-test">Interventions to Test<a aria-hidden="true" class="anchor-heading icon-link" href="#interventions-to-test"></a></h2>
+<h3 id="a-baseline">A. Baseline<a aria-hidden="true" class="anchor-heading icon-link" href="#a-baseline"></a></h3>
+<p>No date context. Just the question.</p>
+<h3 id="b-explicit-today-context">B. Explicit Today Context<a aria-hidden="true" class="anchor-heading icon-link" href="#b-explicit-today-context"></a></h3>
+<p>"Today is Saturday, January 17, 2026."</p>
+<h3 id="c-calendar-context">C. Calendar Context<a aria-hidden="true" class="anchor-heading icon-link" href="#c-calendar-context"></a></h3>
+<p>"Here is a calendar for January 2026:
+Mon Tue Wed Thu Fri Sat Sun
+1   2   3   4   5
+6   7   8   9  10  11  12
+13  14  15  16  17  18  19
+20  21  22  23  24  25  26
+27  28  29  30  31"</p>
+<h3 id="d-chain-of-thought-prompt">D. Chain-of-Thought Prompt<a aria-hidden="true" class="anchor-heading icon-link" href="#d-chain-of-thought-prompt"></a></h3>
+<p>"Think step by step. First verify what day of the week the starting date is, then proceed."</p>
+<h3 id="e-tool-access">E. Tool Access<a aria-hidden="true" class="anchor-heading icon-link" href="#e-tool-access"></a></h3>
+<p>Give the model a get_day_of_week(date) tool and see if it uses it correctly.</p>
+<h3 id="f-few-shot-examples">F. Few-Shot Examples<a aria-hidden="true" class="anchor-heading icon-link" href="#f-few-shot-examples"></a></h3>
+<p>Provide 2-3 correct examples before the test question.</p>
+<h2 id="models-to-test">Models to Test<a aria-hidden="true" class="anchor-heading icon-link" href="#models-to-test"></a></h2>
+<ul>
+<li>Claude 3.5 Sonnet</li>
+<li>Claude 3 Opus</li>
+<li>GPT-4o</li>
+<li>GPT-4 Turbo</li>
+<li>Gemini 1.5 Pro</li>
+<li>Llama 3 70B</li>
+<li>Mistral Large</li>
+</ul>
+<h2 id="metrics">Metrics<a aria-hidden="true" class="anchor-heading icon-link" href="#metrics"></a></h2>
+<ul>
+<li><strong>Accuracy</strong>: % of correct day-of-week answers</li>
+<li><strong>Off-by-one rate</strong>: % of errors that are exactly ±1 day</li>
+<li><strong>Consistency</strong>: In planning tasks, do all day-date pairs match?</li>
+<li><strong>Intervention lift</strong>: How much does each intervention improve accuracy?</li>
+</ul>
+<h2 id="methodology">Methodology<a aria-hidden="true" class="anchor-heading icon-link" href="#methodology"></a></h2>
+<ol>
+<li>Generate test set (aim for 100-200 questions across categories)</li>
+<li>Run each question against each model with each intervention</li>
+<li>Parse responses, extract day/date claims</li>
+<li>Validate against ground truth (Python datetime)</li>
+<li>Categorize errors</li>
+<li>Statistical analysis of intervention effectiveness</li>
+</ol>
+<h2 id="output-format">Output Format<a aria-hidden="true" class="anchor-heading icon-link" href="#output-format"></a></h2>
+<p>Blog post or short paper:</p>
+<ol>
+<li>Introduction (the problem, why it matters)</li>
+<li>Related work (ToT, DATETIME, TIME)</li>
+<li>Methodology</li>
+<li>Results (tables, charts)</li>
+<li>Analysis (why do models fail? which interventions work?)</li>
+<li>Practical recommendations for developers</li>
+<li>Limitations and future work</li>
+</ol>
+<h2 id="practical-recommendations-hypotheses">Practical Recommendations (hypotheses)<a aria-hidden="true" class="anchor-heading icon-link" href="#practical-recommendations-hypotheses"></a></h2>
+<p>Based on intuition, likely recommendations:</p>
+<ul>
+<li>Always include explicit "Today is [day], [date]" in system prompt</li>
+<li>For planning tasks, provide a calendar snippet</li>
+<li>Force CoT for multi-step date calculations</li>
+<li>Consider a simple date validation tool</li>
+</ul>
+<h2 id="timeline">Timeline<a aria-hidden="true" class="anchor-heading icon-link" href="#timeline"></a></h2>
+<p>Day 1:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Generate test set</li>
+<li class="task-list-item"><input type="checkbox" disabled> Set up evaluation harness</li>
+<li class="task-list-item"><input type="checkbox" disabled> Run baseline tests across models</li>
+</ul>
+<p>Day 2:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Run intervention tests</li>
+<li class="task-list-item"><input type="checkbox" disabled> Analyze results</li>
+<li class="task-list-item"><input type="checkbox" disabled> Write up findings</li>
+</ul>
+<h2 id="why-this-gets-attention">Why This Gets Attention<a aria-hidden="true" class="anchor-heading icon-link" href="#why-this-gets-attention"></a></h2>
+<ol>
+<li>Practical problem every AI app developer faces</li>
+<li>Actionable recommendations (not just "models are bad")</li>
+<li>Builds on ICLR 2025 paper (ToT) with new angle</li>
+<li>Clear, reproducible methodology</li>
+<li>Good visuals potential (error heatmaps, intervention comparisons)</li>
+</ol>
+<h2 id="why-this-gets-you-hired">Why This Gets You Hired<a aria-hidden="true" class="anchor-heading icon-link" href="#why-this-gets-you-hired"></a></h2>
+<ul>
+<li>Shows you understand LLM limitations deeply</li>
+<li>Demonstrates research methodology</li>
+<li>Practical engineering (building eval harness)</li>
+<li>Clear communication (blog post)</li>
+<li>Original contribution to the field</li>
+</ul>

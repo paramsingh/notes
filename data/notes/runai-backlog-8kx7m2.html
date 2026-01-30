@@ -1,0 +1,211 @@
+<h1 id="runai-backlog">RunAI Backlog<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-backlog"></a></h1>
+<h1 id="runai-backlog-1">RunAI Backlog<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-backlog-1"></a></h1>
+<p>Ordered by priority (top = do first). New ideas go to the bottom.</p>
+<h2 id="backlog">Backlog<a aria-hidden="true" class="anchor-heading icon-link" href="#backlog"></a></h2>
+<p><strong>High Priority / Launch Blockers:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Add "Founding Member" lifetime pricing tier</p>
+<ul>
+<li>$149 / 12,499 INR lifetime access</li>
+<li>Limited to first 50 members</li>
+<li>Show remaining count in paywall</li>
+<li>Founding member badge/perk</li>
+<li>Remove once sold out, never bring back at this price</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" checked disabled> Choose new app name (RunAI is taken) → <strong>Coach Vayu</strong> (coachvayu.com)</p>
+<ul class="contains-task-list">
+<li>Blocks: domain, landing page, privacy policy, Strava approval, Play Store</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Update name throughout frontend (app title, strings, etc.)</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" checked disabled> Buy domain and set up landing page</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Buy domain (coachvayu.com)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Host landing page with privacy policy and terms of service</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" checked disabled> Pull recent runs from Strava API during signup (last 30-60 days) - LAUNCH BLOCKER ✓</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Get Strava approval (brand guidelines review) - RESUBMITTED Jan 29</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Review and customize Strava Developer Program application email draft (RunAI → Coach Vayu)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Fill in Client ID, name, email, website URL, privacy policy URL</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Take required screenshots (login, settings, run details, AI chat)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Implement "View on Strava" deep links ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Implement deauthorization webhook ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Submit application to <a href="/mailto:developers@strava.com">developers@strava.com</a> ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Respond to AI usage clarification request (Jan 29)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Update privacy policy &#x26; ToS with explicit AI data usage language</li>
+<li>Waiting for final decision. If rejected, plan is open source minus payments.</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" checked disabled> Test RevenueCat integration ✓ (verified Jan 17)</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Cancellation ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Expiration ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Restore purchases ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Plan upgrade ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Resubscribe after cancel ✓</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> New user flow - double check before release ✓</li>
+<li class="task-list-item"><input type="checkbox" disabled> iOS testing - later</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Security audit</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Final pre-launch check</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Auth flows: login, logout, token refresh</li>
+<li class="task-list-item"><input type="checkbox" disabled> Payment flows: subscribe, restore, cancel</li>
+<li class="task-list-item"><input type="checkbox" disabled> Auto-import runs after OAuth</li>
+<li class="task-list-item"><input type="checkbox" disabled> New user end-to-end (signup → import → chat with coach → paywall)</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Publish to Play Store</p>
+</li>
+</ul>
+<p><strong>UX Improvements:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Rethink core flow: single coach relationship instead of multiple chats</p>
+<ul>
+<li>One ongoing conversation with Coach Vayu (not chat per run, general chat, etc.)</li>
+<li>Coach remembers everything (needs memory tool)</li>
+<li>Runs feed into conversation as context</li>
+<li>Coach is proactive ("Nice 5k this morning, saw you negative split")</li>
+<li>No "start new chat" - just talk to your coach</li>
+<li>Home screen = your coach conversation</li>
+<li>Feels like a relationship, not customer support tickets</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Add loading/status messages during AI coach tool calls (e.g., "Analyzing your runs...", "Looking at your pace data...")</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Remove "upload FIT file" feature</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review end-to-end UX - make sure flows make sense for new users</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Add tooltips/coach marks for first-time viewing of key pages</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Improve run page design</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Start conversation from coach's notes (tap note on run page → opens chat with context)</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Work on onboarding flow</p>
+</li>
+</ul>
+<p><strong>Features:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Give coach a memory tool (writes to database) - persistent context across conversations</li>
+<li class="task-list-item"><input type="checkbox" disabled> Coach can search/analyze past runs</li>
+<li class="task-list-item"><input type="checkbox" disabled> Design and implement onboarding screens with 30-day free trial messaging</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add streaming responses to chat interface</li>
+<li class="task-list-item"><input type="checkbox" disabled> Finalize app-wide color scheme and redesign entire app based on it</li>
+</ul>
+<p><strong>Launch Strategy:</strong></p>
+<p>Pre-launch:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Collect beta tester testimonials (2-3 quotes)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Set up analytics (Mixpanel/Amplitude) - track funnel</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add email waitlist to coachvayu.com</li>
+<li class="task-list-item"><input type="checkbox" disabled> Tease on Twitter/socials before launch</li>
+</ul>
+<p>Launch day:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Product Hunt launch (coordinate timezone, early upvotes)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Hacker News "Show HN" post</li>
+<li class="task-list-item"><input type="checkbox" disabled> Reddit: r/running, r/AdvancedRunning, r/triathlon</li>
+<li class="task-list-item"><input type="checkbox" disabled> Strava clubs / running Discord servers</li>
+<li class="task-list-item"><input type="checkbox" disabled> Personal network push (WhatsApp, LinkedIn)</li>
+</ul>
+<p>In-app growth:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Review prompt after positive interaction</li>
+<li class="task-list-item"><input type="checkbox" disabled> Referral mechanism ("Give a friend 1 month free, get 1 month free")</li>
+<li class="task-list-item"><input type="checkbox" disabled> Share run analysis to socials feature</li>
+</ul>
+<p>ASO (App Store Optimization):</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Keywords in title/description (AI running coach, training plan)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Screenshots that show value, not just UI</li>
+<li class="task-list-item"><input type="checkbox" disabled> Compelling first sentence in description</li>
+</ul>
+<p>Post-launch:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Respond to every review</li>
+<li class="task-list-item"><input type="checkbox" disabled> Weekly content (running tips) for SEO</li>
+<li class="task-list-item"><input type="checkbox" disabled> Reach out to running bloggers/YouTubers</li>
+</ul>
+<p><strong>Infrastructure:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Automate build and Play Store upload (script EAS build → download AAB → upload to Play Store)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Research Strava API user limit increase process and apply for higher limits</li>
+<li class="task-list-item"><input type="checkbox" disabled> Create landing page and host privacy policy and other legal docs</li>
+</ul>
+<p><strong>Bugs:</strong></p>
+<p><strong>AI Coach Quality (embarrassing to show):</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Date/day off-by-one errors in training plans (says Thursday but means Friday)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Tool call confusion - AI doesn't realize what happened, says "looks like plan is already updated"</li>
+<li class="task-list-item"><input type="checkbox" disabled> Uses markdown formatting in chat messages (should be plain text)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Analysis errors - wrong conclusions about runs (e.g., "too hard" when clearly zone 2)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Too slow - needs performance optimization</li>
+</ul>
+<p><strong>Critical (blocks new user flow):</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Navigation broken after login - clicking anything flickers and returns to main page</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> App opens to runs page by default instead of login page when not authenticated</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Fix privacy policy and terms of service pages on paywall</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Restore purchases button unclear - needs better UX and verification it works</li>
+</ul>
+<p><strong>Medium priority:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Manage subscription page should show cancelled status and expiry date when subscription is cancelled</li>
+<li class="task-list-item"><input type="checkbox" disabled> Chat page doesn't auto-refresh the chats on opening</li>
+<li class="task-list-item"><input type="checkbox" disabled> Onboarding flow should allow going back to previous slide</li>
+</ul>
+<hr>
+<h2 id="new-project-ideas">New Project Ideas<a aria-hidden="true" class="anchor-heading icon-link" href="#new-project-ideas"></a></h2>
+<p><strong>Grimoire</strong> (exploring while waiting on Strava)</p>
+<ul>
+<li>Mobile app that brings Claude Code experience to phone</li>
+<li>Chat with Claude, it can read/write files in a notes folder</li>
+<li>"Claude that knows your life and can read/write your second brain"</li>
+<li>BYOK (Bring Your Own Key), Android-first, dark mode, fantasy-themed</li>
+<li>Design doc: <a href="/notes/grimoire-design-v2">Grimoire - Design Doc</a></li>
+</ul>
+<hr>
+<h2 id="extracted-libraries">Extracted Libraries<a aria-hidden="true" class="anchor-heading icon-link" href="#extracted-libraries"></a></h2>
+<p>Reusable packages extracted from Coach Vayu codebase:</p>
+<ul>
+<li><strong>vayu-storage</strong> - Cross-platform secure storage (SecureStore/localStorage)
+<ul>
+<li><a href="https://github.com/paramsingh/vayu-storage">https://github.com/paramsingh/vayu-storage</a></li>
+</ul>
+</li>
+<li><strong>vayu-auth</strong> - Token-based auth utilities with auto-refresh
+<ul>
+<li><a href="https://github.com/paramsingh/vayu-auth">https://github.com/paramsingh/vayu-auth</a></li>
+</ul>
+</li>
+<li><strong>vayu-subscriptions</strong> - RevenueCat subscription management wrapper
+<ul>
+<li><a href="https://github.com/paramsingh/vayu-subscriptions">https://github.com/paramsingh/vayu-subscriptions</a></li>
+</ul>
+</li>
+</ul>

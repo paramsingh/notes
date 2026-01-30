@@ -1,0 +1,128 @@
+<h1 id="runai-week-2-jan-3-9">RunAI Week 2 (Jan 3-9)<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-week-2-jan-3-9"></a></h1>
+<h1 id="week-2-jan-3-9">Week 2 (Jan 3-9)<a aria-hidden="true" class="anchor-heading icon-link" href="#week-2-jan-3-9"></a></h1>
+<p>← prev | <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">log.2025-w03 (Private)</a></p>
+<h2 id="theme">Theme<a aria-hidden="true" class="anchor-heading icon-link" href="#theme"></a></h2>
+<p>Launch prep - get ready to charge</p>
+<h2 id="this-week">This Week<a aria-hidden="true" class="anchor-heading icon-link" href="#this-week"></a></h2>
+<h3 id="1-test-revenuecat-integration">1. Test RevenueCat integration<a aria-hidden="true" class="anchor-heading icon-link" href="#1-test-revenuecat-integration"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Test purchase flow in sandbox (iOS + Android)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verify subscription status reflected correctly in app</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test webhook handling (purchase, renewal, cancellation)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test restore purchases flow</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test paywall triggers correctly</li>
+</ul>
+<h3 id="2-security-audit">2. Security audit<a aria-hidden="true" class="anchor-heading icon-link" href="#2-security-audit"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> JWT: token expiry, refresh flow, secure storage</li>
+<li class="task-list-item"><input type="checkbox" disabled> Strava tokens: storage, refresh, revocation handling</li>
+<li class="task-list-item"><input type="checkbox" disabled> Data isolation: verify users can't see each other's runs/chats</li>
+<li class="task-list-item"><input type="checkbox" disabled> API: rate limiting, input validation, SQL injection checks</li>
+<li class="task-list-item"><input type="checkbox" disabled> HTTPS everywhere, no secrets in code/logs</li>
+</ul>
+<h3 id="3-read-strava-brand-guidelines">3. Read Strava brand guidelines<a aria-hidden="true" class="anchor-heading icon-link" href="#3-read-strava-brand-guidelines"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Read developer guidelines</li>
+<li class="task-list-item"><input type="checkbox" disabled> Note requirements (attribution, logos, naming)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Create checklist of changes needed</li>
+<li class="task-list-item"><input type="checkbox" disabled> Check if "RunAI" name is compliant</li>
+</ul>
+<h3 id="4-play-store-listing-prep">4. Play Store listing prep<a aria-hidden="true" class="anchor-heading icon-link" href="#4-play-store-listing-prep"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> App icon finalized</li>
+<li class="task-list-item"><input type="checkbox" disabled> Screenshots (5+ screens)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Short &#x26; full description</li>
+<li class="task-list-item"><input type="checkbox" disabled> Privacy policy URL</li>
+<li class="task-list-item"><input type="checkbox" disabled> Data safety form answers</li>
+</ul>
+<h2 id="daily">Daily<a aria-hidden="true" class="anchor-heading icon-link" href="#daily"></a></h2>
+<h3 id="sat-jan-3">Sat Jan 3<a aria-hidden="true" class="anchor-heading icon-link" href="#sat-jan-3"></a></h3>
+<h3 id="sun-jan-4">Sun Jan 4<a aria-hidden="true" class="anchor-heading icon-link" href="#sun-jan-4"></a></h3>
+<h3 id="mon-jan-5">Mon Jan 5<a aria-hidden="true" class="anchor-heading icon-link" href="#mon-jan-5"></a></h3>
+<p><strong>Did:</strong> Set up project tracking system - created backlog, weekly note structure, added workflow to CLAUDE.md
+<strong>Blockers:</strong> None
+<strong>Notes:</strong> First session, no code work - just planning infrastructure</p>
+<h3 id="tue-jan-6">Tue Jan 6<a aria-hidden="true" class="anchor-heading icon-link" href="#tue-jan-6"></a></h3>
+<h3 id="wed-jan-7">Wed Jan 7<a aria-hidden="true" class="anchor-heading icon-link" href="#wed-jan-7"></a></h3>
+<h3 id="thu-jan-8">Thu Jan 8<a aria-hidden="true" class="anchor-heading icon-link" href="#thu-jan-8"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Worked on RevenueCat integration - created Google Play Store account, RevenueCat account, set up permissions</li>
+<li>Created product and base plan in RevenueCat</li>
+<li>Fixed credentials issue by regenerating service account credentials</li>
+<li>Kicked off agents for Strava brand guidelines review and security audit - both completed and generated specs</li>
+<li>Tested RevenueCat flow - got buy page showing up for users after login</li>
+<li>Implemented Strava branding compliance: downloaded official assets, replaced button, added 'Powered by Strava' logo to Settings, added 'View on Strava' deep links (branch ready for manual testing)
+<strong>Blockers:</strong> Can't test actual payment flow without app installed from Google Play (not local builds). This slows dev loop significantly - need to research workarounds.
+<strong>Notes:</strong> RevenueCat integration has lots of edge cases and rough edges to polish. Will continue tomorrow. Strava branding work complete and ready for testing. Have security fixes spec ready to implement.</li>
+</ul>
+<p><strong>Task lists from specs:</strong></p>
+<p><strong>Strava Branding Compliance:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Download official Strava button and logo assets</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Replace custom Strava button with official 'Connect with Strava' asset</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Add 'Powered by Strava' logo to Settings screen</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Add 'View on Strava' deep links to activity detail screens</li>
+<li>✓ App name "RunAI" is compliant (no Strava references)</li>
+</ul>
+<p><strong>Security Audit - Critical/High:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Remove hardcoded secrets from backend/settings.py and rotate keys</li>
+<li class="task-list-item"><input type="checkbox" disabled> Remove DB files from repo, add to .gitignore, purge git history</li>
+<li class="task-list-item"><input type="checkbox" disabled> Enforce JWT_SECRET validation - fail fast on startup if missing</li>
+<li class="task-list-item"><input type="checkbox" disabled> Fix OAuth callbacks - stop placing JWT/session IDs in redirect URLs</li>
+<li class="task-list-item"><input type="checkbox" disabled> Make RevenueCat webhook auth required - reject if secret missing</li>
+</ul>
+<p><strong>Security Audit - Medium:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Restrict CORS origins via env config (backend/app.py)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add rate limiting to API endpoints (/api/chat, /upload, /api/strava/webhook)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add upload size limits and MIME validation (backend/upload.py)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Allowlist fields in update_planned_run (backend/db.py:1254-1267)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Enforce session revocation in auth checks (validate sessions table)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add OAuth state parameter and PKCE for CSRF protection</li>
+</ul>
+<h3 id="fri-jan-9">Fri Jan 9<a aria-hidden="true" class="anchor-heading icon-link" href="#fri-jan-9"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Manual tested Strava branding changes - looks good, merged to main</li>
+<li>Set up license testing for RevenueCat in Google Play Console - should unblock payment flow testing</li>
+<li>Created comprehensive Play Store listing content (descriptions, keywords, screenshot plan)</li>
+<li>Drafted privacy policy for Play Store submission</li>
+<li>Identified critical launch blockers: Strava user limit approval, pull recent runs on signup, new user UX review</li>
+<li>Started planning Week 3 focus
+<strong>Blockers:</strong> None currently - license testing should unblock RevenueCat
+<strong>Notes:</strong> Play Store listing materials ready to publish once we have screenshots and privacy policy hosting. Ready to submit Strava approval request.</li>
+</ul>
+<h3 id="sat-jan-10">Sat Jan 10<a aria-hidden="true" class="anchor-heading icon-link" href="#sat-jan-10"></a></h3>
+<h3 id="sun-jan-11">Sun Jan 11<a aria-hidden="true" class="anchor-heading icon-link" href="#sun-jan-11"></a></h3>
+<h2 id="review">Review<a aria-hidden="true" class="anchor-heading icon-link" href="#review"></a></h2>
+<p><strong>What got done:</strong></p>
+<ul>
+<li>✅ <strong>Task #3: Strava branding</strong> (100%) - Fully implemented, tested, merged. Official button, "Powered by Strava" logo, compliant.</li>
+<li>🟡 <strong>Task #1: RevenueCat integration</strong> (40%) - Accounts created, products configured, buy page working, license testing enabled. Payment flow testing NOT done.</li>
+<li>🟡 <strong>Task #4: Play Store prep</strong> (60%) - Descriptions, privacy policy, and screenshot plan drafted. Need to take actual screenshots, host privacy policy, finalize icon.</li>
+<li>❌ <strong>Task #2: Security audit</strong> (0%) - None of the 11 critical/medium fixes implemented.</li>
+</ul>
+<p><strong>What didn't get done:</strong></p>
+<ul>
+<li>RevenueCat end-to-end payment testing (waiting for license testing to work)</li>
+<li>All security fixes (11 items)</li>
+<li>Play Store submission (need screenshots, privacy hosting)</li>
+<li>Strava Developer Program application (drafted but not submitted)</li>
+</ul>
+<p><strong>Why:</strong></p>
+<ul>
+<li>Blocked on RevenueCat payment testing (resolved Fri with license testing)</li>
+<li>Didn't work Sat/Sun</li>
+<li>Focused on planning and documentation over implementation</li>
+</ul>
+<p><strong>Revenue impact:</strong>
+Moderate progress toward launch. Can't charge users until RevenueCat fully tested. Can't launch publicly until Strava approval received (could take 1-2 weeks). Still 1-2 weeks away from being able to generate revenue.</p>
+<p><strong>Critical path blockers identified:</strong></p>
+<ol>
+<li>Strava user limit approval (1-2 week wait)</li>
+<li>Pull recent runs from Strava on signup (new users need data)</li>
+<li>Complete RevenueCat testing</li>
+<li>New user UX review and polish</li>
+</ol>

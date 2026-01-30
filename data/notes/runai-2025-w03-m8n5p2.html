@@ -1,0 +1,145 @@
+<h1 id="runai-week-3-jan-10-16">RunAI Week 3 (Jan 10-16)<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-week-3-jan-10-16"></a></h1>
+<h1 id="week-3-jan-10-16">Week 3 (Jan 10-16)<a aria-hidden="true" class="anchor-heading icon-link" href="#week-3-jan-10-16"></a></h1>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">log.2025-w02 (Private)</a> | <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">log.2026-w04 (Private)</a></p>
+<h2 id="theme">Theme<a aria-hidden="true" class="anchor-heading icon-link" href="#theme"></a></h2>
+<p>First Launch - Get Live</p>
+<h2 id="this-week">This Week<a aria-hidden="true" class="anchor-heading icon-link" href="#this-week"></a></h2>
+<h3 id="1-submit-strava-approval-request-critical---do-sunday">1. Submit Strava approval request (CRITICAL - DO SUNDAY)<a aria-hidden="true" class="anchor-heading icon-link" href="#1-submit-strava-approval-request-critical---do-sunday"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Implement "View on Strava" deep links on run detail screens ✓ already done</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Implement deauthorization webhook handler (required for approval)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Take required screenshots (login, settings, run details, AI chat)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Review and customize application email draft (RunAI → Coach Vayu)</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Fill in Client ID, contact info, URLs</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Submit to <a href="/mailto:developers@strava.com">developers@strava.com</a> ✓ sent Jan 16
+<strong>Why critical:</strong> 1-2 week approval wait. Blocks public launch. Start clock ASAP.</li>
+</ul>
+<h3 id="2-pull-recent-runs-from-strava-during-signup-launch-blocker">2. Pull recent runs from Strava during signup (LAUNCH BLOCKER)<a aria-hidden="true" class="anchor-heading icon-link" href="#2-pull-recent-runs-from-strava-during-signup-launch-blocker"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Implement Strava API call to fetch last 30-60 days of runs</li>
+<li class="task-list-item"><input type="checkbox" disabled> Import runs automatically after OAuth completes</li>
+<li class="task-list-item"><input type="checkbox" disabled> Show loading/progress state during import</li>
+<li class="task-list-item"><input type="checkbox" disabled> Handle errors gracefully
+<strong>Why critical:</strong> New users with zero runs = no value = churn. Required for launch.</li>
+</ul>
+<h3 id="3-complete-revenuecat-end-to-end-testing">3. Complete RevenueCat end-to-end testing<a aria-hidden="true" class="anchor-heading icon-link" href="#3-complete-revenuecat-end-to-end-testing"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Install app from Play Console internal testing (not local build)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test purchase flow with license tester account</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verify subscription status shows in app correctly</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test restore purchases flow</li>
+<li class="task-list-item"><input type="checkbox" disabled> Polish paywall UX and edge cases
+<strong>Why critical:</strong> Can't charge users = no revenue until this works.</li>
+</ul>
+<h3 id="4-new-user-ux-review-and-polish">4. New user UX review and polish<a aria-hidden="true" class="anchor-heading icon-link" href="#4-new-user-ux-review-and-polish"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Walk through full flow: first launch → signup → first run → first chat → subscription</li>
+<li class="task-list-item"><input type="checkbox" disabled> Fix confusing flows, missing guidance, unclear CTAs</li>
+<li class="task-list-item"><input type="checkbox" disabled> Polish rough edges that would turn off first-time users</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test on fresh device/account
+<strong>Why critical:</strong> First impressions determine retention. Can't launch with broken onboarding.</li>
+</ul>
+<h3 id="5-play-store-submission">5. Play Store submission<a aria-hidden="true" class="anchor-heading icon-link" href="#5-play-store-submission"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Take 5-7 high-quality screenshots</li>
+<li class="task-list-item"><input type="checkbox" disabled> Finalize app icon (if needed)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Host privacy policy at public URL</li>
+<li class="task-list-item"><input type="checkbox" disabled> Fill out data safety form</li>
+<li class="task-list-item"><input type="checkbox" disabled> Submit app for review
+<strong>Why critical:</strong> 1-7 day approval process. Parallel path with Strava approval.</li>
+</ul>
+<h3 id="6-critical-security-fixes-minimum-to-launch">6. Critical security fixes (minimum to launch)<a aria-hidden="true" class="anchor-heading icon-link" href="#6-critical-security-fixes-minimum-to-launch"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Remove DB files from repo, purge git history</li>
+<li class="task-list-item"><input type="checkbox" disabled> Remove hardcoded secrets from backend/settings.py</li>
+<li class="task-list-item"><input type="checkbox" disabled> Rotate any exposed tokens
+<strong>Why critical:</strong> Can't launch with user data exposed in git history.</li>
+</ul>
+<h2 id="daily">Daily<a aria-hidden="true" class="anchor-heading icon-link" href="#daily"></a></h2>
+<h3 id="sat-jan-10">Sat Jan 10<a aria-hidden="true" class="anchor-heading icon-link" href="#sat-jan-10"></a></h3>
+<p><strong>Did:</strong> Nothing
+<strong>Blockers:</strong> None
+<strong>Notes:</strong> Weekend off</p>
+<h3 id="sun-jan-11">Sun Jan 11<a aria-hidden="true" class="anchor-heading icon-link" href="#sun-jan-11"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Working on onboarding flow PR - fixing tests before merge</li>
+<li>Fixed app crash on startup bug</li>
+<li>Built automation around EAS build → Play Store upload process</li>
+<li>Submitted new build to Play Store for testing</li>
+<li>Auto-import runs from Strava PR ready - Claude completed implementation, needs testing/merging</li>
+<li>Verified build fixed crash but found auth flow bugs while dogfooding
+<strong>Blockers:</strong> Critical auth/paywall bugs block new user experience
+<strong>Notes:</strong> Major progress on launch blockers: auto-import feature implemented (PR ready), build automation working, crash fixed. However, discovered critical auth flow bugs that break new user onboarding. Need to fix auth issues, then test/merge auto-import PR and ship.</li>
+</ul>
+<p><strong>Reflection:</strong> Velocity is slow because a lot of the code is slop. Moving fast created bugs (auth flow broken, paywall not working) which now block progress. The shortcuts taken to ship quickly are now costing more time in firefighting and bug fixes than writing it carefully would have. At a critical decision point: continue rushing and accept more bugs, or take 2-3 days to get core flows solid before launch. The paradox: rushing creates bugs → bugs block progress → velocity gets slower.</p>
+<h3 id="mon-jan-12">Mon Jan 12<a aria-hidden="true" class="anchor-heading icon-link" href="#mon-jan-12"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Fixed bug where app always redirected to runs page even without login (used Codex)</li>
+<li>Fixed EAS autoincrement</li>
+<li>Fixed navigation bug - clicking anything flickered back to main page (Codex fix, verified working)
+<strong>Blockers:</strong> Blocked on builds for a while
+<strong>Notes:</strong> Heavy debugging day. Both critical auth/nav bugs from Sunday now fixed - new user flow should be unblocked.</li>
+</ul>
+<h3 id="tue-jan-13">Tue Jan 13<a aria-hidden="true" class="anchor-heading icon-link" href="#tue-jan-13"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Fixed bug where every login started a new trial (subscription tracking issue)</li>
+<li>Added "manage subscription" flow (cancel, etc.)</li>
+<li>Decided on new app name: <strong>Coach Vayu</strong> (coachvayu.com) - domain purchased, landing page deployed with privacy policy &#x26; terms of service</li>
+<li>Fixed privacy policy &#x26; terms links in app paywall</li>
+<li>Fixed restore purchases - clearer verbiage
+<strong>Blockers:</strong> None
+<strong>Notes:</strong> Huge progress day. Name decided, domain bought, landing page live, all critical bugs cleared. RevenueCat testing in progress - need to verify cancellation, expiration, and restore flows with new build.</li>
+</ul>
+<h3 id="wed-jan-14">Wed Jan 14<a aria-hidden="true" class="anchor-heading icon-link" href="#wed-jan-14"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Renaming app to Coach Vayu (agent working on it)</li>
+<li>Testing RevenueCat cancellation flow</li>
+<li>Fixed manage subscription to show cancelled status/expiry (using RevenueCat directly instead of backend)
+<strong>Blockers:</strong> Build times slowing iteration
+<strong>Notes:</strong> Started RevenueCat testing, found and fixed subscription state display issues.</li>
+</ul>
+<h3 id="thu-jan-15">Thu Jan 15<a aria-hidden="true" class="anchor-heading icon-link" href="#thu-jan-15"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Fixed subscription state not auto-updating</li>
+<li>Coach Vayu rename complete throughout frontend</li>
+<li>Attempted local build for faster testing
+<strong>Blockers:</strong> Local build credentials mismatch - need to debug or wait for EAS
+<strong>Notes:</strong> RevenueCat testing continuing. Build iteration speed is the main bottleneck.</li>
+</ul>
+<h3 id="fri-jan-16">Fri Jan 16<a aria-hidden="true" class="anchor-heading icon-link" href="#fri-jan-16"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Debugging credentials mismatch - fixed</li>
+<li>Researched Strava submission requirements - discovered deep links already implemented</li>
+<li>Identified missing deauthorization webhook handler (critical for approval)</li>
+<li>Implemented deauth webhook ✓</li>
+<li>Took Strava submission screenshots (login, settings, run detail, AI chat)</li>
+<li>Submitted Strava Developer Program application via email → got auto-reply pointing to form</li>
+<li>Submitted via form ✓ - review takes 7-10 business days
+<strong>Blockers:</strong> None
+<strong>Notes:</strong> Deep links ("View on Strava") already in <code>mobile/components/run/RunHeader.tsx</code>. Main blocker for Strava submission is deauth webhook - when user revokes access, app must delete their token/data. Currently silently ignored in <code>backend/strava.py</code>.</li>
+</ul>
+<h2 id="review">Review<a aria-hidden="true" class="anchor-heading icon-link" href="#review"></a></h2>
+<p><strong>Done:</strong></p>
+<ul>
+<li>Strava Developer Program submitted ✓ (7-10 day wait started)</li>
+<li>Coach Vayu rebrand complete (domain, landing page, privacy/terms)</li>
+<li>Deauth webhook implemented</li>
+<li>Multiple critical bugs fixed (auth, nav, subscription tracking)</li>
+<li>Build automation working</li>
+</ul>
+<p><strong>Not done:</strong></p>
+<ul>
+<li>Pull recent runs (PR ready, not merged)</li>
+<li>RevenueCat full testing (partial)</li>
+<li>Play Store submission (blocked on Strava)</li>
+<li>Security fixes</li>
+<li>UX review</li>
+</ul>
+<p><strong>Why:</strong> Week was heavy on bug fixing from prior technical debt. Strava submission was the critical time-gated item and got done Friday.</p>
+<p><strong>Revenue impact:</strong> No revenue yet. Clock started on Strava approval - launch possible ~Jan 30 if everything else is ready.</p>

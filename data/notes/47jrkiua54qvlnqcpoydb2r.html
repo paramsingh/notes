@@ -1,0 +1,29 @@
+<h1 id="logic-programming">Logic Programming<a aria-hidden="true" class="anchor-heading icon-link" href="#logic-programming"></a></h1>
+<p>The query system is based around two operations: pattern matching and unification.</p>
+<h2 id="pattern-matching">Pattern matching<a aria-hidden="true" class="anchor-heading icon-link" href="#pattern-matching"></a></h2>
+<ul>
+<li>Test whether a datum matches a pattern</li>
+<li><code>((a b) c (a b))</code> matches <code>(?x c ?x)</code> with <code>?x</code> bound to <code>(a b)</code></li>
+<li>The pattern matcher takes as input: the datum, the pattern and a frame with any previous bindings.</li>
+<li>If match in a way consistent with the frame, it returns a new frame extended with new bindings.</li>
+<li>If no match, it says no match</li>
+</ul>
+<h3 id="streams-of-frames">Streams of frames<a aria-hidden="true" class="anchor-heading icon-link" href="#streams-of-frames"></a></h3>
+<p>Given a single frame, the matching process runs through the database entries one by one.
+For each database entry, we get a result. The results for all the database entries
+are collected into a stream.</p>
+<p><img src="/assets/images/streams.png"></p>
+<p><img src="/assets/images/and-stream.png"></p>
+<h2 id="unification">Unification<a aria-hidden="true" class="anchor-heading icon-link" href="#unification"></a></h2>
+<p>Unification is the generalization of pattern matching. In this case, both
+the pattern and the datum may have variables.</p>
+<p>For example, unify <code>(?x ?x)</code> and <code>((a ?y c) (a b ?z))</code>. To do this, we need
+to infer that <code>?y</code> is <code>b</code>, then <code>?x</code> is <code>(a b c)</code> and so <code>?z</code> is <code>c</code></p>
+<h2 id="how-it-works">How it works<a aria-hidden="true" class="anchor-heading icon-link" href="#how-it-works"></a></h2>
+<ol>
+<li>Unify the query with the conclusion of the rule to form an extension of the original frame</li>
+<li>Relative to this extended frame, evaluate the query formed by the body of the rule</li>
+</ol>
+<p>Similar to eval-apply loop.</p>
+<hr>
+<p>Next: <a href="/notes/5wws4a4c36v3xpzvrglru3a">Is Logic Programming Mathematical Logic?</a></p>

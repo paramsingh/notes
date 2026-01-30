@@ -1,0 +1,429 @@
+<h1 id="grimoire---design-doc">Grimoire - Design Doc<a aria-hidden="true" class="anchor-heading icon-link" href="#grimoire---design-doc"></a></h1>
+<blockquote>
+<p>This note was generated with AI assistance.</p>
+</blockquote>
+<h1 id="grimoire---design-doc-v2">Grimoire - Design Doc v2<a aria-hidden="true" class="anchor-heading icon-link" href="#grimoire---design-doc-v2"></a></h1>
+<h2 id="concept">Concept<a aria-hidden="true" class="anchor-heading icon-link" href="#concept"></a></h2>
+<p><strong>Grimoire</strong> - A mobile app that brings the Claude Code experience to your phone. Chat with Claude, and it can read/write files in a notes folder on your device. Open canvas, user-defined workflows.</p>
+<p><strong>Core value prop:</strong> "Claude that can read/write your files, and you can see everything it knows."</p>
+<p><strong>Differentiators:</strong></p>
+<ul>
+<li>Files on YOUR device - portable, private, auditable</li>
+<li>Transparency - see exactly what the AI knows (not a black box)</li>
+<li>Conversational-first - talk to manage your notes, not manual editing</li>
+<li>AI as author - detailed notes because Claude writes them</li>
+<li>Open canvas - no opinionated workflow, you define how you use it</li>
+</ul>
+<h2 id="key-decisions">Key Decisions<a aria-hidden="true" class="anchor-heading icon-link" href="#key-decisions"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Decision</th><th>Choice</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Grimoire</td></tr><tr><td><strong>Pricing</strong></td><td>BYOK (Bring Your Own Key) - no backend</td></tr><tr><td><strong>Model</strong></td><td>Claude Opus</td></tr><tr><td><strong>Platform</strong></td><td>Android-first (Pixel 10 Pro), iOS via Expo</td></tr><tr><td><strong>Home screen</strong></td><td>Chat - open canvas</td></tr><tr><td><strong>Conversations</strong></td><td>Session-based (fresh each time, notes persist)</td></tr><tr><td><strong>Context limit</strong></td><td>Auto-compact when exceeded</td></tr><tr><td><strong>File structure</strong></td><td>Subfolders allowed, Claude organizes</td></tr><tr><td><strong>Storage</strong></td><td>App documents (private)</td></tr><tr><td><strong>Personality</strong></td><td>Subtle fantasy flavor</td></tr><tr><td><strong>Dark mode</strong></td><td>Yes (must-have)</td></tr><tr><td><strong>Share extension</strong></td><td>Yes (must-have)</td></tr></tbody></table></div>
+<h2 id="tools-7-total">Tools (7 total)<a aria-hidden="true" class="anchor-heading icon-link" href="#tools-7-total"></a></h2>
+<p>Codex-compatible where possible, plus simple write/edit for notes.</p>
+<pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> tools <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token comment">// === Codex-compatible read tools ===</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"list_dir"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Lists entries in a directory with type labels (file/dir)"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Path to directory (relative to notes root, defaults to root)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        offset<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"number"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Entry number to start from (1-indexed)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        limit<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"number"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Maximum number of entries to return"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        depth<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"number"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Maximum directory depth to traverse (1 = current dir only)"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"read_file"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Reads a file with 1-indexed line numbers"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Path to file (relative to notes root)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        offset<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"number"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Line number to start reading from (1-indexed)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        limit<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"number"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Maximum number of lines to return"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"grep_files"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Search for pattern across files, returns matching files sorted by modification time"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        pattern<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Regular expression pattern to search for"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        include<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Glob to filter files (e.g. '*.md', 'projects/**/*.md')"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Directory to search (defaults to notes root)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        limit<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"number"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Maximum number of results (defaults to 100)"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"pattern"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"view_image"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"View an image file from the notes folder"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Path to image file (relative to notes root)"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// === Notes-specific write tools ===</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"write_file"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Create a new file or overwrite an existing one"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Path to file (can include subdirectories, will be created)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        content<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Content to write"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"edit_file"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Edit a file by finding and replacing text"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Path to file"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        old_text<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Text to find (must be unique in file)"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        new_text<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Text to replace with"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path"</span><span class="token punctuation">,</span> <span class="token string">"old_text"</span><span class="token punctuation">,</span> <span class="token string">"new_text"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"delete_file"</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token string">"Delete a file or empty directory"</span><span class="token punctuation">,</span>
+    input_schema<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">"object"</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+          description<span class="token operator">:</span> <span class="token string">"Path to file or empty directory to delete"</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"path"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="system-prompt">System Prompt<a aria-hidden="true" class="anchor-heading icon-link" href="#system-prompt"></a></h2>
+<pre><code>You are the spirit of Grimoire, a magical tome that helps the user manage their personal knowledge. You have access to their notes folder and can read, write, edit, search, and view images.
+
+Available tools:
+- list_dir: See what files and folders exist (supports depth for nested view)
+- read_file: Read a file's contents (supports offset/limit for large files)
+- grep_files: Search for patterns across files (supports glob filtering)
+- view_image: Look at an image in the notes folder
+- write_file: Create or overwrite a file (creates subdirectories as needed)
+- edit_file: Modify part of a file by finding and replacing text
+- delete_file: Remove a file or empty directory
+
+Guidelines:
+- When the user asks about something, check if there's a relevant note first
+- Organize notes logically - use subdirectories when it makes sense
+- Use markdown formatting in notes
+- When updating notes, preserve existing content unless asked to replace
+- Be transparent about what files you're reading/writing
+- Keep a subtle magical flavor in your responses, but stay practical and helpful
+- When the user shares an image, you can save it and reference it in notes
+
+First conversation: Welcome the user and ask what they'd like to use Grimoire for.
+</code></pre>
+<h2 id="context-management-inspired-by-codex">Context Management (inspired by Codex)<a aria-hidden="true" class="anchor-heading icon-link" href="#context-management-inspired-by-codex"></a></h2>
+<ul>
+<li><strong>On-demand tools</strong> - read files only when needed for the task</li>
+<li><strong>No auto file list</strong> - Claude discovers via <code>list_files</code> when relevant</li>
+<li><strong>Session-based</strong> - conversation resets on app open, notes persist</li>
+<li><strong>Auto-compact</strong> - when context limit hit, summarize older messages</li>
+<li><strong>Environment injection</strong> - tell Claude the notes folder path</li>
+</ul>
+<h2 id="uiux">UI/UX<a aria-hidden="true" class="anchor-heading icon-link" href="#uiux"></a></h2>
+<h3 id="loading-messages-whimsical-fantasy-themed">Loading Messages (whimsical, fantasy-themed)<a aria-hidden="true" class="anchor-heading icon-link" href="#loading-messages-whimsical-fantasy-themed"></a></h3>
+<p>While Claude is thinking or executing tools:</p>
+<ul>
+<li>"Consulting the archives..."</li>
+<li>"Scrying your notes..."</li>
+<li>"Leafing through the tome..."</li>
+<li>"Channeling ancient wisdom..."</li>
+<li>"Inscribing new knowledge..."</li>
+<li>"Divining connections..."</li>
+<li>"Weaving the threads..."</li>
+</ul>
+<h3 id="screens">Screens<a aria-hidden="true" class="anchor-heading icon-link" href="#screens"></a></h3>
+<ol>
+<li>
+<p><strong>Chat Screen (main)</strong></p>
+<ul>
+<li>Full-screen chat, message input at bottom</li>
+<li>Streaming responses with fantasy loading messages</li>
+<li>Tool calls shown inline ("📖 Reading projects/coach-vayu.md...")</li>
+<li>Floating action button to open file browser</li>
+<li>Camera button to take photo and attach to message</li>
+<li>Image picker to attach existing photos</li>
+<li>Dark mode by default</li>
+</ul>
+</li>
+<li>
+<p><strong>File Browser</strong></p>
+<ul>
+<li>List of files/folders with icons</li>
+<li>Tap folder to navigate, tap file to view</li>
+<li>Simple create/delete actions</li>
+<li>Back to chat</li>
+</ul>
+</li>
+<li>
+<p><strong>File Viewer</strong></p>
+<ul>
+<li>Rendered markdown</li>
+<li>Edit button to open raw editor</li>
+<li>Delete option</li>
+<li>Share button</li>
+</ul>
+</li>
+<li>
+<p><strong>Settings</strong></p>
+<ul>
+<li>API key input (secure storage)</li>
+<li>Export notes (zip)</li>
+<li>Clear conversation</li>
+<li>About/version</li>
+</ul>
+</li>
+</ol>
+<h3 id="first-launch-guided-intro">First Launch (Guided Intro)<a aria-hidden="true" class="anchor-heading icon-link" href="#first-launch-guided-intro"></a></h3>
+<ol>
+<li>API key setup screen</li>
+<li>Welcome message from Grimoire spirit</li>
+<li>Claude asks: "Welcome, keeper. What knowledge shall we chronicle together?"</li>
+</ol>
+<h2 id="architecture">Architecture<a aria-hidden="true" class="anchor-heading icon-link" href="#architecture"></a></h2>
+<pre><code>┌─────────────────────────────────────────────┐
+│                 Grimoire App                 │
+├─────────────────────────────────────────────┤
+│  ┌─────────────┐    ┌────────────────────┐  │
+│  │   Chat UI   │    │   File Browser     │  │
+│  │  (streaming)│    │   (expo-router)    │  │
+│  └──────┬──────┘    └─────────┬──────────┘  │
+│         │                     │             │
+│         ▼                     ▼             │
+│  ┌─────────────────────────────────────────┐│
+│  │          Tool Execution Layer           ││
+│  │  list | read | write | edit | search   ││
+│  └──────────────┬──────────────────────────┘│
+│                 │                            │
+│         ┌───────┴───────┐                   │
+│         ▼               ▼                   │
+│  ┌────────────┐  ┌─────────────┐            │
+│  │ Claude API │  │ File System │            │
+│  │  (Opus)    │  │ (expo-fs)   │            │
+│  └────────────┘  └─────────────┘            │
+│                                             │
+│  ┌─────────────────────────────────────────┐│
+│  │           Local Storage                 ││
+│  │  - API key (vayu-storage)              ││
+│  │  - Settings (AsyncStorage)             ││
+│  └─────────────────────────────────────────┘│
+└─────────────────────────────────────────────┘
+</code></pre>
+<h2 id="tech-stack">Tech Stack<a aria-hidden="true" class="anchor-heading icon-link" href="#tech-stack"></a></h2>
+<ul>
+<li><strong>Framework:</strong> Expo / React Native</li>
+<li><strong>Navigation:</strong> expo-router</li>
+<li><strong>File system:</strong> expo-file-system</li>
+<li><strong>Camera:</strong> expo-camera + expo-image-picker</li>
+<li><strong>Secure storage:</strong> vayu-storage (already built!)</li>
+<li><strong>AI:</strong> Claude API with tool use, streaming, vision</li>
+<li><strong>Markdown:</strong> react-native-markdown-display</li>
+<li><strong>State:</strong> Zustand (simple, performant)</li>
+<li><strong>Dark mode:</strong> React Native appearance API</li>
+</ul>
+<h2 id="file-structure">File Structure<a aria-hidden="true" class="anchor-heading icon-link" href="#file-structure"></a></h2>
+<pre><code>App Documents/
+└── grimoire/
+    └── notes/
+        ├── inbox.md
+        ├── daily/
+        │   └── 2026-01-30.md
+        ├── projects/
+        │   └── coach-vayu.md
+        └── images/
+            └── 2026-01-30-receipt.jpg
+</code></pre>
+<h2 id="milestones">Milestones<a aria-hidden="true" class="anchor-heading icon-link" href="#milestones"></a></h2>
+<h3 id="v01---proof-of-concept">v0.1 - Proof of concept<a aria-hidden="true" class="anchor-heading icon-link" href="#v01---proof-of-concept"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Expo project scaffold with expo-router</li>
+<li class="task-list-item"><input type="checkbox" disabled> Basic chat UI with streaming</li>
+<li class="task-list-item"><input type="checkbox" disabled> Claude API integration with tool use</li>
+<li class="task-list-item"><input type="checkbox" disabled> Single tool working (read_file)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Hardcoded notes folder</li>
+</ul>
+<h3 id="v02---core-functionality">v0.2 - Core functionality<a aria-hidden="true" class="anchor-heading icon-link" href="#v02---core-functionality"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> All 7 tools working (list_dir, read_file, grep_files, view_image, write_file, edit_file, delete_file)</li>
+<li class="task-list-item"><input type="checkbox" disabled> File browser UI</li>
+<li class="task-list-item"><input type="checkbox" disabled> Markdown rendering</li>
+<li class="task-list-item"><input type="checkbox" disabled> Subfolder support</li>
+<li class="task-list-item"><input type="checkbox" disabled> Camera capture + image picker</li>
+<li class="task-list-item"><input type="checkbox" disabled> Images sent to Claude via vision API</li>
+</ul>
+<h3 id="v03---daily-driver">v0.3 - Daily driver<a aria-hidden="true" class="anchor-heading icon-link" href="#v03---daily-driver"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Settings screen with API key (vayu-storage)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Dark mode</li>
+<li class="task-list-item"><input type="checkbox" disabled> Whimsical loading messages</li>
+<li class="task-list-item"><input type="checkbox" disabled> Tool calls shown inline</li>
+<li class="task-list-item"><input type="checkbox" disabled> Auto-compact for long conversations</li>
+<li class="task-list-item"><input type="checkbox" disabled> Test on Pixel 10 Pro</li>
+</ul>
+<h3 id="v04---polish">v0.4 - Polish<a aria-hidden="true" class="anchor-heading icon-link" href="#v04---polish"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Guided intro / first-run experience</li>
+<li class="task-list-item"><input type="checkbox" disabled> Export notes as zip</li>
+<li class="task-list-item"><input type="checkbox" disabled> Share extension (receive shared content)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Error handling and recovery</li>
+<li class="task-list-item"><input type="checkbox" disabled> Subtle fantasy personality in system prompt</li>
+</ul>
+<h3 id="v05---release-ready">v0.5 - Release ready<a aria-hidden="true" class="anchor-heading icon-link" href="#v05---release-ready"></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Play Store listing</li>
+<li class="task-list-item"><input type="checkbox" disabled> Basic analytics</li>
+<li class="task-list-item"><input type="checkbox" disabled> Crash reporting</li>
+<li class="task-list-item"><input type="checkbox" disabled> Internal testing</li>
+</ul>
+<h2 id="future-features-post-mvp">Future Features (post-MVP)<a aria-hidden="true" class="anchor-heading icon-link" href="#future-features-post-mvp"></a></h2>
+<ul>
+<li>iCloud / Google Drive sync</li>
+<li>Voice input</li>
+<li>PDF support in notes</li>
+<li>Widgets</li>
+<li>Multiple workspaces</li>
+<li>iOS App Store release</li>
+</ul>
+<h2 id="references">References<a aria-hidden="true" class="anchor-heading icon-link" href="#references"></a></h2>
+<ul>
+<li>Codex CLI architecture: <code>~/code/codex</code> (cloned for reference)</li>
+<li>vayu-storage: <code>~/code/vayu-storage</code> (reusable secure storage)</li>
+</ul>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/runai-backlog-8kx7m2">RunAI Backlog</a></li>
+</ul>

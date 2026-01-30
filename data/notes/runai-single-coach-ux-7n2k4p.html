@@ -1,0 +1,52 @@
+<h1 id="runai-single-coach-ux-exploration">RunAI Single Coach UX Exploration<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-single-coach-ux-exploration"></a></h1>
+<blockquote>
+<p>This note was generated with AI assistance.</p>
+</blockquote>
+<h1 id="single-coach-relationship---ux-exploration">Single Coach Relationship - UX Exploration<a aria-hidden="true" class="anchor-heading icon-link" href="#single-coach-relationship---ux-exploration"></a></h1>
+<h2 id="problem">Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h2>
+<p>Current app has multiple chat threads (general chat, chat per run, etc.). This feels like customer support tickets, not a coaching relationship. Users don't build a relationship with their coach.</p>
+<h2 id="vision">Vision<a aria-hidden="true" class="anchor-heading icon-link" href="#vision"></a></h2>
+<p>One ongoing conversation with Coach Vayu. Like texting your real running coach.</p>
+<ul>
+<li><strong>Single thread</strong>: No "new chat" button. Just your coach.</li>
+<li><strong>Coach remembers everything</strong>: Past conversations, your goals, your injury history, what worked/didn't</li>
+<li><strong>Runs feed in automatically</strong>: Coach sees your runs and can comment proactively</li>
+<li><strong>Proactive coaching</strong>: "Nice 5k this morning - saw you negative split the last mile!" or "You mentioned your knee was bothering you, how's it feeling after today's run?"</li>
+<li><strong>Home screen = coach</strong>: Open app, you're talking to your coach</li>
+</ul>
+<h2 id="questions-to-explore">Questions to Explore<a aria-hidden="true" class="anchor-heading icon-link" href="#questions-to-explore"></a></h2>
+<h3 id="data-model">Data Model<a aria-hidden="true" class="anchor-heading icon-link" href="#data-model"></a></h3>
+<ul>
+<li>How does coach memory work? Separate memory tool that writes to DB?</li>
+<li>What gets remembered vs what's just conversation context?</li>
+<li>How do runs feed into the conversation? As system messages? Tool results?</li>
+<li>Single conversation thread in DB, or something else?</li>
+</ul>
+<h3 id="uiux">UI/UX<a aria-hidden="true" class="anchor-heading icon-link" href="#uiux"></a></h3>
+<ul>
+<li>What does home screen look like? Just a chat interface?</li>
+<li>Where do runs live? Still a separate tab, or integrated into coach view?</li>
+<li>How does coach initiate? Push notifications? Messages waiting when you open app?</li>
+<li>What happens to existing multiple-chat UI? Migration path?</li>
+</ul>
+<h3 id="proactive-coaching">Proactive Coaching<a aria-hidden="true" class="anchor-heading icon-link" href="#proactive-coaching"></a></h3>
+<ul>
+<li>When does coach reach out? After every run? Daily summary? Only notable events?</li>
+<li>How to avoid being annoying?</li>
+<li>Does this require background processing / cron jobs?</li>
+</ul>
+<h3 id="technical">Technical<a aria-hidden="true" class="anchor-heading icon-link" href="#technical"></a></h3>
+<ul>
+<li>How does this change the current chat/conversation architecture?</li>
+<li>What's the minimal change to test this hypothesis?</li>
+<li>Can we prototype with current infra or need new backend work?</li>
+</ul>
+<h2 id="current-architecture-for-context">Current Architecture (for context)<a aria-hidden="true" class="anchor-heading icon-link" href="#current-architecture-for-context"></a></h2>
+<p>Help me understand:</p>
+<ol>
+<li>Current chat/conversation data model</li>
+<li>How AI coach currently gets context about runs</li>
+<li>Where conversation history is stored</li>
+<li>Current home screen / navigation structure</li>
+</ol>
+<p>Then let's sketch out what minimal changes would let us test the single-coach model.</p>

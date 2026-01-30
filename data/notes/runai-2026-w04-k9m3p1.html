@@ -1,0 +1,93 @@
+<h1 id="runai-week-4-jan-17-23">RunAI Week 4 (Jan 17-23)<a aria-hidden="true" class="anchor-heading icon-link" href="#runai-week-4-jan-17-23"></a></h1>
+<h1 id="week-4-jan-17-23">Week 4 (Jan 17-23)<a aria-hidden="true" class="anchor-heading icon-link" href="#week-4-jan-17-23"></a></h1>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">log.2025-w03 (Private)</a> | <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">log.2026-w05 (Private)</a></p>
+<h2 id="theme">Theme<a aria-hidden="true" class="anchor-heading icon-link" href="#theme"></a></h2>
+<p>Launch Ready + AI Quality - Minimum launch prep, then make the coach worth paying for</p>
+<h2 id="context">Context<a aria-hidden="true" class="anchor-heading icon-link" href="#context"></a></h2>
+<p>Strava approval submitted Jan 16, expect response ~Jan 27-30 (7-10 business days). Play Store submission blocked until Strava increases athlete limit (reviewers need to log in). Use this time wisely: do minimum launch prep, then focus on AI quality - the thing that actually determines whether users pay.</p>
+<p><strong>Reality check:</strong> "I wouldn't pay $10 for my own app" - the AI coach isn't good enough yet.</p>
+<h2 id="this-week">This Week<a aria-hidden="true" class="anchor-heading icon-link" href="#this-week"></a></h2>
+<h3 id="launch-prep-minimum-viable">Launch Prep (minimum viable)<a aria-hidden="true" class="anchor-heading icon-link" href="#launch-prep-minimum-viable"></a></h3>
+<p><strong>1. Merge auto-import runs PR (LAUNCH BLOCKER)</strong> ✓</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Merge to main (tested properly at pre-launch check when Strava limit increases)
+<strong>Why:</strong> New users with zero runs = no value = churn.</li>
+</ul>
+<p><strong>2. Security fixes (LAUNCH BLOCKER)</strong> (IN PROGRESS)</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Remove DB files from repo, purge git history</li>
+<li class="task-list-item"><input type="checkbox" disabled> Remove hardcoded secrets from backend/settings.py</li>
+<li class="task-list-item"><input type="checkbox" disabled> Rotate any exposed tokens
+<strong>Why:</strong> Can't launch with user data exposed in git history.</li>
+</ul>
+<p><strong>3. RevenueCat - final verification</strong> ✓</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> New user flow - double check before release
+<strong>Why:</strong> Most testing done, just need final sanity check.</li>
+</ul>
+<p><strong>4. Play Store assets (can do last minute)</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Take screenshots (doesn't need to be perfect for soft launch)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Basic store listing</li>
+<li class="task-list-item"><input type="checkbox" disabled> Data safety form
+<strong>Why:</strong> Don't gold-plate this - can iterate post-launch.</li>
+</ul>
+<h3 id="ai-quality-the-real-work">AI Quality (the real work)<a aria-hidden="true" class="anchor-heading icon-link" href="#ai-quality-the-real-work"></a></h3>
+<p><strong>5. Streaming status messages (IN PROGRESS)</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Add loading/status messages during AI coach tool calls</li>
+<li class="task-list-item"><input type="checkbox" disabled> "Analyzing your runs...", "Looking at your pace data...", etc.
+<strong>Why:</strong> Makes app feel faster and more responsive.</li>
+</ul>
+<p><strong>6. Fix AI coach bugs</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Date/day off-by-one errors in training plans</li>
+<li class="task-list-item"><input type="checkbox" disabled> Tool call confusion - AI doesn't realize what happened</li>
+<li class="task-list-item"><input type="checkbox" disabled> Uses markdown formatting in chat (should be plain text)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Analysis errors - wrong conclusions about runs
+<strong>Why:</strong> These make the coach look dumb. Users won't pay for a dumb coach.</li>
+</ul>
+<p><strong>7. Explore core flow rethink (if time)</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Sketch out single coach relationship model</li>
+<li class="task-list-item"><input type="checkbox" disabled> What would home screen look like?</li>
+<li class="task-list-item"><input type="checkbox" disabled> How do runs feed into conversation?
+<strong>Why:</strong> Multiple chats feels like customer support tickets, not coaching.</li>
+</ul>
+<h2 id="daily">Daily<a aria-hidden="true" class="anchor-heading icon-link" href="#daily"></a></h2>
+<h3 id="sat-jan-17">Sat Jan 17<a aria-hidden="true" class="anchor-heading icon-link" href="#sat-jan-17"></a></h3>
+<p><strong>Did:</strong>
+<strong>Blockers:</strong>
+<strong>Notes:</strong></p>
+<h3 id="sun-jan-18">Sun Jan 18<a aria-hidden="true" class="anchor-heading icon-link" href="#sun-jan-18"></a></h3>
+<p><strong>Did:</strong>
+<strong>Blockers:</strong>
+<strong>Notes:</strong></p>
+<h3 id="mon-jan-19">Mon Jan 19<a aria-hidden="true" class="anchor-heading icon-link" href="#mon-jan-19"></a></h3>
+<p><strong>Did:</strong>
+<strong>Blockers:</strong>
+<strong>Notes:</strong></p>
+<h3 id="tue-jan-20">Tue Jan 20<a aria-hidden="true" class="anchor-heading icon-link" href="#tue-jan-20"></a></h3>
+<p><strong>Did:</strong></p>
+<ul>
+<li>Removed hardcoded/fallback JWT secrets, enforced JWT_SECRET usage (jwt_auth.py + tests), verified prod secrets in Fly</li>
+<li>Replaced JWT/session IDs in OAuth redirect URLs with one-time auth-code exchange (new auth_codes table + migration, /api/auth/exchange endpoint, updated mobile/web callbacks)</li>
+<li>(in progress) RevenueCat webhook auth - require secret at startup, reject if missing
+<strong>Blockers:</strong>
+<strong>Notes:</strong></li>
+<li>Before next deploy: test phone login with auth-code changes, run migrations (automatic run import + auth_codes)</li>
+</ul>
+<h3 id="wed-jan-21">Wed Jan 21<a aria-hidden="true" class="anchor-heading icon-link" href="#wed-jan-21"></a></h3>
+<p><strong>Did:</strong>
+<strong>Blockers:</strong>
+<strong>Notes:</strong></p>
+<h3 id="thu-jan-22">Thu Jan 22<a aria-hidden="true" class="anchor-heading icon-link" href="#thu-jan-22"></a></h3>
+<p><strong>Did:</strong>
+<strong>Blockers:</strong>
+<strong>Notes:</strong></p>
+<h3 id="fri-jan-23">Fri Jan 23<a aria-hidden="true" class="anchor-heading icon-link" href="#fri-jan-23"></a></h3>
+<p><strong>Did:</strong>
+<strong>Blockers:</strong>
+<strong>Notes:</strong></p>
+<h2 id="review">Review<a aria-hidden="true" class="anchor-heading icon-link" href="#review"></a></h2>
+<!-- End of week: what got done, what didn't, why, revenue impact -->

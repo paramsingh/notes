@@ -1,0 +1,7 @@
+<h1 id="query">Query<a aria-hidden="true" class="anchor-heading icon-link" href="#query"></a></h1>
+<p>select email, count(c.id) as cnt
+from tblboard b
+join tblcard c
+on b.id = c.boardid
+group by email
+order by cnt desc;</p>
